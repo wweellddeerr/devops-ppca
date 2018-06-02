@@ -49,19 +49,110 @@ para publicação de algum artefato de \textit{software} e na publicação
 propriamente dita.
 
 Essa estrutura em silos ocasionou alguns conflitos ao longo do tempo. Como
-exemplos de problemas ocorridos ao longo do tempo que levaram à manifestação
+exemplos de problemas ocorridos que levaram à manifestação
 de conflitos de interesses entre os times, destacam-se: (1) o não
 funcionamento em ambiente de produção de um software que funciona adequadamente
 em ambiente de desenvolvimento; e (2) o atraso em entregas de software
 importantes pelo não provisionamento tempestivo da infraestrutura necessária.
 
 Como resposta aos conflitos ocorridos ao longo do tempo, o \acrshort{TCU}
-investiu na padronização de procedimentos. 
+investiu na padronização de procedimentos. O provimento de infraestrutura
+para publicação de novas aplicações passou a funcionar de acordo com um
+\acrfull{SLA} que previa um prazo de sete dias desde a abertura por qualquer
+dos times de desenvolvimento de uma solicitação no sistema de
+\textit{servicedesk} interno. Na solicitação deveriam constar os detalhes
+de configuração necessária bem como estimativa de número de usuários que
+acessariam a aplicação.
+
+No tocante à publicação do software foi criada uma padronização de
+procedimentos denominada publicação programada. A publicação programada prevê
+que uma versão de todas as aplicações desenvolvidas será congelada semanalmente
+às 03h00m de terça-feira. As equipes de desenvolvimento tem então um prazo até
+as 13h00m para verificar se os artefatos foram congelados adequadamente. Após
+encerrado este prazo, o \acrshort{SINAP} efetua a publicação dos artefatos
+em um ambiente denominado pré-produção.
+
+Pré-produção é um ambiente mantido pelo time de operações que possui o
+propósito de ser o mais similar possível com o ambiente de produção, buscando-se
+evitar o não funcionamento de alguma aplicação apenas em ambiente de produção.
+
+Após a publicação em pré-produção, o \acrshort{SINAP} envia um e-mail de
+``abertura de temporada de testes em pré-produção'', a partir do qual os times
+de desenvolvimento executam testes manuais em suas respectivas aplicações.
+
+Caso seja necessária a execução de \textit{scripts} em banco de dados, a versão
+definitiva desses \textit{scripts} precisa ser concluída e incluída junto com
+os artefatos para publicação até o limite de 12h00 de terça-feira.
+
+Após a publicação em ambiente de pré-produção (terça-feira) os artefatos podem
+ser substituídos pelo time de desenvolvimento a qualquer momento até o limite
+de 18h00m de quinta-feira, quando os artefatos são congelados definitivamente
+para publicação em ambiente de produção. Novas publicações em pré-produção
+ocorrem às 18h00m de terça-feira e às 14h00m de quarta e quinta-feira. Essas
+novas publicações são chamadas de corretivas. A geração de artefatos para
+publicações corretivas é um procedimento executado manualmente pelo
+desenvolvedor que deseja a nova publicação e requer diversos cuidados para
+evitar a inclusão de código inserido por outro desenvolvedor com o propósito
+de publicação apenas na semana seguinte.
+
+A publicação em ambiente de produção ocorre \textbf{após} o término do
+expediente de quinta-feira que ocorre às 20h00m em dias quando não há sessão
+plenária ou logo após o seu término que não há horário máximo estipulado.
+Os procedimentos de publicação são executados manualmente pelo time de
+operações e gera um \textit{downtime} que pode variar de 10 minutos a algumas
+horas.
+
+O \acrshort{SLA} entre as equipes prevê que em caso de erros na publicação em
+produção, o \acrshort{SINAP} irá reverter a versão anterior e os novos
+artefatos só serão publicados na semana seguinte. Está previstos ainda que
+não haverá publicação programada em semanas que contenham feriados ou pontos
+facultativos na quinta ou sexta-feira.
+
+A publicação programada ajuda a lidar com alguns dos problemas existentes
+previamente. Todavia, alguns outros problemas de ordem prática passam a existir:
+
+\begin{itemize}
+\item Uma eventual evolução pontual em alguma aplicação, cujo código tenha sido
+disponibilizado pelo desenvolvedor na manhã de uma terça-feira, só será
+disponibilizada para o usuário final em ambiente de produção na sexta-feira da
+semana seguinte, uma demora de 10 dias que nem sempre é aceitável;
+
+\item Por mais que o ambiente de pré-produção seja semelhante ao de produção,
+ainda ocorrem erros de versões que funcionam naquele mas não neste;
+
+\item downtime no Acre
+
+\item banco de dados sincronização
+
+\item cenários com feriados e erros (time-to-market)
+
+\end{itemize}
+
+Toda essa rigidez procedimental, com tarefas e horários encadeados ilustra o
+quão complexa podem se tornar soluções que visam contornar o problema da falta
+de colaboração entre os times de desenvolvimento e operações.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Justificativa}%
+
+O modelo produzido para orientar a adoção de \textit{DevOps} com base em
+experiências de mercado bem sucedidas, produzido durante a pesquisa e
+devidamente implementado no \acrshort{TCU}, representa um
+incremento ao conhecimento existente sobre \textit{DevOps}, com destaque
+para o melhor entendimento de como se adotar \textit{DevOps} com base na
+prática de mercado.
+
+Ademais, a realização deste estudo contribui para o intercâmbio de experiências
+e conhecimentos que apóiam o processo de adoção de \textit{DevOps} no TCU
+para que ocorra alinhado às práticas de mercado e, portanto, com menor
+chance de incorrer em falhas comuns, já superadas em outros contextos.
+
+A adoção de \textit{DevOps} no \acrshort{TCU} está alinhada aos direcionadores
+estratégicos da área de \acrshort{TI} do órgão e irá possibilitar uma
+mudança de paradigma necessária para tratar adequadamente os problemas
+decorrentes da baixa colaboração entre os times de desenvolvimento e operações.
 
 %conforme ilustrado na \refFig{latexvsword}.%
 %\figuraBib{miktex}{\LaTeX\ vs MS Word}{pinteric_latex_2004}{latexvsword}{width=.45\textwidth}%
@@ -77,11 +168,12 @@ aplicações corporativas do \acrshort{TCU}.
 Para atingir esse objetivo, os seguintes objetivos específicos foram definidos:
 
 \begin{itemize}
-\item Elaborar uma \textit{grounded theory} que explique como se deu a adoção
-de \textit{DevOps} por praticantes bem sucedidos na indústria e desenvolvimento
+\item Elaborar uma \textit{grounded theory} que explique a adoção
+de \textit{DevOps} por praticantes bem sucedidos na indústria de desenvolvimento
 de software;
-\item Propor e implantar um modelo de adoção de \textit{DevOps} com base na
+\item Propor um modelo de adoção de \textit{DevOps} com base na
 \textit{grounded theory} produzida;
+\item Implantar o modelo para guiar a adoção de \textit{DevOps} no \acrshort{TCU}; e
 \item Realizar um estudo empírico para avaliar o modelo proposto no contexto
 do desenvolvimento de uma aplicação corporativa do \acrshort{TCU}.
 \end{itemize}
