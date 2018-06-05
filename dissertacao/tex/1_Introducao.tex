@@ -42,10 +42,10 @@ que são considerados inadequados.
 \section{Problema de Pesquisa}%
 O \acrshort{TCU} possui sete times de desenvolvimento de \textit{software} e um
 único time de operações, que historicamente trabalham em silos.
-A equipe de operações (\acrfull{SINAP}) participa do processo apenas em
-momentos específicos, notadamente quando uma nova infraestrutura precisa ser provida
-para publicação de algum artefato de \textit{software}, e na publicação
-propriamente dita.
+A equipe de operações (\acrfull{SINAP}) participa da produção de software apenas
+em momentos específicos, notadamente quando uma nova infraestrutura precisa ser
+provida para publicação de algum artefato de \textit{software}, e também na
+publicação propriamente dita.
 
 Essa estrutura em silos ocasionou alguns conflitos ao longo do tempo. Como
 exemplos de problemas ocorridos que levaram à manifestação
@@ -60,30 +60,38 @@ investiu na padronização de procedimentos. O provimento de infraestrutura
 para publicação de novas aplicações passou a funcionar em conformidade com um
 \acrfull{SLA} que prevê um prazo de sete dias para conclusão por parte do time
 de operações. O provimento de infraestrutura deve ser pedido por qualquer
-dos times de desenvolvimento por meio de uma solicitação no sistema de
-\textit{servicedesk} interno, e o prazo inicia após a abertura dessa
-solicitação. Na solicitação devem constar os detalhes
-da configuração (quantidade de memória e CPU, por exemplo) necessária,
-bem como estimativa de número de usuários que irão acessar a aplicação.
+dos times de desenvolvimento por meio do registro de uma solicitação no sistema
+de \textit{servicedesk} interno, e o prazo inicia após este registro.
+Na solicitação devem constar os detalhes da configuração (quantidade de memória
+e CPU, por exemplo) necessária, bem como estimativa de número de usuários que
+irão acessar a aplicação.
 
-No tocante à publicação do \textit{software} foi criada uma padronização de
+No tocante à publicação do \textit{software}, foi criada uma padronização de
 procedimentos denominada \emph{publicação programada}. A publicação programada
 é um processo que prevê um complexo encadeamento de ações com horários bem
 definidos visando reduzir o risco de problemas na publicação dos artefatos. Os
 detalhes desse processo são apresentados a seguir.
 
 A versão de todas as aplicações desenvolvidas é congelada semanalmente
-às 03h00m de terça-feira. Uma construção é executada com base no código contante
+às 03h00m de terça-feira. Para que esse congelamento fosse viabilizado, foi
+criado um segundo \textit{Jenkins} e um segundo \textit{Artifactory} cujos
+\textit{jobs} apenas podem ser executados no contexto da publicação programada.
+Uma primeira construção é executada com base no código contante
 na \textit{branch} master das aplicações no horário estabelecido. Os artefatos
-produzidos são então movidos para um diretório de rede onde só podem ser
-alterados pelo \acrshort{SINAP}.
+produzidos são então publicados no servidor \textit{artifactory} onde só podem
+ser alterados pelo \acrshort{SINAP}.
 
 As equipes de desenvolvimento tem então um prazo até
 as 13h00m para verificar se os artefatos foram gerados adequadamente. Após
 encerrado este prazo, o \acrshort{SINAP} efetua a publicação
 em um ambiente denominado pré-produção. Caso algum artefato não tenha sido
-gerado adequadamente, os times devem gerá-lo e enviar solicitação para que o
-\acrshort{SINAP} atualize o diretório de rede com a versão adequada.
+gerado adequadamente, os times devem efetuar as correções necessárias e
+solicitar a reexecução dos relativos \textit{jobs} no servidor \textit{Jenkins}
+que opera apenas no contexto da publicação programada. Cumpre ressaltar que
+antes de serem reexecutados, os \textit{jobs} precisam ser ajustados para
+congelar uma nova \textit{branch} do repositório de código fonte, não mais a
+\textit{branch} master que pode já possuir código que não faz parte do escopo
+da publicação da semana em tela.
 
 Pré-produção é um ambiente mantido pelo time de operações que possui o
 propósito de ser \emph{o mais similar possível} ao ambiente de produção,
@@ -100,7 +108,7 @@ de \textit{scripts} também é padronizada. A sua versão definitiva
 precisa ser concluída e incluída junto com os artefatos para publicação até o
 limite de 12h00 de terça-feira. Ressalte-se que para que um \textit{script}
 esteja em versão definitiva, é necessário ter passado pela equipe de operações
-para validação, o que não há prazo definido para ocorrer. Um \textit{script}
+para validação, para a qual não há prazo definido. Um \textit{script}
 proposto por algum dos times de desenvolvimento durante o dia de segunda-feira
 tipicamente não é validado pelo time de operações até o limite de prazo e isso
 ocasiona erros na publicação dos artefatos relacionados.
@@ -110,11 +118,13 @@ de desenvolvimento podem solicitar a substituição dos artefatos a qualquer
 momento até o limite de 18h00m de quinta-feira, quando os artefatos são
 congelados definitivamente para publicação em ambiente de produção. Novas
 publicações em pré-produção ocorrem às 18h00m de terça-feira e às 14h00m de
-quarta e quinta-feira. Essas novas publicações são chamadas de emph{corretivas}.
-A geração de artefatos para publicações corretivas é um procedimento executado
-manualmente pelo desenvolvedor que deseja a nova publicação e requer diversos
-cuidados para evitar a inclusão de código inserido por outro desenvolvedor com o
-propósito de publicação apenas na semana seguinte.
+quarta e quinta-feira. Essas novas publicações são chamadas de \emph{corretivas}.
+A geração de artefatos para publicações corretivas, assim como a reexecução
+de \textit{jobs} para geração de artefatos que falharam, é um procedimento
+executado manualmente e requer diversos cuidados relacionados à criação de novas
+\textit{branchs} e ajuste dos \textit{jobs} para evitar a inclusão de código
+inserido por outro desenvolvedor com o propósito de publicação apenas na semana
+seguinte.
 
 A publicação em ambiente de produção ocorre \textbf{após} o término do
 expediente de quinta-feira, que ocorre às 20h00m em dias quando não há sessão
@@ -147,8 +157,8 @@ gerando a necessidade de pagamento de horas extras, cujo número se acentua
 em dias quando ocorre sessão plenária;
 
 \item O término do horário de expediente em Brasília diverge de algumas outras
-capitais. Em caso de horário de verão a diferença para Rio Branco, no Acre,
-por exemplo, chega a ser de 3 horas. Ou seja, o \texit{downtime} de 10 minutos
+capitais. Em caso de horário de verão, a diferença para Rio Branco, no Acre,
+por exemplo, chega a ser de 3 horas. Ou seja, o \textit{downtime} de 10 minutos
 a algumas horas impede a continuidade dos trabalhos em algumas secretarias
 de controle externo que funcionam nos estados;
 
@@ -156,7 +166,7 @@ de controle externo que funcionam nos estados;
 períodos sem publicação de software em ambiente de produção. Por exemplo, já
 ocorreu de em uma semana a publicação ser revertida pela ocorrência de erros,
 na semana seguinte ser feriado e na terceira ocorrer novo erro na publicação.
-Neste cenário, é possível que uma nova feature pronta tenha passado um mês
+Neste cenário, é possível que uma nova funcionalidade pronta tenha passado um mês
 inteiro até ser publicada;
 
 \item Nos casos de não funcionamento de aplicações em ambiente de produção,
@@ -170,6 +180,11 @@ na aplicação.
 Toda essa rigidez procedimental, com tarefas e horários encadeados ilustra o
 quão complexa podem se tornar soluções que visam contornar o problema da falta
 de colaboração entre os times de desenvolvimento e operações.
+
+Ademais, diante da necessidade de adoção de \textit{DevOps} no TCU, foi
+identificado que existe uma carência de orientações na literatura existente
+sobre \textit{DevOps} a respeito de caminhos a serem seguidos por novos
+praticantes.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -189,12 +204,9 @@ para que ocorra alinhado às práticas de mercado e, portanto, com menor
 chance de incorrer em falhas comuns, já superadas em outros contextos.
 
 A adoção de \textit{DevOps} no \acrshort{TCU} está alinhada aos direcionadores
-estratégicos da área de \acrshort{TI} do órgão e irá possibilitar uma
+estratégicos da área de \acrshort{TI} do órgão e tem possibilitado uma
 mudança de paradigma necessária para tratar adequadamente os problemas
 decorrentes da baixa colaboração entre os times de desenvolvimento e operações.
-
-%conforme ilustrado na \refFig{latexvsword}.%
-%\figuraBib{miktex}{\LaTeX\ vs MS Word}{pinteric_latex_2004}{latexvsword}{width=.45\textwidth}%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
