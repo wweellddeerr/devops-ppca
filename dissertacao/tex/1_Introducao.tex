@@ -41,70 +41,91 @@ que são considerados inadequados.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Problema de Pesquisa}%
 O \acrshort{TCU} possui sete times de desenvolvimento de \textit{software} e um
-único time de operações chamado de \acrfull{SINAP}. Esses times de
-desenvolvimento e operações trabalham historicamente em silos.
-O \acrshort{SINAP} participa do processo apenas em
-momentos específicos, notadamente quando uma infraestrutura precisa ser provida
-para publicação de algum artefato de \textit{software} e na publicação
+único time de operações, que historicamente trabalham em silos.
+A equipe de operações (\acrfull{SINAP}) participa do processo apenas em
+momentos específicos, notadamente quando uma nova infraestrutura precisa ser provida
+para publicação de algum artefato de \textit{software}, e na publicação
 propriamente dita.
 
 Essa estrutura em silos ocasionou alguns conflitos ao longo do tempo. Como
 exemplos de problemas ocorridos que levaram à manifestação
-de conflitos de interesses entre os times, destacam-se: (1) o não
-funcionamento em ambiente de produção de um software que funciona adequadamente
-em ambiente de desenvolvimento; e (2) o atraso em entregas de software
-importantes pelo não provisionamento tempestivo da infraestrutura necessária.
+destes conflitos, destacam-se: (1) o não
+funcionamento em ambiente de produção de um \textit{software} que funciona adequadamente
+em outros ambientes (desenvolvimento, por exemplo); e (2) o atraso em entregas
+de software importantes ocasionado pelo não provisionamento tempestivo da
+infraestrutura necessária.
 
 Como resposta aos conflitos ocorridos ao longo do tempo, o \acrshort{TCU}
 investiu na padronização de procedimentos. O provimento de infraestrutura
-para publicação de novas aplicações passou a funcionar de acordo com um
-\acrfull{SLA} que previa um prazo de sete dias desde a abertura por qualquer
-dos times de desenvolvimento de uma solicitação no sistema de
-\textit{servicedesk} interno. Na solicitação deveriam constar os detalhes
-de configuração necessária bem como estimativa de número de usuários que
-acessariam a aplicação.
+para publicação de novas aplicações passou a funcionar em conformidade com um
+\acrfull{SLA} que prevê um prazo de sete dias para conclusão por parte do time
+de operações. O provimento de infraestrutura deve ser pedido por qualquer
+dos times de desenvolvimento por meio de uma solicitação no sistema de
+\textit{servicedesk} interno, e o prazo inicia após a abertura dessa
+solicitação. Na solicitação devem constar os detalhes
+da configuração (quantidade de memória e CPU, por exemplo) necessária,
+bem como estimativa de número de usuários que irão acessar a aplicação.
 
-No tocante à publicação do software foi criada uma padronização de
-procedimentos denominada publicação programada. A publicação programada prevê
-que uma versão de todas as aplicações desenvolvidas será congelada semanalmente
-às 03h00m de terça-feira. As equipes de desenvolvimento tem então um prazo até
-as 13h00m para verificar se os artefatos foram congelados adequadamente. Após
-encerrado este prazo, o \acrshort{SINAP} efetua a publicação dos artefatos
-em um ambiente denominado pré-produção.
+No tocante à publicação do \textit{software} foi criada uma padronização de
+procedimentos denominada \emph{publicação programada}. A publicação programada
+é um processo que prevê um complexo encadeamento de ações com horários bem
+definidos visando reduzir o risco de problemas na publicação dos artefatos. Os
+detalhes desse processo são apresentados a seguir.
+
+A versão de todas as aplicações desenvolvidas é congelada semanalmente
+às 03h00m de terça-feira. Uma construção é executada com base no código contante
+na \textit{branch} master das aplicações no horário estabelecido. Os artefatos
+produzidos são então movidos para um diretório de rede onde só podem ser
+alterados pelo \acrshort{SINAP}.
+
+As equipes de desenvolvimento tem então um prazo até
+as 13h00m para verificar se os artefatos foram gerados adequadamente. Após
+encerrado este prazo, o \acrshort{SINAP} efetua a publicação
+em um ambiente denominado pré-produção. Caso algum artefato não tenha sido
+gerado adequadamente, os times devem gerá-lo e enviar solicitação para que o
+\acrshort{SINAP} atualize o diretório de rede com a versão adequada.
 
 Pré-produção é um ambiente mantido pelo time de operações que possui o
-propósito de ser o mais similar possível com o ambiente de produção, buscando-se
-evitar o não funcionamento de alguma aplicação apenas em ambiente de produção.
+propósito de ser \emph{o mais similar possível} ao ambiente de produção,
+buscando-se evitar o não funcionamento de alguma aplicação apenas em ambiente
+de produção.
 
 Após a publicação em pré-produção, o \acrshort{SINAP} envia um e-mail de
 ``abertura de temporada de testes em pré-produção'', a partir do qual os times
 de desenvolvimento executam testes manuais em suas respectivas aplicações.
 
-Caso seja necessária a execução de \textit{scripts} em banco de dados, a versão
-definitiva desses \textit{scripts} precisa ser concluída e incluída junto com
-os artefatos para publicação até o limite de 12h00 de terça-feira.
+É comum que versões específicas de artefatos necessitem da execução de
+\textit{scripts} em banco de dados para funcionar adequadamente, esta execução
+de \textit{scripts} também é padronizada. A sua versão definitiva
+precisa ser concluída e incluída junto com os artefatos para publicação até o
+limite de 12h00 de terça-feira. Ressalte-se que para que um \textit{script}
+esteja em versão definitiva, é necessário ter passado pela equipe de operações
+para validação, o que não há prazo definido para ocorrer. Um \textit{script}
+proposto por algum dos times de desenvolvimento durante o dia de segunda-feira
+tipicamente não é validado pelo time de operações até o limite de prazo e isso
+ocasiona erros na publicação dos artefatos relacionados.
 
-Após a publicação em ambiente de pré-produção (terça-feira) os artefatos podem
-ser substituídos pelo time de desenvolvimento a qualquer momento até o limite
-de 18h00m de quinta-feira, quando os artefatos são congelados definitivamente
-para publicação em ambiente de produção. Novas publicações em pré-produção
-ocorrem às 18h00m de terça-feira e às 14h00m de quarta e quinta-feira. Essas
-novas publicações são chamadas de corretivas. A geração de artefatos para
-publicações corretivas é um procedimento executado manualmente pelo
-desenvolvedor que deseja a nova publicação e requer diversos cuidados para
-evitar a inclusão de código inserido por outro desenvolvedor com o propósito
-de publicação apenas na semana seguinte.
+Após a publicação em ambiente de pré-produção (13h00m de terça-feira), os times
+de desenvolvimento podem solicitar a substituição dos artefatos a qualquer
+momento até o limite de 18h00m de quinta-feira, quando os artefatos são
+congelados definitivamente para publicação em ambiente de produção. Novas
+publicações em pré-produção ocorrem às 18h00m de terça-feira e às 14h00m de
+quarta e quinta-feira. Essas novas publicações são chamadas de emph{corretivas}.
+A geração de artefatos para publicações corretivas é um procedimento executado
+manualmente pelo desenvolvedor que deseja a nova publicação e requer diversos
+cuidados para evitar a inclusão de código inserido por outro desenvolvedor com o
+propósito de publicação apenas na semana seguinte.
 
 A publicação em ambiente de produção ocorre \textbf{após} o término do
-expediente de quinta-feira que ocorre às 20h00m em dias quando não há sessão
-plenária ou logo após o seu término que não há horário máximo estipulado.
+expediente de quinta-feira, que ocorre às 20h00m em dias quando não há sessão
+plenária ou logo após o seu término (não há horário máximo estipulado).
 Os procedimentos de publicação são executados manualmente pelo time de
-operações e gera um \textit{downtime} que pode variar de 10 minutos a algumas
+operações e ocorre um \textit{downtime} que pode variar de 10 minutos a algumas
 horas.
 
 O \acrshort{SLA} entre as equipes prevê que em caso de erros na publicação em
 produção, o \acrshort{SINAP} irá reverter a versão anterior e os novos
-artefatos só serão publicados na semana seguinte. Está previstos ainda que
+artefatos só serão publicados na semana seguinte. Está previsto ainda que
 não haverá publicação programada em semanas que contenham feriados ou pontos
 facultativos na quinta ou sexta-feira.
 
@@ -115,16 +136,34 @@ previamente. Todavia, alguns outros problemas de ordem prática passam a existir
 \item Uma eventual evolução pontual em alguma aplicação, cujo código tenha sido
 disponibilizado pelo desenvolvedor na manhã de uma terça-feira, só será
 disponibilizada para o usuário final em ambiente de produção na sexta-feira da
-semana seguinte, uma demora de 10 dias que nem sempre é aceitável;
+semana seguinte, uma demora de dez dias que nem sempre é aceitável;
 
 \item Por mais que o ambiente de pré-produção seja semelhante ao de produção,
 ainda ocorrem erros de versões que funcionam naquele mas não neste;
 
-\item downtime no Acre
+\item A publicação manual e com \textit{downtime} requer a alocação de
+profissionais para trabalho fora do horário regulamentar do \acrshort{TCU},
+gerando a necessidade de pagamento de horas extras, cujo número se acentua
+em dias quando ocorre sessão plenária;
 
-\item banco de dados sincronização
+\item O término do horário de expediente em Brasília diverge de algumas outras
+capitais. Em caso de horário de verão a diferença para Rio Branco, no Acre,
+por exemplo, chega a ser de 3 horas. Ou seja, o \texit{downtime} de 10 minutos
+a algumas horas impede a continuidade dos trabalhos em algumas secretarias
+de controle externo que funcionam nos estados;
 
-\item cenários com feriados e erros (time-to-market)
+\item Combinações de feriados com publicações com erros podem ocasionar longos
+períodos sem publicação de software em ambiente de produção. Por exemplo, já
+ocorreu de em uma semana a publicação ser revertida pela ocorrência de erros,
+na semana seguinte ser feriado e na terceira ocorrer novo erro na publicação.
+Neste cenário, é possível que uma nova feature pronta tenha passado um mês
+inteiro até ser publicada;
+
+\item Nos casos de não funcionamento de aplicações em ambiente de produção,
+a postura de resolução não é colaborativa. A preocupação do time de operações
+tende a ser tão somente assegurar que não é um problema na infraestrutura,
+enquanto que os times de desenvolvimento buscam defender que não é um problema
+na aplicação.
 
 \end{itemize}
 
@@ -141,7 +180,7 @@ O modelo produzido para orientar a adoção de \textit{DevOps} com base em
 experiências de mercado bem sucedidas, produzido durante a pesquisa e
 devidamente implementado no \acrshort{TCU}, representa um
 incremento ao conhecimento existente sobre \textit{DevOps}, com destaque
-para o melhor entendimento de como se adotar \textit{DevOps} com base na
+para o melhor entendimento de \emph{como} se adotar \textit{DevOps} com base na
 prática de mercado.
 
 Ademais, a realização deste estudo contribui para o intercâmbio de experiências
