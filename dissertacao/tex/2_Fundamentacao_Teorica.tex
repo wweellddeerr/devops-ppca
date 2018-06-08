@@ -14,10 +14,61 @@
 Este capítulo apresenta uma revisão dos principais trabalhos relacionados a
 \textit{DevOps} estando estruturado da seguinte forma:
 
+\section{Abordagem ``Não \textit{DevOps}'' de Desenvolvimento de Software}
+
+A questão de como o desenvolvimento de \textit{software} deve ser organizado
+visando entregar soluções com maior velocidade, melhor qualidade e menor custo
+é discutida nos círculos de engenharia de \textit{software} há décadas
+\cite{empirical_studies_agile}. Entre as abordagens de desenvolvimento de
+\textit{software} consideradas tradicionais, a mais antiga e mais amplamente
+utilizada é o modelo cascata, que divide o ciclo de vida de desenvolvimento
+de \textit{software} em estágios distintos e lineares
+\cite{software_quality_agile}.
+
+O modelo cascata possui diversas desvantagens, tais como inflexibilidade para
+mudanças de requisitos, e um processo altamente cerimonioso, que tipicamente
+despreza a natureza, o tamanho e as características individuais das pessoas
+envolvidas no projeto \cite{software_quality_agile}.
+
+Diante da pressão por desenvolvimento acelerado de novos produtos e a
+contrastante exigência de que esses produtos sejam cada vez mais confiáveis,
+muitas soluções de melhorias tem sido sugeridas, desde padronização e controle
+do processo de \textit{software} a um considerável número de ferramentas,
+técnicas e práticas.
+
+Os métodos ágeis de desenvolvimento de \textit{software} emergiram como
+alternativa aos modelos tradicionais (p.ex.: cascata) com a proposta de
+desburocratizar o processo, dispensando tudo que não seja essencial. Uma das
+consequências do uso de metodologias ágeis é a redução dos silos presentes no
+processo de desenvolvimento. As atividades que outrora eram executadas de
+maneira linear passaram a ser unificadas em um processo iterativo e contínuo
+de desenvolvimento \cite{a_decade_of_agile}.
+
+Embora as metodologias ágeis tenham possibilitado uma aproximação das
+atividades de desenvolvimento de \textit{software}, que passaram a ser
+executadas de maneira iterativa e contínua, as atividades de operações têm
+ficado de fora do contexto de práticas ágeis, gerando um gargalo na entrega
+de valor do \textit{software} \cite{understanding_devops}.
+
+Neste cenário, a equipe de operações tipicamente possui a última
+responsabilidade durante o processo, que é a de disponibilizar o
+\textit{software} em ambiente de produção. Segundo H\"uttermann
+\cite{devops_for_developers}, essa abordagem gera uma barreira organizacional
+e cultural que desencadeia três principais tipos de problemas: (1) cada time
+(desenvolvimento e operações) defende seus próprios interesses, ao invés de
+um interesse comum; (2) desenvolvimento de idiomas/vocabulários distintos pelos
+dois times que trabalham em problemas isoladamente, sem a busca de um objetivo
+comum; e (3) não compartilhamento de conhecimento entre os times, por falta
+de confiança e receio de perda de poder ou de confrontamento.
+
+Um outro problema típico dessa abordagem ``não \textit{DevOps}'' é a existência
+de um \textit{blame game} onde, na ocorrência de um problema, um lado acusa
+o outro de tê-lo causado \cite{toward_unified_model}.
+
 \section{O que é \textit{DevOps}?}
 
-\textit{DevOps} emergiu na indústria de desenvolvimento de software sem uma
-clara definição.
+\textit{DevOps} emergiu na indústria de desenvolvimento de \textit{software}
+sem uma clara definição ou delimitação teórica.
 
 Em \textit{What is DevOps?}, Loukides tenta ilustrar o conceito de
 \textit{DevOps} por meio da diferenciação entre o passado e o presente do
@@ -30,9 +81,9 @@ H\"uttermann \cite{devops_for_developers} salienta a dificuldade que é definir
 \textit{DevOps} e ressalta que o termo é multifacetado. O autor afirma que
 ``\textit{DevOps} descreve práticas que simplificam o processo de entrega
 de software, enfatizando o aprendizado por meio da transmissão contínua de
-\textit{feedback} da produção para o desenvolvimento''. Essa definição de
-\textit{DevOps} como um conjunto de práticas relacionadas à entrega de
-\textit{software} quando comparada com outras definições, demonstra carecer
+\textit{feedback} da produção para o desenvolvimento''. Quando comparada com
+outras, essa definição de \textit{DevOps} como um conjunto de práticas
+relacionadas à entrega de \textit{software}, demonstra carecer
 de uma maior ênfase no aspecto cultural. Por exemplo, de acordo com
 Walls \cite{building_devops_culture}, o termo foi introduzido justamente para
 definir uma cultura organizacional que as organizações podem buscar. De acordo
@@ -42,18 +93,28 @@ rápido''. O autor descreve quatro características culturais chave em um
 contexto de \textit{DevOps}: comunicação aberta, incentivo e alinhamento de
 responsabilidades, respeito e confiança.
 
+Tão intrincado e difícil é definir \textit{DevOps} que três estudos recentes
+investigaram especificamente essa questão.
 
+Por meio de uma revisão de literatura, o trabalho de J. Smeds et al.
+\cite{devops_a_definition} define \textit{DevOps} como um conjunto de
+capacidades do processo de engenharia de \textit{software} que é sustentado
+por certos facilitadores culturais e tecnológicos. Os autores enfatizam
+que as \emph{capacidades} definem processos que uma organização deve ser capaz
+de executar, enquanto que os \emph{facilitadores} possibilitam uma maneira
+fluente, flexível e eficiente de se trabalhar.
 
+Dyck et al \cite{towards_definitions}, por sua vez, definem \textit{DevOps}
+como uma abordagem organizacional que enfatiza a empatia e a colaboração
+interfuncional dentro e entre as equipes - especialmente o desenvolvimento e
+operações de TI - em organizações de desenvolvimento de software, para operar
+sistemas resilientes e acelerar a entrega de mudanças.
 
-
-
-Todavia, estudos recentes propõem definições
-dentre as quais desataca-se a de França et al. \cite{characterizing_devops}
-que definem \textit{DevOps} como um neologismo que representa um movimento de
-profissionais de tecnologia da informação e comunicação buscando uma
-diferente atitude no que se refere à entrega de \textit{software},
-através da colaboração entre o desenvolvimento de sistemas de
-\textit{software} e as funções de operações, com base em um conjunto
+Por fim, França et al. \cite{characterizing_devops} definem \textit{DevOps}
+como um neologismo que representa um movimento de profissionais de tecnologia
+da informação e comunicação buscando uma diferente atitude no que se refere à
+entrega de \textit{software}, através da colaboração entre o desenvolvimento de
+sistemas de \textit{software} e as funções de operações, com base em um conjunto
 de práticas, tais como cultura, automação, medição e compartilhamento.
 
 \section{Elementos de \textit{DevOps}}
