@@ -14,21 +14,21 @@
 Este capítulo apresenta uma revisão dos principais trabalhos relacionados a
 \textit{DevOps} estando estruturado da seguinte forma:
 
-\section{Abordagem ``Não \textit{DevOps}'' de Desenvolvimento de Software}
+\section{Abordagem ``Não \textit{DevOps}'' de Desenvolvimento de \textit{Software}}
 
 A questão de como o desenvolvimento de \textit{software} deve ser organizado
 visando entregar soluções com maior velocidade, melhor qualidade e menor custo
-é discutida nos círculos de engenharia de \textit{software} há décadas
+é discutida há décadas nos círculos de engenharia de \textit{software}
 \cite{empirical_studies_agile}. Entre as abordagens de desenvolvimento de
 \textit{software} consideradas tradicionais, a mais antiga e mais amplamente
 utilizada é o modelo cascata, que divide o ciclo de vida de desenvolvimento
 de \textit{software} em estágios distintos e lineares
 \cite{software_quality_agile}.
 
-O modelo cascata possui diversas desvantagens, tais como inflexibilidade para
+O modelo cascata possui algumas desvantagens, tais como inflexibilidade para
 mudanças de requisitos, e um processo altamente cerimonioso, que tipicamente
-despreza a natureza, o tamanho e as características individuais das pessoas
-envolvidas no projeto \cite{software_quality_agile}.
+despreza a natureza e o tamanho dos projetos e as características individuais
+das pessoas envolvidas \cite{software_quality_agile}.
 
 Diante da pressão por desenvolvimento acelerado de novos produtos e a
 contrastante exigência de que esses produtos sejam cada vez mais confiáveis,
@@ -50,9 +50,12 @@ executadas de maneira iterativa e contínua, as atividades de operações têm
 ficado de fora do contexto de práticas ágeis, gerando um gargalo na entrega
 de valor do \textit{software} \cite{understanding_devops}.
 
-Neste cenário, a equipe de operações tipicamente possui a última
-responsabilidade durante o processo, que é a de disponibilizar o
-\textit{software} em ambiente de produção. Segundo H\"uttermann
+Neste cenário, a equipe de operações tipicamente participa do processo
+apenas em um último momento, que é o de disponibilizar o
+\textit{software} em ambiente de produção. O time de desenvolvimento realiza
+diversas iterações, produz diversas versões intermediárias dos produtos de
+\textit{software} e o time de operações não tem participação ativa neste
+momento. Segundo H\"uttermann
 \cite{devops_for_developers}, essa abordagem gera uma barreira organizacional
 e cultural que desencadeia três principais tipos de problemas: (1) cada time
 (desenvolvimento e operações) defende seus próprios interesses, ao invés de
@@ -63,24 +66,62 @@ de confiança e receio de perda de poder ou de confrontamento.
 
 Um outro problema típico dessa abordagem ``não \textit{DevOps}'' é a existência
 de um \textit{blame game} onde, na ocorrência de um problema, um lado acusa
-o outro de tê-lo causado \cite{toward_unified_model}.
+o outro de tê-lo causado e o foco deixa de ser a resolução do problema em si
+e passa a ser apenas em evitar a responsabilização \cite{toward_unified_model}.
+
+\section{A História de \textit{DevOps}}
+
+O termo \textit{DevOps} foi cunhado em 2009 durante a organização da
+conferência \textit{DevOpsDays} na Bélgica \cite{devops_for_developers}.
+
+Todavia, as origens de \textit{DevOps} remetem para antes mesmo da existência
+do termo. Primeiro, em 2008, foi publicado o artigo ``\textit{Agile
+Infrastructure and Operations: How Infra-gile are You?}''
+\cite{agile_infra_operations} no qual
+Patrick Debois propôs analogias entre o sucesso com o qual os métodos ágeis
+se adaptam às constantes mudanças das necessidades de negócio e a maneira como
+a infraestrutura também poderia responder de maneira ágil à essas mudanças.
+Desafiando um suposto oxímoro no qual agilidade e infraestrutura não
+encaixam-se, o autor relata a experiência bem sucedida da aplicação de técnicas
+ágeis na construção e gerenciamento da infraestrutura de três projetos reais.
+Na mesma conferência onde Debois apresentou suas ideias de aplicar técnicas
+ágeis a contextos de infraestrutura, Andrew Shafer propôs uma sessão sobre
+infraestrutura ágil, momento em os dois começaram a interagir a respeito do
+tema \cite{effective_devops}.
+
+Pouco tempo depois, já em 2009, Hammond e Allspaw apresentaram ``\textit{10+ Deploys
+per Day: Dev and Ops Cooperation at Flickr}'' \cite{flickr} em uma conferência
+chamada \textit{Velocity}, ilustrando não somente o alto número de
+\textit{deploys} realizados na \textit{Flickr}, mas o poder revolucionário que
+a colaboração entre os times de desenvolvimento e operações possibilitou lá.
+
+E foi neste momento que o termo \textit{DevOps} finalmente surgiu. Segundo
+J. Davis e K. Daniels \cite{effective_devops}, em um \textit{tweet} de Andrew
+Shaffer convidando para a próxima edição da conferência \textit{Velocity}, que
+iria se concentrar em infraestrutura ágil, continha a \textit{hashtag}
+``\textit{\#devops}''. Ao ler este \textit{tweet}, Patrick Debois lamentou que
+não iria poder estar presente, pois estaria na Bélgica. Shaffer então teria
+sugerido a Debois que organizasse sua própria edição da conferência
+\textit{Velocity}. Foi quando Debois, utilizando o texto da \textit{hashtag}
+organizou a primeira edição do evento \textit{DevOpsDays} na Bélgica,
+iniciando a disseminação do termo \textit{DevOps}.
 
 \section{O que é \textit{DevOps}?}
 
 \textit{DevOps} emergiu na indústria de desenvolvimento de \textit{software}
 sem uma clara definição ou delimitação teórica.
 
-Em \textit{What is DevOps?}, Loukides tenta ilustrar o conceito de
-\textit{DevOps} por meio da diferenciação entre o passado e o presente do
-trabalho de operações de \acrshort{TI}. O texto ilustra os novos desafios
-existentes para os times de operações e destaca a importância da existência
-de colaboração com os times de desenvolvimento para superá-los. Todavia,
-não é apresentada uma definição final de \textit{DevOps}.
+Em \textit{What is DevOps?} \cite{what_is_devops}, Loukides tenta ilustrar o
+conceito de \textit{DevOps} por meio da diferenciação entre o passado e o
+presente do trabalho de operações de \acrshort{TI}. O texto ilustra os novos
+desafios existentes para os times de operações e destaca a importância da
+existência de colaboração com os times de desenvolvimento para superá-los.
+Todavia, não é apresentada uma definição final de \textit{DevOps}.
 
 H\"uttermann \cite{devops_for_developers} salienta a dificuldade que é definir
 \textit{DevOps} e ressalta que o termo é multifacetado. O autor afirma que
 ``\textit{DevOps} descreve práticas que simplificam o processo de entrega
-de software, enfatizando o aprendizado por meio da transmissão contínua de
+de \textit{software}, enfatizando o aprendizado por meio da transmissão contínua de
 \textit{feedback} da produção para o desenvolvimento''. Quando comparada com
 outras, essa definição de \textit{DevOps} como um conjunto de práticas
 relacionadas à entrega de \textit{software}, demonstra carecer
@@ -89,7 +130,7 @@ Walls \cite{building_devops_culture}, o termo foi introduzido justamente para
 definir uma cultura organizacional que as organizações podem buscar. De acordo
 com ele, \textit{DevOps} é ``um movimento cultural combinado com várias
 práticas relacionadas a \textit{software} que possibilitam um desenvolvimento
-rápido''. O autor descreve quatro características culturais chave em um
+rápido dos produtos''. O autor descreve quatro características culturais chave em um
 contexto de \textit{DevOps}: comunicação aberta, incentivo e alinhamento de
 responsabilidades, respeito e confiança.
 
@@ -107,7 +148,7 @@ fluente, flexível e eficiente de se trabalhar.
 Dyck et al \cite{towards_definitions}, por sua vez, definem \textit{DevOps}
 como uma abordagem organizacional que enfatiza a empatia e a colaboração
 interfuncional dentro e entre as equipes - especialmente o desenvolvimento e
-operações de TI - em organizações de desenvolvimento de software, para operar
+operações de TI - em organizações de desenvolvimento de \textit{software}, para operar
 sistemas resilientes e acelerar a entrega de mudanças.
 
 Por fim, França et al. \cite{characterizing_devops} definem \textit{DevOps}
@@ -118,6 +159,35 @@ sistemas de \textit{software} e as funções de operações, com base em um conj
 de práticas, tais como cultura, automação, medição e compartilhamento.
 
 \section{Elementos de \textit{DevOps}}
+
+As caracterizações de \textit{DevOps} tipicamente utilizam enumerações e
+detalhamentos de elementos relacionados. Esses elementos podem ser práticas,
+técnicas, princípios ou dimensões de \textit{DevOps}. Aqui são apresentados
+os principais elementos de \textit{DevOps} identificados na literatura
+relacionada.
+
+Em 2010, John Willis propôs uma caracterização de \textit{DevOps} \cite{}
+que se tornou influente. De acordo com esta proposta, \textit{DevOps} é
+constituído de quatro elementos cujas iniciais compõem o acrônimo CAMS: cultura,
+automação, medição e compartilhamento (sharing, em inglês). Esse modelo é
+conhecido como CAMS \textit{Framework}.
+
+Na revisão de literatura de fulano, foram acrescentados tais novos elementos.
+
+Posteriormente Lwakatare et al.
+
+Characterizing DevOps
+
+A qualitative study of DevOps
+
+\subsection{Cultura}
+Willis é bastante sucinto com realação a cultura: pessoas e processos primeiro.
+
+\subsection{Automação}
+
+\subsection{Medição}
+
+\subsection{Compartilhamento}
 
 \section{Impedimentos de \textit{DevOps}}
 
