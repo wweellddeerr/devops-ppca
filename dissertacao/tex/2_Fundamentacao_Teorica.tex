@@ -12,9 +12,29 @@
 \\\vspace{\baselineskip}}%
 
 Este capítulo apresenta uma revisão dos principais trabalhos relacionados a
-\textit{DevOps} estando estruturado da seguinte forma:
+\textit{DevOps}, estando estruturado da seguinte forma: a seção \ref{secao_abordagem_nao_devops}
+apresenta a maneira como o desenvolvimento de \textit{software} tipicamente é
+organizado quando não se utiliza \textit{DevOps} como abordagem; a seção \ref{secao_historico_devops}
+contém um breve histórico do surgimento do termo \textit{DevOps}; na seção
+\ref{secao_definicao_devops} são apresentadas as principais definições de
+\textit{DevOps} existentes na literatura; a seção \ref{secao_elementos_devops}
+contém um detalhamento dos principais elementos que fazem parte das caracterizações
+de \textit{DevOps} presentes na literatura.
 
 \section{Abordagem ``Não \textit{DevOps}'' de Desenvolvimento de \textit{Software}}
+\label{secao_abordagem_nao_devops}
+
+De acordo com Davis e Daniels \cite{effective_devops}, no início o desenvolvedor
+era o operador, o trabalho de construir um \textit{software} embutia todos
+os aspectos relacionados ao \textit{hardware} no qual ele iria operar. Apenas
+com o advento dos \textit{softwares} proprietários, no final do anos 1960,
+\textit{software} e \textit{hardware} foram desacoplados, em termos de atividades
+de desenvolvimento. Ainda segundo as autoras, o crescimento de popularidade da
+internet gerou uma maior complexidade nos produtos de \textit{software}
+requeridos para atender as necessidades das organizações. Essa maior
+complexidade gerou uma proliferação de papéis e habilidades necessárias durante
+a construção de \textit{software}. Grupos como qualidade, segurança, bancos de
+dados tornaram-se áreas separadas durante o desenvolvimento de \textit{software}.
 
 A questão de como o desenvolvimento de \textit{software} deve ser organizado
 visando entregar soluções com maior velocidade, melhor qualidade e menor custo
@@ -69,7 +89,7 @@ de um \textit{blame game} onde, na ocorrência de um problema, um lado acusa
 o outro de tê-lo causado e o foco deixa de ser a resolução do problema em si
 e passa a ser apenas em evitar a responsabilização \cite{toward_unified_model}.
 
-\section{A História de \textit{DevOps}}
+\section{A História de \textit{DevOps}}\label{secao_historico_devops}
 
 O termo \textit{DevOps} foi cunhado em 2009 durante a organização da
 conferência \textit{DevOpsDays} na Bélgica \cite{devops_for_developers}.
@@ -118,13 +138,11 @@ desafios existentes para os times de operações e destaca a importância da
 existência de colaboração com os times de desenvolvimento para superá-los.
 Todavia, não é apresentada uma definição final de \textit{DevOps}.
 
-H\"uttermann \cite{devops_for_developers} salienta a dificuldade que é definir
-\textit{DevOps} e ressalta que o termo é multifacetado. O autor afirma que
-``\textit{DevOps} descreve práticas que simplificam o processo de entrega
-de \textit{software}, enfatizando o aprendizado por meio da transmissão contínua de
-\textit{feedback} da produção para o desenvolvimento''. Quando comparada com
-outras, essa definição de \textit{DevOps} como um conjunto de práticas
-relacionadas à entrega de \textit{software}, demonstra carecer
+H\"uttermann afirma que ``\textit{DevOps} descreve práticas que simplificam o
+processo de entrega de \textit{software}, enfatizando o aprendizado por meio da
+transmissão contínua de \textit{feedback} da produção para o desenvolvimento''.
+Quando comparada com outras, essa definição de \textit{DevOps} como um conjunto
+de práticas relacionadas à entrega de \textit{software}, demonstra carecer
 de uma maior ênfase no aspecto cultural. Por exemplo, de acordo com
 Walls \cite{building_devops_culture}, o termo foi introduzido justamente para
 definir uma cultura organizacional que as organizações podem buscar. De acordo
@@ -134,8 +152,16 @@ rápido dos produtos''. O autor descreve quatro características culturais chave
 contexto de \textit{DevOps}: comunicação aberta, incentivo e alinhamento de
 responsabilidades, respeito e confiança.
 
-Tão intrincado e difícil é definir \textit{DevOps} que três estudos recentes
-investigaram especificamente essa questão.
+O aspecto cultural de \textit{DevOps} é também ressaltado por Davis e Daniels
+\cite{effective_devops} que o definem como um movimento cultural que altera
+como os indivíduos pensam sobre seu trabalho, valoriza a diversidade, apóia
+processos que aceleram o ritmo da obtenção de valor e medem o efeito da mudança
+social e técnica.
+
+Como ressaltado por H\"uttermann \cite{devops_for_developers}, \textit{DevOps}
+é um termo multifacetado e de difícil definição. A seguir, são apresentadas
+três definições de \textit{DevOps} obtidas em estudos que dedicaram-se a
+investigar essa questão em específico.
 
 Por meio de uma revisão de literatura, o trabalho de J. Smeds et al.
 \cite{devops_a_definition} define \textit{DevOps} como um conjunto de
@@ -148,8 +174,8 @@ fluente, flexível e eficiente de se trabalhar.
 Dyck et al \cite{towards_definitions}, por sua vez, definem \textit{DevOps}
 como uma abordagem organizacional que enfatiza a empatia e a colaboração
 interfuncional dentro e entre as equipes - especialmente o desenvolvimento e
-operações de TI - em organizações de desenvolvimento de \textit{software}, para operar
-sistemas resilientes e acelerar a entrega de mudanças.
+operações de TI - em organizações de desenvolvimento de \textit{software}, para
+operar sistemas resilientes e acelerar a entrega de mudanças.
 
 Por fim, França et al. \cite{characterizing_devops} definem \textit{DevOps}
 como um neologismo que representa um movimento de profissionais de tecnologia
@@ -161,26 +187,42 @@ de práticas, tais como cultura, automação, medição e compartilhamento.
 \section{Elementos de \textit{DevOps}}
 
 As caracterizações de \textit{DevOps} tipicamente utilizam enumerações e
-detalhamentos de elementos relacionados. Esses elementos podem ser práticas,
-técnicas, princípios ou dimensões de \textit{DevOps}. Aqui são apresentados
-os principais elementos de \textit{DevOps} identificados na literatura
-relacionada.
+detalhamentos de elementos relacionados. Nesta seção são apresentados os
+principais elementos de \textit{DevOps} identificados na literatura relacionada.
+O termo ``elemento'' é aqui usado para unificar o vocabulário da literatura
+relacionada no qual constam termos distintos, como ``conceitos'', ``dimensões''
+e ``princípios'' de \textit{DevOps}.
 
-Em 2010, John Willis propôs uma caracterização de \textit{DevOps} \cite{}
-que se tornou influente. De acordo com esta proposta, \textit{DevOps} é
-constituído de quatro elementos cujas iniciais compõem o acrônimo CAMS: cultura,
-automação, medição e compartilhamento (sharing, em inglês). Esse modelo é
-conhecido como CAMS \textit{Framework}.
+Em 2010, John Willis propôs uma caracterização de \textit{DevOps}
+\cite{what_devops_means_2010} que se tornou influente. De acordo com esta
+proposta, \textit{DevOps} é constituído de quatro elementos cujas iniciais
+compõem o acrônimo CAMS: cultura, automação, medição e compartilhamento
+(\textit{sharing}, em inglês). Esse modelo é conhecido como CAMS
+\textit{Framework}.
 
-Na revisão de literatura de fulano, foram acrescentados tais novos elementos.
+Uma revisão de literatura de Erich et al. \cite{cooperation_dev_ops_esem_2014}
+apresentou oito conceitos principais relacionados a \textit{DevOps}, os quatro
+presentes no CAMS \textit{framework} acrescidos de (1) serviços, (2) garantia
+da qualidade, (3) estruturas e (4) padrões.
 
-Posteriormente Lwakatare et al.
+Posteriormente Lwakatare et al. \cite{dimensions_of_devops} apresentaram uma
+caracterização de \textit{DevOps} como um \textit{framework} conceitual que
+contém quatro dimensões: colaboração, automação, medição e
+\textbf{monitoramento}, este último sendo o único elemento novo, em comparação
+com os estudos anteriores. Uma extensão deste trabalho foi publicada
+posteriormente em \cite{extending_dimensions} e acrescentou uma nova dimensão
+chamada de colaboração.
 
-Characterizing DevOps
+Em \emph{Characterizing DevOps by Hearing Multiple Voices}, França et al.
+\cite{characterizing_devops} organizam os elementos de \textit{DevOps} em seis
+categorias de princípios: (1) automação, (2) garantia da qualidade,
+(3) compartilhamento, (4) medição, (5) \textbf{aspectos sociais} e (6)
+\textbf{\textit{Leanness}}, os dois últimos são elementos novos em relação
+aos já apresentados aqui.
 
 A qualitative study of DevOps
 
-\subsection{Cultura}
+\subsection{Cultura / Colaboração / Cultura de Colaboração}
 Willis é bastante sucinto com realação a cultura: pessoas e processos primeiro.
 
 \subsection{Automação}

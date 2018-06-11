@@ -1,26 +1,23 @@
 O advento e a consolidação dos métodos ágeis de desenvolvimento de
 \textit{software} possibilitaram uma maior eficiência na produção de
 \textit{software} com entregas mais rápidas em um período de tempo menor
-\cite{}. Todavia, essa mudança gerou um aumento na demanda da equipe de
+\cite{agile_sw_dev}. Todavia, essa mudança gerou um aumento na demanda da equipe de
 operações, tipicamente responsável pelas atividades relacionadas a
-publicação dos artefatos de \textit{software} e que não participava
+publicação dos artefatos de \textit{software}, e que não participava
 do processo de desenvolvimento ágil \cite{humble2010continuous}.
 
-Visando reduzir as barreiras entre os times de desenvolvimento e operações,
-trazendo as atividades típicas de operações para um contexto de agilidade
-já presente durante o desenvolvimento, o conceito de \textit{DevOps} emergiu
-na indústria de desenvolvimento de software. O termo \textit{DevOps} é uma
+Visando reduzir as barreiras entre os times, trazendo as atividades típicas
+do time operações para um contexto de agilidade já presente durante o
+desenvolvimento, o conceito de \textit{DevOps} emergiu na indústria de
+desenvolvimento de \textit{software}. O termo \textit{DevOps} é uma
 junção das palavras ``\textit{development}'' e ``\textit{operations}'' que
 foi usado pela primeira vez em 2009 \cite{devops_for_developers}.
 
-A necessidade de se rediscutir o papel do time de operações durante o
-desenvolvimento de software já havia sido apontada mesmo antes de o termo
-\textit{DevOps} existir. Uma apresentação da \textit{Flickr} \cite{flickr}
-onde é proposta uma rediscussão sobre os papéis dos times de desenvolvimento e
-operações, e os benefícios de uma mudança de paradigma
-com maior aproximação e colaboração entre estes times são
-explorados é considerada um dos pontos de partida para o surgimento de
-\textit{DevOps} \cite{devops_for_developers}.
+Antes mesmo de o termo \textit{DevOps} existir, artigos e apresentações
+já tratavam da aplicação dos princípios ágeis também às atividades de operações,
+da rediscussão sobre os papéis dos times de desenvolvimento e operações, e dos
+benefícios de uma mudança de paradigma com maior aproximação e colaboração
+entre estes times~\cite{devops_for_developers,flickr}.
 
 Os benefícios relacionados a \textit{DevOps} incluem aumento na performance
 e na produtividate organizacional de \acrshort{TI}, redução de custos no ciclo de vida
@@ -28,13 +25,13 @@ de \textit{software}, melhoria na eficiência e eficácia operacional e maior
 alinhamento com o negócio entre os times de desenvolvimento e operações
 \cite{characterizing_devops}.
 
-Nesse contexto, o \acrfull{TCU} inseriu como um dos direcionadores da Secretaria
-de Soluções de Tecnologia da Informação para o biênio 2017/2018: \emph{o
+Nesse contexto, o \acrfull{TCU} inseriu como um dos direcionadores presentes
+em seu \acrfull{PDTI} para o biênio 2017/2018: \emph{o
 aprimoramento do uso de práticas ágeis em todas as equipes e ampliação do uso da
 abordagem DevOps}. O entendimento é de que os rígidos procedimentos criados
 como paleativo para o problema da baixa colaboração entre os times de
-desenvolvimento e operações ocasionam atrasos na entrega de software do órgão
-que são considerados inadequados.
+desenvolvimento e operações ocasionam atrasos na entrega de \textit{software}
+do órgão que são considerados inadequados.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -42,18 +39,18 @@ que são considerados inadequados.
 \section{Problema de Pesquisa}%
 O \acrshort{TCU} possui sete times de desenvolvimento de \textit{software} e um
 único time de operações, que historicamente trabalham em silos.
-A equipe de operações (\acrfull{SINAP}) participa da produção de software apenas
-em momentos específicos, notadamente quando uma nova infraestrutura precisa ser
-provida para publicação de algum artefato de \textit{software}, e também na
-publicação propriamente dita.
+A equipe de operações (\acrfull{SINAP}) participa da produção de
+\textit{software} apenas em momentos específicos, notadamente quando uma nova
+infraestrutura precisa ser provida para publicação de algum artefato de
+\textit{software}, e também na publicação propriamente dita.
 
 Essa estrutura em silos ocasionou alguns conflitos ao longo do tempo. Como
 exemplos de problemas ocorridos que levaram à manifestação
-destes conflitos, destacam-se: (1) o não
-funcionamento em ambiente de produção de um \textit{software} que funciona adequadamente
-em outros ambientes (desenvolvimento, por exemplo); e (2) o atraso em entregas
-de software importantes ocasionado pelo não provisionamento tempestivo da
-infraestrutura necessária.
+destes conflitos, destacam-se: (1) o não funcionamento em ambiente de produção
+de um \textit{software} que funciona adequadamente
+em outros ambientes, como ambiente de desenvolvimento, por exemplo; e (2) o
+atraso em entregas de \textit{software} consideradas importantes ocasionado
+pelo não provisionamento tempestivo da infraestrutura necessária.
 
 Como resposta aos conflitos ocorridos ao longo do tempo, o \acrshort{TCU}
 investiu na padronização de procedimentos. O provimento de infraestrutura
@@ -67,19 +64,24 @@ e CPU, por exemplo) necessária, bem como estimativa de número de usuários que
 irão acessar a aplicação.
 
 No tocante à publicação do \textit{software}, foi criada uma padronização de
-procedimentos denominada \emph{publicação programada}. A publicação programada
+procedimentos denominada \emph{publicação programada}, que é vista como a maior
+manifestação atual da falta de colaboração entre os times de desenvolvimento
+de operações do \acrshort{TCU}. A publicação programada
 é um processo que prevê um complexo encadeamento de ações com horários bem
 definidos visando reduzir o risco de problemas na publicação dos artefatos. Os
 detalhes desse processo são apresentados a seguir.
 
 A versão de todas as aplicações desenvolvidas é congelada semanalmente
 às 03h00m de terça-feira. Para que esse congelamento fosse viabilizado, foi
-criado um segundo \textit{Jenkins} e um segundo \textit{Artifactory} cujos
-\textit{jobs} apenas podem ser executados no contexto da publicação programada.
-Uma primeira construção é executada com base no código contante
-na \textit{branch} master das aplicações no horário estabelecido. Os artefatos
-produzidos são então publicados no servidor \textit{artifactory} onde só podem
-ser alterados pelo \acrshort{SINAP}.
+criado um segundo servidor \textit{Artifactory}\footnote{Gerenciador de
+repositórios de artefatos de \textit{software} \url{https://jfrog.com/artifactory/}}
+e um segundo servidor \textit{Jenkins}\footnote{Servidor de integração contínua
+\url{https://jenkins.io/}}
+cujos \textit{jobs} apenas podem ser executados no
+contexto da publicação programada. Uma primeira construção é executada com
+base no código contante na \textit{branch} master das aplicações no horário
+estabelecido. Os artefatos produzidos são então publicados no servidor
+\textit{artifactory} onde só podem ser alterados pelo \acrshort{SINAP}.
 
 As equipes de desenvolvimento tem então um prazo até
 as 13h00m para verificar se os artefatos foram gerados adequadamente. Após
@@ -151,6 +153,10 @@ semana seguinte, uma demora de dez dias que nem sempre é aceitável;
 \item Por mais que o ambiente de pré-produção seja semelhante ao de produção,
 ainda ocorrem erros de versões que funcionam naquele mas não neste;
 
+\item A existência de servidores \textit{artifactory} e \textit{jenkins}
+duplicados aumenta o retrabalho e o risco de erros durante o processo de
+geração de artefatos para publicação;
+
 \item A publicação manual e com \textit{downtime} requer a alocação de
 profissionais para trabalho fora do horário regulamentar do \acrshort{TCU},
 gerando a necessidade de pagamento de horas extras, cujo número se acentua
@@ -163,7 +169,7 @@ a algumas horas impede a continuidade dos trabalhos em algumas secretarias
 de controle externo que funcionam nos estados;
 
 \item Combinações de feriados com publicações com erros podem ocasionar longos
-períodos sem publicação de software em ambiente de produção. Por exemplo, já
+períodos sem publicação de \textit{software} em ambiente de produção. Por exemplo, já
 ocorreu de em uma semana a publicação ser revertida pela ocorrência de erros,
 na semana seguinte ser feriado e na terceira ocorrer novo erro na publicação.
 Neste cenário, é possível que uma nova funcionalidade pronta tenha passado um mês
@@ -235,6 +241,27 @@ O resultado esperado para essa pesquisa é a construção e implantação no
 experiências bem sucedidas coletadas empiricamente da prática na indústria.
 
 \section{Estrutura do Trabalho}
+
+O restante deste documento está organizado em cinco capítulos cujos conteúdos
+foram estruturados da seguinte forma:
+
+\begin{itemize}
+\item \textbf{Capítulo 2.} Introduz o tema \textit{DevOps} por meio da
+apresentação de seu histórico, definições e elementos que o caracterizam;
+\item \textbf{Capítulo 3.} Apresenta o detalhamento da pesquisa utilizando
+\textit{\acrfull{GT}} que possibilitou a caracterização da adoção de
+\textit{DevOps} com base na percepção de praticantes da indústria;
+\item \textbf{Capítulo 4.} Contém detalhes de um modelo para adoção de
+\textit{DevOps} proposto com base na teoria construída no Capítulo 2 e os
+respectivos detalhes da sua implantação no \acrshort{TCU};
+\item \textbf{Capítulo 5.} Apresenta os resultados de uma avaliação empírica
+utilizada para obter as percepções relacionadas à adoção de \textit{DevOps} no
+\acrshort{TCU}.
+\item \textbf{Capítulo 6.} Contém as conclusões do trabalho com designação
+das suas limitações bem como de oportunidades para trabalhos futuros.
+\end{itemize}
+
+
 %\section{Normas CIC}
 
 % \href{http://monografias.cic.unb.br/dspace/normasGerais.pdf}{Política de Publicação de Monografias e Dissertações no Repositório Digital do CIC}%
