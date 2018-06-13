@@ -309,6 +309,16 @@ aos elementos que não fazem parte do \textit{framework}, \emph{garantia
 da qualidade} e \emph{serviços} aparecem em três e dois estudos, respectivamente,
 enquanto que os demais aparecem apenas em um único estudo.
 
+Nas subseções a seguir, cada um dos elementos é detalhado. Alguns dos trabalhos
+relacionados citam práticas relacionadas aos elementos. Quando aplicável, as
+práticas também são listadas. Os elementos \emph{estruturas} e \emph{padrões}
+foram citados apenas em \cite{cooperation_dev_ops_esem_2014} e não foi
+apresentado um detalhamento sobre suas características. O mesmo grupo de
+autores retirou esses elementos dos resultados apresentados a partir de uma
+nova revisão de literatura realizada em \cite{qualitative_devops_journalsw_17}.
+Assim sendo, esses elementos não fazem parte do detalhamento apresentado a
+seguir.
+
 \subsection{Cultura de Colaboração}
 
 No \acrshort{CAMS} \textit{framework} \cite{what_devops_means_2010}, este
@@ -353,11 +363,175 @@ comunicação burocrática, sem confiança mútua e buscando objetivos distintos
 
 \subsubsection{Práticas Relacionadas}
 
+Como práticas relacionadas ao elemento \emph{cultura de colaboração}, são
+apresentadas as seis seguintes em \cite{extending_dimensions}:
+
+\begin{enumerate}
+\item Aumentar o escopo de responsabilidades;
+\item Intensificar a cooperação e o envolvimento no trabalho diário de cada um
+dos times;
+\item Tanto desenvolvedores como operadores são considerados responsáveis para
+lidar com incidentes;
+\item Integrar o desenvolvimento Integrating development em pós-mortem de
+produção;
+\item Tornar a comunicação entre desenvolvimento e operações menos formal e
+sem adversidades;
+\item Respeito mútuo, apoio e vontade de trabalhar juntos e compartilhamento
+de responsabilidades.
+\end{enumerate}
+
+Enquanto que em \cite{characterizing_devops}, são apresentadas mais oito
+práticas:
+
+\begin{enumerate}
+\item Avaliação coletiva de desempenho;
+\item Cultura de confiança;
+\item Comunicação efetiva;
+\item Aprendizagem mútua;
+\item Abertura para mudanças;
+\item Responsabilidade pessoal;
+\item Relevância de aspectos culturais;
+\item Respeito entre os membros dos times.
+\end{enumerate}
+
+Ambos os trabalhos apresentam poucos detalhes a respeito das práticas, fazem
+apenas uma enumeração delas.
+
 \subsection{Automação}
+
+Organizações praticando \textit{DevOps} almejam ter um maior nível de automação
+\cite{qualitative_devops_journalsw_17}.
+
+No \acrshort{CAMS} \textit{framework} \cite{what_devops_means_2010}, é citado
+que as ferramentas \textit{DevOps} possibilitam uma ampla gama de possibilidades
+para automação. Ferramentas para gerenciamento de versões, provisionamento,
+gerenciamento de configuração, integração de sistemas, monitoramento e controle
+e orquestração são tratatadas como peças importantes na construção de uma
+estrutura Devops.
+
+Para acompanhar o ritmo ágil das práticas de desenvolvimento de software, os
+processos de operações precisam ser flexíveis, repetíveis e rápidos, e a
+automação é vista como um meio para isso. Em ambientes complexos, é difícil
+e demorado implantar funcionalidades manualmente e gerenciar configurações de
+infraestrutura de software. Além disso, existe automação de testes visando
+garantir a qualidade das funcionalidades implantadas
+\cite{dimensions_of_devops,extending_dimensions}.
+
+França et al. \cite{characterizing_devops} acrescentam que automação é um dos
+princípios fundamentais de \textit{DevOps} pois reduz os esforços repetitivos
+e acelera a entrega de software, melhorando não só a velocidade de entrega,
+como também a consistência da infraestrutura, a produtividade das equieps e
+a repetibilidade das tarefas.
+
+\subsubsection{Práticas Relacionadas}
+
+Como práticas relacionadas a automação, têm-se (1) infraestrutura como código
+e (2) automação do processo de \textit{deployment} apresentadas em
+\cite{extending_dimensions}, enquanto que em \cite{characterizing_devops} são
+apresentadas as seguintes: (1) aceleração por meio de automação, (2)
+automatização de tarefas repetitivas, (3) automatização da coleta de métricas,
+(4) automatização da infraestrutura e (5) consistência da infraestrutura.
 
 \subsection{Medição}
 
+Organizações que praticam \textit{DevOps} tentam usar métricas que envolvem
+disciplinas de desenvolvimento e operações, ao invés de métricas separadas
+para cada um dos times \cite{qualitative_devops_journalsw_17}.
+
+Sem \emph{medição} não há como melhorar, uma implementação bem sucedida de
+\textit{DevOps} irá medir tudo o que for possível com a maior frequência
+possível, há a coleta de métricas de desempenho, de processo e até mesmo de
+pessoas \cite{what_devops_means_2010}.
+
+A \emph{medição} em \textit{DevOps} é obtida quando os esforços vão além do
+controle básico de qualidade, há medições usando dados de desempenho e uso em
+tempo real das funcionalidades do \textit{software} em ambiente de produção.
+Com uma \emph{medição} efetiva, os esforços de desenvolvimento de
+\textit{software} são efetivamente medidos \cite{dimensions_of_devops}.
+
+\textit{DevOps} envolve a coleta de métricas eficientes para apoiar a tomada
+de decisões no ciclo de vida de desenvolvimento e operações de
+\textit{software} \cite{characterizing_devops}.
+
+\subsubsection{Práticas Relacionadas}
+
+As quatro práticas a seguir são apresentadas em \cite{extending_dimensions}:
+
+\begin{enumerate}
+\item As equipes de operações e de desenvolvimento são incentivadas e
+recompensadas pelas mesmas métricas;
+\item Tanto desenvolvimento quanto operações se concentram no valor de negócio
+como a unidade essencial de medição;
+\item O progresso no desenvolvimento é medido em termos de sistema
+funcionando em ambiente de produção;
+\item Os desenvolvedores usam \textit{feedback} de produção para orientar
+decisões, melhorias e alterações nos sistemas.
+\end{enumerate}
+
+Enquanto que em \cite{characterizing_devops} são apresentadas as quatro
+seguintes práticas: (1) medição para entender o código e o ambiente, (2)
+monitoramento do negócio por meio de métricas, (3) monitoramento de operações
+e (4) Monitoramento de equipes por meio de métricas.
+
 \subsection{Compartilhamento}
+
+As organizações que praticam \textit{DevOps} tentam facilitar o desenvolvimento
+e as operações, por meio do uso de sistemas compartilhados para registrar o
+conhecimento \cite{qualitative_devops_journalsw_17}.
+
+O compartilhamento é o \textit{loopback} no ciclo do \acrshort{CAMS}
+\textit{framework}. Segundo Willis, criar uma cultura onde as pessoas
+compartilham idéias e problemas é fundamental, ademais o compartilhamento de
+ideias cria um \textit{feedback} aberto que no final as ajuda a melhorar
+\cite{what_devops_means_2010}.
+
+\textit{DevOps} envolve cenários onde a informação e o conhecimento são
+disseminados entre os indivíduos para promover o intercâmbio de aprendizado
+pessoal e informações sobre projetos. Nesse sentido, os indivíduos divulgam
+informações relevantes, por exemplo, sobre como implementar e executar
+práticas recomendadas. Além disso, as informações sobre mudanças ou novas
+características de produtos devem ser distribuídas para entre os envolvidos
+tanto da equipe de desenvolvimento quanto da de operações e isso promove a
+visibilidade do fluxo de trabalho \cite{characterizing_devops}.
+
+\subsubsection{Práticas Relacionadas}
+
+Como práticas relacionadas a \emph{compartilhamento}, apenas são apresentadas
+as práticas (1) compartilhamento do aprendizado pessoal e (2) compartilhamento
+de informações de projeto, em \cite{characterizing_devops}.
+
+\subsection{Serviços}
+
+Este elemento está presente em \cite{cooperation_dev_ops_esem_2014} e em
+\cite{qualitative_devops_journalsw_17}. Neste último estudo, é explicado que
+considerar \emph{serviços} como elemento \textit{DevOps} consiste em considerar
+uma característica das organizações que se estruturam em torno de serviços,
+ao invés de em torno de disciplinas (como desenvolvimento e operações, por
+exemplo). Organizações que praticam \textit{DevOps}
+tipicamente usam serviços em nuvem e a arquitetura de microsserviços.
+
+\subsection{Garantia da Qualidade}
+
+As organizações que praticam \textit{DevOps} tentam incorporar o controle de
+qualidade ao processo de construção de \textit{software}, visando garantir
+que os produtos e serviços possuam uma qualidade adequada.
+
+A busca por \emph{garantia da qualidade} suporta a implementação de práticas
+\textit{DevOps} uma vez que vincula diferentes partes interessadas
+(desenvolvimento, operações, suporte e clientes) para realizar atividades de
+forma eficiente e confiável. Ademais, representa o esforço para garantir que
+os produtos e serviços atendam aos padrões de qualidade estabelecidos
+\cite{characterizing_devops}.
+
+\subsubsection{Práticas Relacionadas}
+
+Em \cite{characterizing_devops} é apresentada uma única prática que possui
+pouca expressividade e detalhamento: \emph{preocupações de garantia de
+qualidade}.
+
+\subsection{Monitoramento}
+
+\subsection{\textit{Leanness}}
 
 \section{Impedimentos de \textit{DevOps}}
 
