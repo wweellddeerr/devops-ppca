@@ -19,7 +19,9 @@ contém um breve histórico do surgimento do termo \textit{DevOps}; na seção
 \ref{secao_definicao_devops} são apresentadas as principais definições de
 \textit{DevOps} existentes na literatura; a seção \ref{secao_elementos_devops}
 contém um detalhamento dos principais elementos que fazem parte das caracterizações
-de \textit{DevOps} presentes na literatura.
+de \textit{DevOps}. E, por fim, na seção \ref{secao_adocao_devops}
+são apresentadas percepções a respeito de como aspectos relacionados à adoção
+de \textit{DevOps} estão presentes literatura relacionada.
 
 \section{Abordagem ``Não \textit{DevOps}'' de Desenvolvimento de \textit{Software}}
 \label{secao_abordagem_nao_devops}
@@ -31,18 +33,19 @@ com o advento dos \textit{softwares} proprietários, no final do anos 1960,
 \textit{software} e \textit{hardware} foram desacoplados, em termos de atividades
 de desenvolvimento. Ainda segundo as autoras, o crescimento de popularidade da
 internet gerou uma maior complexidade nos produtos de \textit{software}
-requeridos para atender as necessidades das organizações. Essa maior
-complexidade gerou uma proliferação de papéis e habilidades necessárias durante
-a construção de \textit{software}. Grupos como qualidade, segurança, bancos de
-dados tornaram-se áreas separadas durante o desenvolvimento de \textit{software}.
+requeridos para atender às necessidades das organizações. Essa maior
+complexidade gerou uma proliferação dos papéis existentes e das habilidades
+necessárias durante a construção de \textit{software}. Grupos como qualidade,
+requisitos, segurança e bancos de dados tornaram-se áreas dissociadas durante o
+desenvolvimento de \textit{software}.
 
-A questão de como o desenvolvimento de \textit{software} deve ser organizado
-visando entregar soluções com maior velocidade, melhor qualidade e menor custo
-é discutida há décadas nos círculos de engenharia de \textit{software}
-\cite{empirical_studies_agile}. Entre as abordagens de desenvolvimento de
-\textit{software} consideradas tradicionais, a mais antiga e mais amplamente
-utilizada é o modelo cascata, que divide o ciclo de vida de desenvolvimento
-de \textit{software} em estágios distintos e lineares
+Desde então, a questão de como o desenvolvimento de \textit{software} deve ser
+organizado visando entregar soluções com maior velocidade, melhor qualidade e
+menor custo vem sendo discutida ao longo de décadas nos círculos de engenharia
+de \textit{software} \cite{empirical_studies_agile}. Entre as abordagens de
+desenvolvimento de \textit{software} consideradas tradicionais, a mais antiga e
+que foi mais amplamente utilizada é o modelo cascata, que divide o ciclo de
+vida de desenvolvimento de \textit{software} em estágios distintos e lineares
 \cite{software_quality_agile}.
 
 O modelo cascata possui algumas desvantagens, tais como inflexibilidade para
@@ -52,11 +55,12 @@ das pessoas envolvidas \cite{software_quality_agile}.
 
 Diante da pressão por desenvolvimento acelerado de novos produtos e a
 contrastante exigência de que esses produtos sejam cada vez mais confiáveis,
-muitas soluções de melhorias tem sido sugeridas, desde padronização e controle
-do processo de \textit{software} a um considerável número de ferramentas,
-técnicas e práticas.
+muitas soluções com melhorias têm sido sugeridas, desde padronização e controle
+do processo de desenvolvimento de \textit{software} a um considerável número
+de ferramentas, técnicas e práticas.
 
-Os métodos ágeis de desenvolvimento de \textit{software} emergiram como
+Entre essas soluções de melhorias propostas, os métodos ágeis de
+desenvolvimento de \textit{software} emergiram como
 alternativa aos modelos tradicionais (p.ex.: cascata) com a proposta de
 desburocratizar o processo, dispensando tudo que não seja essencial. Uma das
 consequências do uso de metodologias ágeis é a redução dos silos presentes no
@@ -74,7 +78,7 @@ Neste cenário, a equipe de operações tipicamente participa do processo
 apenas em um último momento, que é o de disponibilizar o
 \textit{software} em ambiente de produção. O time de desenvolvimento realiza
 diversas iterações, produz diversas versões intermediárias dos produtos de
-\textit{software} e o time de operações não tem participação ativa neste
+\textit{software}, e o time de operações não tem participação ativa neste
 momento. Segundo H\"uttermann
 \cite{devops_for_developers}, essa abordagem gera uma barreira organizacional
 e cultural que desencadeia três principais tipos de problemas: (1) cada time
@@ -92,7 +96,8 @@ e passa a ser apenas em evitar a responsabilização \cite{toward_unified_model}
 \section{A História de \textit{DevOps}}\label{secao_historico_devops}
 
 O termo \textit{DevOps} foi cunhado em 2009 durante a organização da
-conferência \textit{DevOpsDays} na Bélgica \cite{devops_for_developers}.
+conferência \textit{DevOpsDays}\footnote{https://www.devopsdays.org/} na
+Bélgica \cite{devops_for_developers}.
 
 Todavia, as origens de \textit{DevOps} remetem para antes mesmo da existência
 do termo. Primeiro, em 2008, foi publicado o artigo ``\textit{Agile
@@ -102,11 +107,11 @@ Patrick Debois propôs analogias entre o sucesso com o qual os métodos ágeis
 se adaptam às constantes mudanças das necessidades de negócio e a maneira como
 a infraestrutura também poderia responder de maneira ágil à essas mudanças.
 Desafiando um suposto oxímoro no qual agilidade e infraestrutura não
-encaixam-se, o autor relata a experiência bem sucedida da aplicação de técnicas
+encaixam-se, o autor relata experiências bem sucedidas da aplicação de técnicas
 ágeis na construção e gerenciamento da infraestrutura de três projetos reais.
 Na mesma conferência onde Debois apresentou suas ideias de aplicar técnicas
 ágeis a contextos de infraestrutura, Andrew Shafer propôs uma sessão sobre
-infraestrutura ágil, momento em os dois começaram a interagir a respeito do
+infraestrutura ágil, momento em que os dois começaram a interagir a respeito do
 tema \cite{effective_devops}.
 
 Pouco tempo depois, já em 2009, Hammond e Allspaw apresentaram ``\textit{10+ Deploys
@@ -122,11 +127,11 @@ iria se concentrar em infraestrutura ágil, continha a \textit{hashtag}
 ``\textit{\#devops}''. Ao ler este \textit{tweet}, Patrick Debois lamentou que
 não iria poder estar presente, pois estaria na Bélgica. Shaffer então teria
 sugerido a Debois que organizasse sua própria edição da conferência
-\textit{Velocity}. Foi quando Debois, utilizando o texto da \textit{hashtag}
+\textit{Velocity}. Foi quando Debois, utilizando o texto da \textit{hashtag},
 organizou a primeira edição do evento \textit{DevOpsDays} na Bélgica,
 iniciando a disseminação do termo \textit{DevOps}.
 
-\section{O que é \textit{DevOps}?}
+\section{O que é \textit{DevOps}?}\label{secao_definicao_devops}
 
 \textit{DevOps} emergiu na indústria de desenvolvimento de \textit{software}
 sem uma clara definição ou delimitação teórica.
@@ -184,7 +189,7 @@ entrega de \textit{software}, através da colaboração entre o desenvolvimento 
 sistemas de \textit{software} e as funções de operações, com base em um conjunto
 de práticas, tais como cultura, automação, medição e compartilhamento.
 
-\section{Elementos de \textit{DevOps}}
+\section{Elementos de \textit{DevOps}}\label{secao_elementos_devops}
 
 As caracterizações de \textit{DevOps} tipicamente utilizam enumerações e
 detalhamentos de elementos relacionados. Nesta seção são apresentados os
@@ -221,7 +226,7 @@ Em \emph{Characterizing DevOps by Hearing Multiple Voices}, França et al.
 \cite{characterizing_devops} organizam os elementos de \textit{DevOps} em seis
 categorias de princípios: (1) automação, (2) garantia da qualidade,
 (3) compartilhamento, (4) medição, (5) \textbf{aspectos sociais} e (6)
-\textbf{\textit{Leanness}}, os dois últimos são elementos novos em relação
+\textbf{\textit{leanness}}, os dois últimos são elementos novos em relação
 aos já apresentados aqui. Para chegar a estes resultados os autores conduziram
 uma revisão de literatura multivocal, e os dados foram analisados usando
 algumas técnicas de codificação de \textit{\acrfull{GT}}.
@@ -230,7 +235,7 @@ Por fim, por meio de uma nova revisão sistemática de literatura, Erich et al.
 \cite{qualitative_devops_journalsw_17} identificaram sete agrupamentos de
 conceitos presentes na literatura sobre \textit{DevOps}: (1) cultura de
 colaboração, (2) automação (3) medição; (4) compartilhamento, (5) serviços,
-(6) Garantia da qualidade e (7) \textbf{Governança}. Apenas \emph{governança}
+(6) garantia da qualidade e (7) \textbf{governança}. Apenas \emph{governança}
 não aparece em nenhum dos trabalhos apontados previamente.
 
 É possível identificar elementos de \textit{DevOps} que aparecem em vários
@@ -239,7 +244,7 @@ trabalhos bem como outros que aparecem apenas em um deles, a tabela
 quais trabalhos cada um deles aparece. Após comparação dos estudos, foi
 identificado que os elementos \emph{cultura}, \emph{cultura de colaboração},
 \emph{colaboração} e \emph{aspectos sociais} são similares e, para efeitos de
-comparação, foi designiada uma única coluna na tabela, a coluna 2 (cultura de
+comparação, foi designada uma única linha na tabela, a linha 1 (cultura de
 colaboração).
 
 \begin{table}[hb!]
@@ -310,7 +315,7 @@ da qualidade} e \emph{serviços} aparecem em três e dois estudos, respectivamen
 enquanto que os demais aparecem apenas em um único estudo.
 
 Nas subseções a seguir, cada um dos elementos é detalhado. Alguns dos trabalhos
-relacionados citam práticas relacionadas aos elementos. Quando aplicável, as
+relacionados citam práticas relacionadas aos elementos, quando aplicável, as
 práticas também são listadas. Os elementos \emph{estruturas} e \emph{padrões}
 foram citados apenas em \cite{cooperation_dev_ops_esem_2014} e não foi
 apresentado um detalhamento sobre suas características. O mesmo grupo de
@@ -347,7 +352,7 @@ No trabalho de França et al. \cite{characterizing_devops}, este elemento é
 apresentado como um princípio denominado \emph{aspectos sociais}. De acordo com os
 autores, apesar de existirem diversos princípios técnicos, muitas das
 características de \textit{DevOps} estão associadas a aspectos sociais entre as
-equipes de desenvolvimento de \textit{software} e operações. A \textbf{cultura
+equipes de desenvolvimento de \textit{software} e de operações. A \textbf{cultura
 \textit{DevOps}} reconhece a confiança como uma característica relevante para
 influenciar a mudança organizacional exigida por \textit{DevOps}.
 
@@ -372,8 +377,7 @@ apresentadas as seis seguintes em \cite{extending_dimensions}:
 dos times;
 \item Tanto desenvolvedores como operadores são considerados responsáveis para
 lidar com incidentes;
-\item Integrar o desenvolvimento Integrating development em pós-mortem de
-produção;
+\item Integrar o desenvolvimento em pós-mortem de produção;
 \item Tornar a comunicação entre desenvolvimento e operações menos formal e
 sem adversidades;
 \item Respeito mútuo, apoio e vontade de trabalhar juntos e compartilhamento
@@ -407,26 +411,26 @@ que as ferramentas \textit{DevOps} possibilitam uma ampla gama de possibilidades
 para automação. Ferramentas para gerenciamento de versões, provisionamento,
 gerenciamento de configuração, integração de sistemas, monitoramento e controle
 e orquestração são tratatadas como peças importantes na construção de uma
-estrutura Devops.
+estrutura \textit{DevOps}.
 
-Para acompanhar o ritmo ágil das práticas de desenvolvimento de software, os
+Para acompanhar o ritmo ágil das práticas de desenvolvimento de \textit{software}, os
 processos de operações precisam ser flexíveis, repetíveis e rápidos, e a
-automação é vista como um meio para isso. Em ambientes complexos, é difícil
-e demorado implantar funcionalidades manualmente e gerenciar configurações de
-infraestrutura de software. Além disso, existe automação de testes visando
-garantir a qualidade das funcionalidades implantadas
+automação é vista como um meio para viabilizar isso. Em ambientes complexos,
+é difícil e demorado implantar funcionalidades e gerenciar configurações de
+infraestrutura de \textit{software} manualmente. Além disso, existe automação
+de testes visando garantir a qualidade das funcionalidades implantadas
 \cite{dimensions_of_devops,extending_dimensions}.
 
 França et al. \cite{characterizing_devops} acrescentam que automação é um dos
 princípios fundamentais de \textit{DevOps} pois reduz os esforços repetitivos
-e acelera a entrega de software, melhorando não só a velocidade de entrega,
-como também a consistência da infraestrutura, a produtividade das equieps e
-a repetibilidade das tarefas.
+e acelera a entrega de \textit{software}, melhorando não só a velocidade de
+entrega, como também a consistência da infraestrutura, a produtividade das
+equipes e a repetibilidade das tarefas.
 
 \subsubsection{Práticas Relacionadas}
 
 Como práticas relacionadas a automação, têm-se (1) infraestrutura como código
-e (2) automação do processo de \textit{deployment} apresentadas em
+e (2) automação do processo de \textit{deployment}, apresentadas em
 \cite{extending_dimensions}, enquanto que em \cite{characterizing_devops} são
 apresentadas as seguintes: (1) aceleração por meio de automação, (2)
 automatização de tarefas repetitivas, (3) automatização da coleta de métricas,
@@ -471,15 +475,15 @@ decisões, melhorias e alterações nos sistemas.
 Enquanto que em \cite{characterizing_devops} são apresentadas as quatro
 seguintes práticas: (1) medição para entender o código e o ambiente, (2)
 monitoramento do negócio por meio de métricas, (3) monitoramento de operações
-e (4) Monitoramento de equipes por meio de métricas.
+e (4) monitoramento de equipes por meio de métricas.
 
 \subsection{Compartilhamento}
 
 As organizações que praticam \textit{DevOps} tentam facilitar o desenvolvimento
-e as operações, por meio do uso de sistemas compartilhados para registrar o
+e as operações por meio do uso de sistemas compartilhados para registrar o
 conhecimento \cite{qualitative_devops_journalsw_17}.
 
-O compartilhamento é o \textit{loopback} no ciclo do \acrshort{CAMS}
+O compartilhamento é considerado o \textit{loopback} no ciclo do \acrshort{CAMS}
 \textit{framework}. Segundo Willis, criar uma cultura onde as pessoas
 compartilham idéias e problemas é fundamental, ademais o compartilhamento de
 ideias cria um \textit{feedback} aberto que no final as ajuda a melhorar
@@ -490,7 +494,7 @@ disseminados entre os indivíduos para promover o intercâmbio de aprendizado
 pessoal e informações sobre projetos. Nesse sentido, os indivíduos divulgam
 informações relevantes, por exemplo, sobre como implementar e executar
 práticas recomendadas. Além disso, as informações sobre mudanças ou novas
-características de produtos devem ser distribuídas para entre os envolvidos
+características de produtos devem ser distribuídas entre os envolvidos
 tanto da equipe de desenvolvimento quanto da de operações e isso promove a
 visibilidade do fluxo de trabalho \cite{characterizing_devops}.
 
@@ -514,7 +518,8 @@ tipicamente usam serviços em nuvem e a arquitetura de microsserviços.
 
 As organizações que praticam \textit{DevOps} tentam incorporar o controle de
 qualidade ao processo de construção de \textit{software}, visando garantir
-que os produtos e serviços possuam uma qualidade adequada.
+que os produtos e serviços possuam uma qualidade adequada
+\cite{qualitative_devops_journalsw_17}.
 
 A busca por \emph{garantia da qualidade} suporta a implementação de práticas
 \textit{DevOps} uma vez que vincula diferentes partes interessadas
@@ -531,8 +536,99 @@ qualidade}.
 
 \subsection{Monitoramento}
 
+A proposta de \emph{monitoramento} como elemento \textit{DevOps} foi indicada
+como uma das principais contribuições do primeiro trabalho de Lwakatare et al.
+\cite{dimensions_of_devops} e mantida na extensão deste trabalho, publicada
+em \cite{extending_dimensions}. Segundo os autores, a equipe de
+operações é tipicamente responsável por monitorar os sistemas e a
+infraestrutura subjacente para determinar a atribuição apropriada de recursos e
+para detectar, relatar e corrigir os problemas que ocorrem nos sistemas.
+Todavia, \textit{DevOps} propicia uma resposta aos desafios enfrentados na
+realização de um monitoramento efetivo por meio da ênfase em colaboração entre
+desenvolvedores e operadores. Adicionalmente, as análise são usadas para
+integrar os dados de desempenho da infraestrutura e do sistema com o
+comportamento de uso do cliente. As informações coletadas são fornecidas como
+\textit{feedback} aos desenvolvedores e ao gerenciamento de produtos a serem
+usados para aprimoramentos e personalização dos produtos de \textit{software}.
+
+Convém ressaltar, que as descrições contidas nos demais trabalhos para o
+elemento \emph{medição}, tipicamente englobam aspectos de \emph{monitoramento}.
+Por exemplo, entre as práticas apontadas em \cite{characterizing_devops} estão
+\emph{monitoramento de operações} e \emph{monitoramento de equipes por meio de
+métricas}. Essa separação de \emph{monitoramento} como um elemento autônomo em
+relação a \emph{medição} apenas foi realizado por Lwakatare et al.
+
 \subsection{\textit{Leanness}}
 
-\section{Impedimentos de \textit{DevOps}}
+Este elemento é apontado apenas em \cite{characterizing_devops}. Segundo os
+autores, algumas práticas \textit{DevOps} são baseadas nos princípios de
+pensamento enxuto\footnote{Lean Thinking \cite{lean_thinking}}. Considerando
+que \textit{DevOps} visa garantir um fluxo contínuo para desenvolver e entregar
+\textit{software} regularmente, em pequenas e incrementadas mudanças, o processo
+precisa de \textit{lean}.
 
-\section{Adoção de \textit{DevOps}}
+\subsubsection{Práticas Relacionadas}
+França et al. \cite{characterizing_devops} apresentam seis práticas
+relacionadas ao elemento \textit{Leanness}: (1) fluxo contínuo, (2) melhoria
+contínua, (3) eliminação de desperdícios, (4) \textit{feedback} rápido, (5)
+visão holística ou sistêmica e (6) simplicidade.
+
+\section{Adoção de \textit{DevOps}}\label{secao_adocao_devops}
+
+Os trabalhos listados anteriormente concentram-se em caracterizar
+\textit{DevOps}, há pouco conteúdo indicando caminhos seguidos por companhias
+que adotaram \textit{DevOps} e que eventualmente poderiam ser seguidos por
+novos praticantes, com indicações de lições aprendidas, possíveis impedimentos
+e abordagens bem e mal sucedidas durante o processo.
+
+O trabalho de Erich et al. \cite{qualitative_devops_journalsw_17} investigou
+o processo de adoção de \textit{DevOps} por meio de entrevistas com praticantes
+de seis companhias. Todavia, as percepções obtidas foram usadas para validar
+a aplicação dos elementos identificados em uma revisão de literatura realizada
+previamente, não foi construído um conjunto de \textit{guidelines} ou um modelo
+que explicasse os caminhos seguidos por essas organizações. As visões de como
+cada companhia adotou \textit{DevOps} foram apresentadas separadamente e de
+maneira sucinta:
+
+\begin{enumerate}
+\item Na primeira companhia, é relatado que o pessoal de desenvolvimento e
+operações passou a trabalhar juntos diariamente, foi criado um novo cargo na
+companhia chamado \textit{DevOps Engineer}, o pessoal de gestão foi treinado
+para ser capaz de gerenciar tanto pessoas de desenvolvimento como de operações,
+o pessoal de recursos humanos alterou os processos de avaliação e, por fim,
+a organização está automatizando seus processos de infraestrutura, não são
+apresentados detalhes de como isso está sendo feito.
+
+\item Na segunda companhia, \textit{DevOps} é visto como uma extensão de
+\textit{Scrum} e \textit{lean}. A adoção de \textit{DevOps} lá foi guiada por
+dois princípios: colaboração diária, ambiente de trabalho compartilhado e uma
+premissa: o \textit{software} deve ir pra produção a cada iteração. É relatado
+então que a organização usou \textit{frameworks} comerciais para guiar a
+implantação de \textit{DevOps}.
+
+\item Na terceira companhia, é relatado que três times que trabalhavam em
+funcionalidades separadas foram agrupados em um emph{time DevOps}. A organização
+passou então a experimentar \textit{Continuous Delivery}, mas ainda estava em
+um estágio inicial.
+
+\item A quarta companhia criou uma única equipe de \textit{DevOps} para
+experimentar ferramentas, princípios e práticas \textit{DevOps}. Os
+membros dessa equipe possuem habilidades multidisciplinares. É relatado ainda
+o uso de ferramentas para controle de versão e o desenvolvimento de ferramentas
+próprias para criar facilmente ambientes de nuvem.
+
+\item Na quinta companhia, é relatado que \textit{DevOps} é visto como
+um papel responsável por gerenciamento de incidentes, gerenciamento de
+capacidade, gerenciamento de riscos e suporte ao processo de criação.
+As pessoas que têm esse papel no passado eram chamadas de engenheiros de
+\textit{script} de servidor ou ``viciados em script''. Um dos objetivos da implementação do DevOps era dar mais respeito a esse papel. A crescente complexidade das operações devido à introdução da computação em nuvem levou a uma abordagem mais sistemática das operações de execução, exigindo que o pessoal de operações aprendesse várias técnicas de desenvolvimento de software
+
+\item
+
+\end{enumerate}
+
+\subsection{Impedimentos ou Problemas na Adoção de \textit{DevOps}}
+
+Já o trabalho de Smeds et al. usou as percepções de praticantes para gerar
+um conjunto de possíveis impedimentos na adoção de \textit{DevOps}. Esse
+conjunto de entendimentos é detalhado a seguir.
