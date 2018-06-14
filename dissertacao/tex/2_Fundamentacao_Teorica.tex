@@ -577,21 +577,20 @@ visão holística ou sistêmica e (6) simplicidade.
 
 Os trabalhos listados anteriormente concentram-se em caracterizar
 \textit{DevOps}, há pouco conteúdo indicando caminhos seguidos por companhias
-que adotaram \textit{DevOps} e que eventualmente poderiam ser seguidos por
+que adotaram \textit{DevOps} e que eventualmente poderiam ser usados por
 novos praticantes, com indicações de lições aprendidas, possíveis impedimentos
 e abordagens bem e mal sucedidas durante o processo.
 
 O trabalho de Erich et al. \cite{qualitative_devops_journalsw_17} investigou
 o processo de adoção de \textit{DevOps} por meio de entrevistas com praticantes
-de seis companhias. Todavia, as percepções obtidas foram usadas para validar
-a aplicação dos elementos identificados em uma revisão de literatura realizada
-previamente, não foi construído um conjunto de \textit{guidelines} ou um modelo
-que explicasse os caminhos seguidos por essas organizações. As visões de como
-cada companhia adotou \textit{DevOps} foram apresentadas separadamente e de
-maneira sucinta:
+de seis companhias. Todavia, as percepções obtidas não detalham a maneira como
+as companhias aplicaram os elementos de \textit{DevOps} ao longo do processo
+e são apresentadas de maneira individualizada, não se colocando em perspectiva
+o que há de comum no entendimento dessas companhias. Os dados de como cada
+companhia relata ter implementado \textit{DevOps} são apresentados de maneira
+sucinta e os principais pontos são descritos a seguir.
 
-\begin{enumerate}
-\item Na primeira companhia, é relatado que o pessoal de desenvolvimento e
+Na primeira companhia, é relatado que o pessoal de desenvolvimento e
 operações passou a trabalhar juntos diariamente, foi criado um novo cargo na
 companhia chamado \textit{DevOps Engineer}, o pessoal de gestão foi treinado
 para ser capaz de gerenciar tanto pessoas de desenvolvimento como de operações,
@@ -599,36 +598,75 @@ o pessoal de recursos humanos alterou os processos de avaliação e, por fim,
 a organização está automatizando seus processos de infraestrutura, não são
 apresentados detalhes de como isso está sendo feito.
 
-\item Na segunda companhia, \textit{DevOps} é visto como uma extensão de
-\textit{Scrum} e \textit{lean}. A adoção de \textit{DevOps} lá foi guiada por
-dois princípios: colaboração diária, ambiente de trabalho compartilhado e uma
-premissa: o \textit{software} deve ir pra produção a cada iteração. É relatado
-então que a organização usou \textit{frameworks} comerciais para guiar a
-implantação de \textit{DevOps}.
+Na segunda companhia, \textit{DevOps} é visto como uma extensão de
+\textit{Scrum} e \textit{Lean}. A adoção de \textit{DevOps} lá foi guiada por
+dois princípios: colaboração diária e ambiente de trabalho compartilhado.
+Havia a premissa de que o \textit{software} deve ir pra produção a cada
+iteração. É relatado então que a organização usou \textit{frameworks}
+comerciais para guiar a implantação de \emph{entrega contínua}, também sem maiores
+detalhamentos de como foi feito.
 
-\item Na terceira companhia, é relatado que três times que trabalhavam em
-funcionalidades separadas foram agrupados em um emph{time DevOps}. A organização
-passou então a experimentar \textit{Continuous Delivery}, mas ainda estava em
-um estágio inicial.
+Na terceira companhia, é relatado que três times que trabalhavam em
+funcionalidades separadas foram agrupados em um \emph{time DevOps}. A organização
+passou então a experimentar \textit{entrega contínua}, mas ainda estava em
+um estágio inicial quando a entrevista foi realizada.
 
-\item A quarta companhia criou uma única equipe de \textit{DevOps} para
+A quarta companhia criou uma única equipe de \textit{DevOps} para
 experimentar ferramentas, princípios e práticas \textit{DevOps}. Os
 membros dessa equipe possuem habilidades multidisciplinares. É relatado ainda
 o uso de ferramentas para controle de versão e o desenvolvimento de ferramentas
 próprias para criar facilmente ambientes de nuvem.
 
-\item Na quinta companhia, é relatado que \textit{DevOps} é visto como
+Na quinta companhia, é relatado que \textit{DevOps} é visto como
 um papel responsável por gerenciamento de incidentes, gerenciamento de
 capacidade, gerenciamento de riscos e suporte ao processo de criação.
-As pessoas que têm esse papel no passado eram chamadas de engenheiros de
-\textit{script} de servidor ou ``viciados em script''. Um dos objetivos da implementação do DevOps era dar mais respeito a esse papel. A crescente complexidade das operações devido à introdução da computação em nuvem levou a uma abordagem mais sistemática das operações de execução, exigindo que o pessoal de operações aprendesse várias técnicas de desenvolvimento de software
+O uso de computação em nuvem ocasionou a necessidade de se existir uma
+abordagem mais sistemática para execução das atividades de operações, exigindo
+que o pessoal responsável aprendesse técnicas de desenvolvimento de
+\textit{software}. O time de desenvolvimento foi dividido em vários subtimes,
+um dos quais focado em \textit{DevOps}, com responsabilidade de apoiar os demais
+times. São também enumerados os princípios e práticas utilizados na companhia
+durante a adoção de \textit{DevOps}.
 
-\item
+Por fim, com relação a como a sexta companhia implementou \textit{DevOps},
+é apresentado um detalhamento de como ocorre a \emph{integração contínua} na
+organização. As evoluções de código são feitas por meio de \textit{pull
+requests} que após aprovadas são integradas ao código principal. Após a
+integração dos códigos das \textit{pull requests}, um \textit{pipeline} de entrega
+contínua é executado para publicar o \textit{software}.
 
+\subsection{Desafios na Adoção de \textit{DevOps}}
+
+Implementar \textit{DevOps} é reconhecidamente uma atividade desafiadora. Nesta
+seção são apresentados os principais desafios relatados na literatura
+relacionada a respeito da adoção de \textit{DevOps}.
+
+Riungu-Kalliosaari et al. \cite{devops_benefits_challenges} apontam quatro
+desafios relacionados à adoção de \textit{DevOps}. O primeiro desafio
+apresentado, é a existência de \emph{comunicação insuficiente} entre os times
+de desenvolvimento e operações. Em segundo lugar, como \textit{DevOps} requer
+uma mudança cultural, existe o desafio da existência de \emph{culturas
+profundamente arraigadas}. O terceiro desafio apontado é a possibilidade de
+\emph{restrições legais} relacionadas por exemplo ao acesso de dados protegidos
+para execução de testes. Por fim, o quarto desafio apontado é que \textit{DevOps}
+ainda não é completamente compreendido mas continua evoluindo rapidamente.
+
+Já o trabalho de Smeds et al. \cite{devops_a_definition} as percepções de
+praticantes form utilizadas para gerar um conjunto de onze possíveis
+impedimentos na adoção de \textit{DevOps}. Esse conjunto de impedimentos é
+listado a seguir.
+
+\begin{enumerate}
+\item Definição e objetivos de se adotar \textit{DevOps} não são claros;
+\item Estrutura organizacional não compatível;
+\item Clientes podem não querer \textit{DevOps};
+\item Distribuição geográfica dos times;
+\item \textit{DevOps} ser visto como uma \textit{buzzword};
+\item \textit{DevOps} gera mais trabalho para os desenvolvedores;
+\item \textit{DevOps} requer habilidades e conhecimentos tanto de desenvolvedores
+como de operadores;
+\item Falta de interesse de um dos lados (desenvolvimento ou operações);
+\item Arquitetura monolítica;
+\item Ambientes de desenvolvimento e teste não refletindo o ambiente de produção;
+\item Múltiplos ambientes de produção.
 \end{enumerate}
-
-\subsection{Impedimentos ou Problemas na Adoção de \textit{DevOps}}
-
-Já o trabalho de Smeds et al. usou as percepções de praticantes para gerar
-um conjunto de possíveis impedimentos na adoção de \textit{DevOps}. Esse
-conjunto de entendimentos é detalhado a seguir.
