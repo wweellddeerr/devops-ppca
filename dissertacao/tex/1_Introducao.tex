@@ -17,30 +17,25 @@ Antes mesmo de o termo \textit{DevOps} existir, artigos e apresentações
 já tratavam da aplicação dos princípios ágeis também às atividades de operações,
 da rediscussão sobre os papéis dos times de desenvolvimento e operações, e dos
 benefícios de uma mudança de paradigma com maior aproximação e colaboração
-entre estes times~\cite{devops_for_developers,flickr}.
+entre estes times~\cite{agile_infra_operations,devops_for_developers,flickr}.
 
 Os benefícios relacionados a \textit{DevOps} incluem aumento na performance
-e na produtividate organizacional de \acrshort{TI}, redução de custos no ciclo de vida
+e na produtividade organizacional de \acrshort{TI}, redução de custos no ciclo de vida
 de \textit{software}, melhoria na eficiência e eficácia operacional e maior
 alinhamento com o negócio entre os times de desenvolvimento e operações
 \cite{characterizing_devops}.
 
-Nesse contexto, o \acrfull{TCU} inseriu como um dos direcionadores presentes
-em seu \acrfull{PDTI} para o biênio 2017/2018: \emph{o
-aprimoramento do uso de práticas ágeis em todas as equipes e ampliação do uso da
-abordagem DevOps}. O entendimento é de que os rígidos procedimentos criados
-como paliativo para o problema da baixa colaboração entre os times de
-desenvolvimento e operações ocasionam atrasos na entrega de \textit{software}
-do órgão que são considerados inadequados.
+Nesse contexto, o \acrfull{TCU} está buscando ampliar o uso da abordagem
+\textit{DevOps} no desenvolvimento de suas aplicações corporativas. O
+entendimento é de que os rígidos procedimentos criados como paliativo para o
+problema da baixa colaboração entre os times de desenvolvimento e operações
+ocasionam atrasos na entrega de \textit{software} do órgão que são considerados
+inadequados.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Problema de Pesquisa}%
-O \acrshort{TCU} possui sete times de desenvolvimento de \textit{software} e um
-único time de operações, que historicamente trabalham em silos.
-A equipe de operações (\acrfull{SINAP}) participa da produção de
-\textit{software} apenas em momentos específicos, notadamente quando uma nova
+Os times de desenvolvimento e operações do \acrshort{TCU} historicamente
+trabalham em silos. Metodologias ágeis são utilizadas durante o processo de
+desenvolvimento e a equipe de operações (\acrfull{SINAP}) participa da produção
+de \textit{software} apenas em momentos específicos, notadamente quando uma nova
 infraestrutura precisa ser provida para publicação de algum artefato de
 \textit{software}, e também na publicação propriamente dita.
 
@@ -187,10 +182,33 @@ Toda essa rigidez procedimental, com tarefas e horários encadeados ilustra o
 quão complexas podem se tornar soluções que visam contornar o problema da falta
 de colaboração entre os times de desenvolvimento e operações.
 
-Ademais, diante da necessidade de adoção de \textit{DevOps} no TCU, foi
-identificado que existe uma carência de orientações na literatura existente
-sobre \textit{DevOps} a respeito de caminhos a serem seguidos por novos
-praticantes.
+O \acrshort{TCU} possui diversos comitês envolvidos no processo de desenvolvimento
+de suas aplicações corporativas. Um desses comitês se chama \acrfull{CPA} que é
+constituído por representantse de todas as equipes da áre de \acrshort{TI} e cuja
+função é orientar e padronizar as decisões tecnológicas e arquiteturais no
+âmbito do processo de desenvolvimento de \textit{software}.
+
+O \acrfull{PDTI} do \acrshort{TCU} para o biênio 2017/2018 contém como um de seus
+indicadores: \emph{o aprimoramento do uso de práticas ágeis em todas as equipes
+e \textbf{ampliação do uso da abordagem DevOps}}.
+
+Inicialmente, para possibilitar o cumprimento do indicador constante no
+\acrshort{PDTI}, o \acrshort{CPA} deliberou no sentido da experimentação e
+realização de provas de conceito em ferramentas \textit{DevOps}. Após um
+período de avaliação, o \acrshort{CPA} avaliou que, embora
+houvesse competência técnica interna para implantação de ferramentas, existia
+uma carência de melhor entendimento a respeito de como se adotar \textit{DevOps}.
+Formou-se então o entendimento de que experiências bem sucedidas na adoção de
+\textit{DevOps} no mercado deveriam ser buscadas através de contato direto
+e participações em eventos. Essas experiências deveriam ser apresentadas
+internamente no sentido de pautar a adoção de \textit{DevOps} no \acrshort{TCU}.
+
+\section{Problema de Pesquisa}%
+
+Para dar encaminhamento a um dos indicadores do \acrshort{PDTI} do \acrshort{TCU},
+o comitê responsável formou entendimento de que a adoção de \textit{DevOps} no
+\acrshort{TCU} deve se pautar em experiências bem sucedidas da adoção de
+\textit{DevOps} no mercado.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -218,28 +236,72 @@ outros contextos.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Objetivos}
-Este trabalho tem como objetivo propor e implantar um modelo aderente à prática
+
+\subsection{Objetivo Geral}
+
+Este trabalho tem como objetivo geral propor e implantar um modelo aderente à prática
 de mercado para guiar a adoção de \textit{DevOps} no desenvolvimento das
 aplicações corporativas do \acrshort{TCU}.
 
-Para atingir esse objetivo, os seguintes objetivos específicos foram definidos:
+\subsection{Objetivos Específicos}
+Com o intuito de atingir o objetivo geral deste trabalho, os seguintes objetivo
+específicos foram definidos:
 
 \begin{itemize}
-\item Elaborar uma \textit{grounded theory} que explique a adoção
-de \textit{DevOps} por praticantes bem sucedidos na indústria de desenvolvimento
-de \textit{software};
-\item Propor um modelo de adoção de \textit{DevOps} com base na
-\textit{grounded theory} produzida;
-\item Implantar o modelo para guiar a adoção de \textit{DevOps} no \acrshort{TCU}; e
+\item Investigar a adoção de \textit{DevOps} por praticantes bem sucedidos no
+mercado de desenvolvimento de \textit{software};
+\item Propor um modelo de adoção de \textit{DevOps} com base na prática de mercado;
+\item Implantar o modelo na adoção de \textit{DevOps} no \acrshort{TCU}; e
 \item Realizar um estudo empírico para avaliar o estágio atual da adoção de
 \textit{DevOps} no \acrshort{TCU} bem como para validar a relevância do modelo
 proposto neste contexto.
 \end{itemize}
 
-\section{Resultados Esperados}
-O resultado esperado para essa pesquisa é a construção e implantação no
-\acrshort{TCU} de um modelo para adoção de \textit{DevOps} com base em
-experiências bem sucedidas coletadas empiricamente da prática na indústria.
+%\section{Resultados Esperados}
+%O resultado esperado para essa pesquisa é a construção e implantação no
+%\acrshort{TCU} de um modelo para adoção de \textit{DevOps} com base em
+%experiências bem sucedidas coletadas empiricamente da prática na indústria.
+
+\section{Metodologia}
+
+Para investigar a adoção bem sucedida de \textit{DevOps} no mercado foi
+utilizada a variação clássica do método \textit{Grounded Theory} \cite{glaser1967discovery}.
+O uso de \textit{Grounded Theory} se justifica por quatro motivos:
+
+\begin{enumerate}
+
+\item O método possibilita a construção de um entendimento independente e original,
+o que é adequado para coletar evidência empírica diretamente da prática de
+mercado sem o viés de pesquisas anteriores, alinhado às necessidades do \acrshort{TCU}.
+A evidência coletada só é reintegrada com a literatura existente após a
+construção da teoria \cite{reconciling_perspectives,stol2016grounded}.
+
+\item \acrshort{GT} é uma metodologia consolidada em outras áreas de
+pesquisa, como sociologia médica \cite{gt_medical_sociology}, nutrição
+\cite{gt_nursing}, educação \cite{gt_education} e administração
+\cite{gt_management}.
+
+\item \acrshort{GT} é considerado um método adequado para caracterizar cenários
+sob uma perspectiva pessoal daqueles envolvidos em uma disciplina ou atividade \cite{stol2016grounded},
+que é exatamente o cenário que se almeja caracterizar aqui: quais são os caminhos
+seguidos por praticantes que adotaram \textit{DevOps} de uma maneira bem sucedida?
+
+\item \acrshort{GT} tem sido cada vez mais aplicada para estudar tópicos de
+engenharia de \textit{software} \cite{hoda2017becoming,Waterman:2015:ICSE,stol2016grounded},
+com destaque para o recente trabalho de Hoda et al. \cite{hoda2017becoming} que
+caracterizou a adoção de métodos ágeis em uma maneira similar ao que se propõe
+fazer aqui em relação a \textit{DevOps}.
+
+\end{enumerate}
+
+O modelo para adoção de \textit{DevOps} foi produzido com base na teoria
+construída utilizando o método \textit{Grounded Theory}.
+
+Já a avaliação empírica foi realizada utilizando um grupo focal, pois neste método
+ao invés de se buscar fornecer respostas quantificáveis a perguntas específicas
+obtidas a partir de uma amostra grande da população, os participantes fornecem
+um fluxo de entrada e interação relacionado ao tópico, provendo novos
+\textit{insights} sobre o assunto \cite{focus_group_handbook}.
 
 \section{Estrutura do Trabalho}
 
@@ -251,13 +313,13 @@ foram estruturados da seguinte forma:
 apresentação de seu histórico, definições e elementos que o caracterizam;
 \item \textbf{Capítulo 3.} Apresenta o detalhamento da pesquisa utilizando
 \textit{\acrfull{GT}} que possibilitou a caracterização da adoção de
-\textit{DevOps} com base na percepção de praticantes da indústria;
+\textit{DevOps} com base na percepção de praticantes do mercado;
 \item \textbf{Capítulo 4.} Contém detalhes de um modelo para adoção de
 \textit{DevOps} proposto com base na teoria construída no Capítulo 2 e os
 respectivos detalhes da sua implantação no \acrshort{TCU};
 \item \textbf{Capítulo 5.} Apresenta os resultados de uma avaliação empírica
 utilizada para obter as percepções relacionadas à adoção de \textit{DevOps} no
-\acrshort{TCU}.
+\acrshort{TCU} e à utilidade do modelo proposto.
 \item \textbf{Capítulo 6.} Contém as conclusões do trabalho com designação
 das suas limitações bem como de oportunidades para trabalhos futuros.
 \end{itemize}
