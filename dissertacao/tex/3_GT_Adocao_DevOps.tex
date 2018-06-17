@@ -1,3 +1,148 @@
+Neste capítulo, apresenta-se um estudo utilizando a variação clássica da
+metodologia \textit{\acrfull{GT}} \cite{glaser1967discovery} para se
+caracterizar a adoção de \textit{DevOps} em organizações de mercado que foram bem
+sucedidas neste processo.
+
+A teoria aqui apresentada foi construída com base na percepção de
+praticantes de quinze companhias de cinco países que foram bem sucedidas na
+adoção de \textit{DevOps}. A teoria torna claro que praticantes interessados em
+adotar \textit{DevOps} devem focar na construção de uma \cat{cultura de
+colaboração}, o que previne pontos de falha comuns relacionados a focar em
+ferramental ou em automação. O papel dos demais elementos que fazem parte da
+adoção de \textit{DevOps} é explicado por meio da definição de dois grandes
+agrupamentos de categorias de conceitos, denominados \emph{Facilitadores DevOps}
+e \emph{Saídas DevOps}.
+
+\section{\acrfull{GT}}
+
+\acrfull{GT} é um método de pesquisa desenvolvido originalmente pelos
+sociologistas B. Glaser e A. Strauss que possibilita a geração sistemática de
+uma teoria a partir de dados analisados em um rigoroso processo \cite{glaser1967discovery}.
+O objetivo de um estudo em \acrshort{GT} é entender como se dá a ação em uma
+determinada área de conhecimento a partir do ponto de vista dos atores
+envolvidos \cite{glaser_doing_1998}.
+
+Ressalte-se que, de acordo com Strauss e Corbin \cite{corbin2014basics}, no
+âmbito de \textit{Grounded Theory}, uma teoria é ``um conjunto bem desenvolvido
+de categorias (incluindo conceitos e temas) que são sistematicamente
+inter-relacionadas através de \textbf{sentenças de relacionamentos} para
+formar um \textit{framework} teórico que explica algum fenômeno relevante''.
+
+Hoda et al. \cite{hoda2017becoming} explicam que um estudo utilizando
+\textit{Grounded Theory} é mais que apenas um conjunto de categorias. Ele deve
+descrever os principais relacionamentos entre as categorias, e que essas
+``sentenças de relacionamentos'' são aqui chamadas de hipóteses, sem prejuízo
+para o uso deste mesmo termo com significado distinto em abordagens que usam
+métodos estatísticos para confirmar ou refutar hipóteses pré-estabelecidas.
+
+Segundo Locke \cite{locke2001grounded}, o diferencial de \textit{Grounded
+Theory} é seu compromisso com a ``descoberta'' através do contato direto com o
+mundo social de interesse, juntamente com uma limitação, a priori, do contato
+com a teorização existente. Os estudos utilizando \acrshort{GT} não começam com
+uma estrutura conceitual, ao invés disso pretendem culminar em uma \cite{miles1994qualitative}.
+São estudos em que uma cobertura aprofundada da literatura é deliberadamente
+adiada até que surjam as direções da análise de dados coletados diretamente
+na fonte de interesse \cite{punch2013introduction}. Stol et al. \cite{stol2016grounded}
+explicam que a principal razão para se limitar a exposição à literatura é previnir
+que o pesquisador se concentre em pensar em termos de conceitos pré-estabelecidos,
+testando teorias existentes, ao invés de desenvolver uma. De fato, \acrshort{GT}
+é um método de desenvolvimento de teoria, e não de teste de teoria. Jantunen e
+Gause \cite{jantunen_using_gt_approach}, utilizando a classificação de abordagens
+de pesquisa proposta por Jarvinen \cite{jarvinen_mapping_2008}, apontam que
+\acrshort{GT} é uma abordagem de desenvolvimento de teoria do grupo estudos
+empíricos da realidade, conforme a área em cinza da Figura \ref{abordagens}.
+
+\figuraBib{abordagens}{Classificação de GT nas Abordagens de Pesquisa}{jantunen_using_gt_approach}{abordagens}{width=.45\textwidth}
+
+No entanto, conforme destaca Glaser \cite{glaser1992basics}, essa postura de
+limitar a exposição à literatura é parte da abordagem apenas no início da
+pesquisa. Quando a teoria proposta parece suficientemente amadurecida, então o
+pesquisador pode começar a revisar a literatura no campo substantivo e
+relacioná-la com seu próprio trabalho.
+
+\subsection{Variações de \acrshort{GT}}
+
+Desde a publicação da versão original de \acrshort{GT}, diversas modificações
+e variações foram propostas ao método, ocasionando a existência de pelo menos
+sete diferentes versões de \acrfull{GT}~\cite{denzin2007grounded}. Segundo
+Stol et al. \cite{stol2016grounded}, as principais versões são três: (1)
+\acrshort{GT} de \textit{Glaser} (GT clássica ou \textit{Glaseriana}), (2)
+\acrshort{GT} de \textit{Strauss} e \textit{Corbin} (GT \textit{Straussiana}) e
+(3) \acrshort{GT} de \textit{Charmaz} (GT construtivista), e qualquer
+estudo utilizando \acrshort{GT} deve especificar qual versão foi utilizada.
+
+As principais diferenças entre as versões de \acrshort{GT} estão relacionadas
+à maneira de utilizar questões de pesquisa, ao papel da literatura, às técnicas
+de codificação, aos tipos de questionamentos que devem ser levantadas durante
+a análise dos dados e aos critérios de avaliação da teoria construída. A
+Tabela \ref{versoes_GT_tabela}, adaptada de \cite{stol2016grounded}
+sintetiza as principais diferenças entre as três principais versões.
+
+\begin{table}[hb!]
+\centering
+\caption{Principais diferenças entre as versões de GT}
+\label{versoes_GT_tabela}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|p{3cm}|p{5.7cm}|p{5.7cm}|p{5.7cm}|}
+\hline
+\textbf{Elemento} & \textbf{Clássica} & \textbf{\textit{Straussiana}} & \textbf{Construtivista} \\
+\hline
+\textbf{Questão de pesquisa}
+& Não é definida \textit{a priori}, emerge da pesquisa. O pesquisador inicia com uma área de interesse.
+& Pode ser definida antecipadamente, derivada da literatura ou sugerida por um colega, é frequentemente ampla e aberta.
+& A pesquisa inicia com questões de pesquisa iniciais, que evoluem ao longo do estudo. \\
+\hline
+
+\textbf{Papel da literatura}
+& Uma revisão abrangente da literatura só deve ser conduzida após a literatura possuir estágio avançado de desenvolvimento, para evitar a influência de conceitos existentes na teoria emergente.
+& A literatura pode ser consultada ao longo do processo para algumas necessidades específicas, como na formualação de perguntas para coleta de dados, para obter sugestões de áreas para exemplificação teórica, etc.
+& Embora concorde com os motivos de \textit{Glaser} recomendar evitar contato com a literatura no início da pesquisa, defende uma consulta adaptada da literatura para adequar o propósito do estudo. \\
+\hline
+
+\textbf{Técnicas de codificação}
+& \textit{Open coding}, \textit{selective coding} e \textit{theoretical coding}.
+& \textit{Open coding}, \textit{axial coding} e \textit{selective coding}.
+& \textit{Initial coding}, \textit{focused coding} e \textit{theoretical coding}. \\
+\hline
+
+\textbf{Questões levantadas durante a análise}
+& Estes dados são um estudo de quê? Que categoria ou propriedade este incidente indica? O que está acontecendo atualmente nos dados?
+& Questões do estilo quem, quando, onde, como, com quais consequências ou sob quais condições algum fenômeno ocorreu, ajudam a descobri ideias importantes para a teoria.
+& Estes dados são um estudo de quê? O que este dado sugere? Sob o ponto de vista de quem? A qual categoria teórica esta unidade de dado indica pertencer? \\
+\hline
+
+\textbf{Critérios de avaliação}
+& As categorias geradas devem estar alinhadas aos dados, a teoria deve funcionar, a teoria deve ter relevância para a ação da área, e a teoria deve ser modificável quando novos dados aparecerem.
+& São definidos sete critérios para o processo de pesquisa, tais quais, informação na seleção de exemplos, principais categorias, hipóteses derivadas e discrepâncias. E oito critérios a respeito do crescimento empírico, tais quais ``conceitos foram gerados?'', ``existe variação construída na teoria?''
+& Credibilidade, originalidade, utilidade e se a teoria faz sentido para os participantes. \\
+\hline
+
+\end{tabular}}
+\end{table}
+
+Neste trabalho foi utilizada a variação clássica, principalmente pela
+inexistência de questões de pesquisa no início da pesquisa, exatamente como
+sugerido nessa versão. O início da pesquisa estava ancorado em investigar uma
+área de interesse: a adoção bem sucedida de \textit{DevOps} no mercado.
+Adicionalmente, os trabalhos de pesquisa atualmente existentes na área
+de engenharia de \textit{software} usam predominantemente a versão clássica
+\cite{stol2016grounded} e, portanto, existe um maior referencial que pode ser
+utilizado como base em um novo estudo.
+
+\subsection{Abordagem \acrshort{GT}}
+
+A figura \ref{abordagem_gt}, adaptada da proposta por Adolph et al.
+\cite{using_gt_adolph}, ilustra uma abordagem de como conduzir um estudo
+utilizando \acrshort{GT} como método. Esta abordagem foi utilizada no estudo
+aqui realizado.
+
+\figuraBib{GT}{O método GT}{using_gt_adolph}{abordagem_gt}{width=.45\textwidth}%
+
+
+
+
+\subsection{Trabalhos Relacionados}
+
 Conforme ilustrado no capítulo anterior, os trabalhos de pequisa existentes
 apresentam algumas caracterizações de \textit{DevOps} por meio da enumeração
 de conceitos, princípios e práticas relacionadas. Apesar de alguns desses
@@ -94,133 +239,6 @@ automação - em uma adoção de \textit{DevOps}? Para responder a essas questõ
 é necessário um entendimento holístico dos caminhos seguidos por organizações
 que adotaram \textit{DevOps} de uma maneira bem sucedida.
 
-Neste capítulo, apresenta-se um estudo utilizando a variação clássica da
-metodologia \textit{\acrfull{GT}} para se caracterizar a adoção de DevOps
-em organizações de mercado que foram bem sucedidas neste processo.
-
-A teoria apresentada neste capítulo foi construída com base na percepção de
-praticantes de quinze companhias de cinco países que foram bem sucedidos na
-adoção de \textit{DevOps}. A teoria torna claro que praticantes interessados em
-adotar \textit{DevOps} devem focar na construção de uma \cat{cultura de
-colaboração}, o que previne pontos de falha comuns relacionados a focar em
-ferramental ou em automação. O papel dos demais elementos que fazem parte da
-adoção de \textit{DevOps} é explicado por meio da definição de dois grandes
-agrupamentos de categorias de conceitos, denominados \emph{Facilitadores DevOps}
-e \emph{Saídas DevOps}.
-
-\section{\acrfull{GT}}
-
-Introduzir GT
-
-\acrshort{GT} foi utilizada como metodologia de pesquisa devido a três principais
-razões. Primeiro, \acrshort{GT} é uma metodologia consolidada em outras áreas de
-pesquisa, notadamente sociologia médica \cite{gt_medical_sociology}, nutrição
-\cite{gt_nursing}, educação \cite{gt_education} e administração
-\cite{gt_management}. \acrshort{GT} também tem sido cada vez mais aplicada
-para estudar tópicos de engenharia de \textit{software}
-\cite{hoda2017becoming,Waterman:2015:ICSE,stol2016grounded}. A segunda
-razão é que \acrshort{GT} é considerada uma metodologia adequada para responder
-questões de pesquisa que objetivam caracterizar cenários sob uma perspectiva
-pessoal daqueles envolvidos em uma disciplina ou atividade \cite{stol2016grounded},
-que é exatamente o cenário que se almeja caracterizar aqui: quais são os caminhos
-seguidos por praticantes que adotaram \textit{DevOps} de uma maneira bem
-sucedida? Finalmente, \acrshort{GT} possibilita a construção de um entendimento
-independente e original, o que é adequado para coletar evidência empírica
-diretamente da prática na indústria sem o viés das pesquisas anteriores.
-A evidência coletada só é reintegrada com a literatura existente após a construção
-da teoria \cite{}.
-
-A theory, according to Strauss and Corbin [44], is ‘a set of well-developed
-categories (e.g. themes, concepts) that are systematically interrelated through statements of
-relationship to form a theoretical framework that explains some relevant social, psychological,
-educational, nursing or other phenomenon’ (using GT to understand sw process improv)
-
-
-
-\subsection{Variações de \acrshort{GT}}
-
-Desde a publicação da versão original de \acrshort{GT}, diversas modificações
-e variações foram propostas ao método, ocasionando a existência de pelo menos
-sete diferentes versões de \acrfull{GT}~\cite{denzin2007grounded}. Segundo
-Stol et al. \cite{stol2016grounded}, as principais versões são três: (1)
-\acrshort{GT} de \textit{Glaser} (GT clássica ou \textit{Glaseriana}), (2)
-\acrshort{GT} de \textit{Strauss} e \textit{Corbin} (GT \textit{Straussiana}) e
-(3) \acrshort{GT} de \textit{Charmaz} (GT construtivista), e qualquer
-estudo utilizando \acrshort{GT} deve especificar qual versão foi utilizada.
-
-As principais diferenças entre as versões de \acrshort{GT} estão relacionadas
-à maneira de utilizar questões de pesquisa, ao papel da literatura, às técnicas
-de codificação, aos tipos de questionamentos que devem ser levantadas durante
-a análise dos dados e aos critérios de avaliação da teoria construída. A
-Tabela \ref{versoes_GT_tabela}, adaptada de \cite{stol2016grounded}
-sintetiza as principais diferenças entre as três principais versões.
-
-\begin{table}[hb!]
-\centering
-\caption{Principais diferenças entre as versões de GT}
-\label{versoes_GT_tabela}
-\resizebox{\textwidth}{!}{
-\begin{tabular}{|p{3cm}|p{5.7cm}|p{5.7cm}|p{5.7cm}|}
-\hline
-\textbf{Elemento} & \textbf{Clássica} & \textbf{\textit{Straussiana}} & \textbf{Construtivista} \\
-\hline
-\textbf{Questão de pesquisa}
-& Não é definida \textit{a priori}, emerge da pesquisa. O pesquisador inicia com uma área de interesse.
-& Pode ser definida antecipadamente, derivada da literatura ou sugerida por um colega, é frequentemente ampla e aberta.
-& A pesquisa inicia com questões de pesquisa iniciais, que evoluem ao longo do estudo. \\
-\hline
-
-\textbf{Papel da literatura}
-& Uma revisão abrangente da literatura só deve ser conduzida após a literatura possuir estágio avançado de desenvolvimento, para evitar a influência de conceitos existentes na teoria emergente.
-& A literatura pode ser consultada ao longo do processo para algumas necessidades específicas, como na formualação de perguntas para coleta de dados, para obter sugestões de áreas para exemplificação teórica, etc.
-& Embora concorde com os motivos de \textit{Glaser} recomendar evitar contato com a literatura no início da pesquisa, defende uma consulta adaptada da literatura para adequar o propósito do estudo. \\
-\hline
-
-\textbf{Técnicas de codificação}
-& \textit{Open coding}, \textit{selective coding} e \textit{theoretical coding}.
-& \textit{Open coding}, \textit{axial coding} e \textit{selective coding}.
-& \textit{Initial coding}, \textit{focused coding} e \textit{theoretical coding}. \\
-\hline
-
-\textbf{Questões levantadas durante a análise}
-& Estes dados são um estudo de quê? Que categoria ou propriedade este incidente indica? O que está acontecendo atualmente nos dados?
-& Questões do estilo quem, quando, onde, como, com quais consequências ou sob quais condições algum fenômeno ocorreu, ajudam a descobri ideias importantes para a teoria.
-& Estes dados são um estudo de quê? O que este dado sugere? Sob o ponto de vista de quem? A qual categoria teórica esta unidade de dado indica pertencer? \\
-\hline
-
-\textbf{Critérios de avaliação}
-& As categorias geradas devem estar alinhadas aos dados, a teoria deve funcionar, a teoria deve ter relevância para a ação da área, e a teoria deve ser modificável quando novos dados aparecerem.
-& São definidos sete critérios para o processo de pesquisa, tais quais, informação na seleção de exemplos, principais categorias, hipóteses derivadas e discrepâncias. E oito critérios a respeito do crescimento empírico, tais quais ``conceitos foram gerados?'', ``existe variação construída na teoria?''
-& Credibilidade, originalidade, utilidade e se a teoria faz sentido para os participantes. \\
-\hline
-
-\end{tabular}}
-\end{table}
-
-
-Neste trabalho foi utilizada a variação clássica, principalmente pela
-inexistência de questões de pesquisa no início da pesquisa, exatamente como
-sugerido nessa versão. O início da pesquisa estava ancorado em investigar uma
-área de interesse: a adoção bem sucedida de \textit{DevOps} na indústria.
-Adicionalmente, os trabalhos de pesquisa atualmente existentes na área
-de engenharia de \textit{software} usam predominantemente a versão clássica
-\cite{stol2016grounded} e, portanto, existe um maior referencial que pode ser
-utilizado como base em um novo estudo.
-
-\subsection{Abordagem \acrshort{GT}}
-
-A figura \ref{abordagem_gt}, adaptada da proposta por Adolph et al.
-\cite{using_gt_adolph}, ilustra uma abordagem de como conduzir um estudo
-utilizando \acrshort{GT} como método. Esta abordagem foi utilizada no estudo
-aqui proposto.
-
-\figuraBib{GT}{O método GT}{using_gt_adolph}{abordagem_gt}{width=.45\textwidth}%
-
-\subsection{Trabalhos Relacionados}
-
-\iffalse
-\section{Adoção de \textit{DevOps}}\label{secao_adocao_devops}
-
 Os trabalhos listados anteriormente concentram-se em caracterizar
 \textit{DevOps}, há pouco conteúdo dedicado a \emph{como} adotar \textit{DevOps},
 com indicação de caminhos seguidos por companhias que passaram pelo processo
@@ -280,4 +298,3 @@ organização. As evoluções de código são feitas por meio de \textit{pull
 requests} que após aprovadas são integradas ao código principal. Após a
 integração dos códigos das \textit{pull requests}, um \textit{pipeline} de entrega
 contínua é executado para publicar o \textit{software}.
-\fi
