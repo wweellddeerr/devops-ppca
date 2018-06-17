@@ -14,10 +14,42 @@
 \usepackage{placeins}%
 
 \usepackage{booktabs}
+\usepackage{xspace}
+\usepackage{enumitem}
 
 \newcommand{\cat}[1]{{\textbf{\emph{#1}}}}
+\newcommand{\cc}{\cat{cultura de colaboração}\xspace}
 
 \usepackage{array}
+\usepackage[framemethod=TikZ]{mdframed}
+
+\definecolor{oldlace}{rgb}{0.99, 0.96, 0.9}
+
+\newmdenv [ %
+ skipabove=\topsep,
+ skipbelow=\topsep,
+% outerlinewidth   = 2              ,
+% roundcorner      = 5pt            ,
+ leftmargin       = 2              ,
+ rightmargin      = 2              ,
+% backgroundcolor  = lightgray        ,
+% outerlinecolor   = blue           ,
+ %innertopmargin   = \topskip       ,
+ splittopskip     = \topskip      ]{mh}
+
+\newmdenv [ %
+ skipabove=\topsep,
+ skipbelow=\topsep,
+ outerlinewidth   = 2              ,
+ roundcorner      = 5pt            ,
+ leftmargin       = 2              ,
+ rightmargin      = 2              ,
+ backgroundcolor  = oldlace        ,
+ outerlinecolor   = blue           ,
+ innertopmargin   = \topskip       ,
+ splittopskip     = \topskip      ]{mq}
+
+\hyphenation{Dev-Ops}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Informações do Trabalho
@@ -48,7 +80,7 @@ DevOps adoption}%
     \capitulo{2_Fundamentacao_Teorica}{Fundamentação Teórica}%
     \capitulo{3_GT_Adocao_DevOps}{Uma \textit{Grounded Theory} Sobre a Adoção de \textit{DevOps} no Mercado}%
     \capitulo{4_Modelo_Adocao_DevOps}{Um Modelo para Adoção de \textit{DevOps} e sua Aplicação no \acrshort{TCU}}%
-    \capitulo{5_Avaliacao_Empirica}{Avaliação Empírica}%
+    %\capitulo{5_Avaliacao_Empirica}{Avaliação Empírica}%
     \capitulo{6_Conclusoes}{Conclusões}%
 
     %\apendice{Apendice_Fichamento}{Fichamento de Artigo Científico}%
