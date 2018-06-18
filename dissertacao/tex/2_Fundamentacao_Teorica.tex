@@ -11,17 +11,16 @@
 #1\end{minipage}}%
 \\\vspace{\baselineskip}}%
 
-Este capítulo apresenta uma revisão dos principais trabalhos relacionados a
+Este capítulo apresenta uma revisão dos principais tópicos relacionados a
 \textit{DevOps}, estando estruturado da seguinte forma: a seção \ref{secao_abordagem_nao_devops}
 apresenta a maneira como o desenvolvimento de \textit{software} tipicamente é
 organizado quando não se utiliza \textit{DevOps} como abordagem; a seção \ref{secao_historico_devops}
 contém um breve histórico do surgimento do termo \textit{DevOps}; na seção
 \ref{secao_definicao_devops} são apresentadas as principais definições de
-\textit{DevOps} existentes na literatura; a seção \ref{secao_elementos_devops}
+\textit{DevOps} existentes na literatura. A seção \ref{secao_elementos_devops}
 contém um detalhamento dos principais elementos que fazem parte das caracterizações
-de \textit{DevOps}. E, por fim, na seção \ref{secao_adocao_devops}
-são apresentadas percepções a respeito de como aspectos relacionados à adoção
-de \textit{DevOps} estão presentes literatura relacionada.
+de \textit{DevOps}. E, por fim, na seção \ref{secao_desafios} são apresentados
+desafios relacionados a \textit{DevOps}
 
 \section{Abordagem ``Não \textit{DevOps}'' de Desenvolvimento de \textit{Software}}
 \label{secao_abordagem_nao_devops}
@@ -216,7 +215,7 @@ com os estudos anteriores. Para identificar as dimensões de \textit{DevOps} foi
 utilizada uma revisão de literatura combinada com entrevistas a quatro
 praticantes de três companhias de um mesmo grupo empresarial. Uma extensão
 deste trabalho foi publicada posteriormente em \cite{extending_dimensions} e
-acrescentou uma nova dimensão chamada de colaboração. Nessa extensão foi
+acrescentou uma nova dimensão chamada de \emph{colaboração}. Nessa extensão foi
 conduzida uma revisão de literatura multivocal, utilizando dados da literatura
 cinza.
 
@@ -232,7 +231,7 @@ algumas técnicas de codificação de \textit{\acrfull{GT}}.
 Por fim, por meio de uma nova revisão sistemática de literatura, Erich et al.
 \cite{qualitative_devops_journalsw_17} identificaram sete agrupamentos de
 conceitos presentes na literatura sobre \textit{DevOps}: (1) cultura de
-colaboração, (2) automação (3) medição; (4) compartilhamento, (5) serviços,
+colaboração, (2) automação, (3) medição, (4) compartilhamento, (5) serviços,
 (6) garantia da qualidade e (7) \textbf{governança}. Apenas \emph{governança}
 não aparece em nenhum dos trabalhos apontados previamente.
 
@@ -313,7 +312,7 @@ da qualidade} e \emph{serviços} aparecem em três e dois estudos, respectivamen
 enquanto que os demais aparecem apenas em um único estudo.
 
 Nas subseções a seguir, cada um dos elementos é detalhado. Alguns dos trabalhos
-relacionados citam práticas relacionadas aos elementos, quando aplicável, as
+relacionados citam práticas relacionadas aos elementos. Quando aplicável, as
 práticas também são listadas. Os elementos \emph{estruturas} e \emph{padrões}
 foram citados apenas em \cite{cooperation_dev_ops_esem_2014} e não foi
 apresentado um detalhamento sobre suas características. O mesmo grupo de
@@ -509,7 +508,7 @@ Este elemento está presente em \cite{cooperation_dev_ops_esem_2014} e em
 considerar \emph{serviços} como elemento \textit{DevOps} consiste em considerar
 uma característica das organizações que se estruturam em torno de serviços,
 ao invés de em torno de disciplinas (como desenvolvimento e operações, por
-exemplo). Organizações que praticam \textit{DevOps}
+exemplo) e que organizações que praticam \textit{DevOps}
 tipicamente usam serviços em nuvem e a arquitetura de microsserviços.
 
 \subsection{Garantia da Qualidade}
@@ -543,11 +542,11 @@ infraestrutura subjacente para determinar a atribuição apropriada de recursos 
 para detectar, relatar e corrigir os problemas que ocorrem nos sistemas.
 Todavia, \textit{DevOps} propicia uma resposta aos desafios enfrentados na
 realização de um monitoramento efetivo por meio da ênfase em colaboração entre
-desenvolvedores e operadores. Adicionalmente, as análise são usadas para
+desenvolvedores e operadores. Adicionalmente, as análises são usadas para
 integrar os dados de desempenho da infraestrutura e do sistema com o
 comportamento de uso do cliente. As informações coletadas são fornecidas como
-\textit{feedback} aos desenvolvedores e ao gerenciamento de produtos a serem
-usados para aprimoramentos e personalização dos produtos de \textit{software}.
+\textit{feedback} aos desenvolvedores e ao gerenciamento de produtos para serem
+utilizadas em aprimoramentos e personalização dos produtos de \textit{software}.
 
 Convém ressaltar, que as descrições contidas nos demais trabalhos para o
 elemento \emph{medição}, tipicamente englobam aspectos de \emph{monitoramento}.
@@ -560,7 +559,7 @@ relação a \emph{medição} apenas foi realizado por Lwakatare et al.
 
 Este elemento é apontado apenas em \cite{characterizing_devops}. Segundo os
 autores, algumas práticas \textit{DevOps} são baseadas nos princípios de
-pensamento enxuto\footnote{Lean Thinking \cite{lean_thinking}}. Considerando
+\emph{pensamento enxuto}\footnote{Lean Thinking \cite{lean_thinking}}. Considerando
 que \textit{DevOps} visa garantir um fluxo contínuo para desenvolver e entregar
 \textit{software} regularmente, em pequenas e incrementadas mudanças, o processo
 precisa ser enxuto (\textit{lean}).
@@ -571,7 +570,7 @@ relacionadas ao elemento \textit{Leanness}: (1) fluxo contínuo, (2) melhoria
 contínua, (3) eliminação de desperdícios, (4) \textit{feedback} rápido, (5)
 visão holística ou sistêmica e (6) simplicidade.
 
-\section{Desafios na Adoção de \textit{DevOps}}
+\section{Desafios na Adoção de \textit{DevOps}}\label{secao_desafios}
 
 Implementar \textit{DevOps} é reconhecidamente uma atividade desafiadora. Nesta
 seção são apresentados os principais desafios relatados na literatura
@@ -583,8 +582,8 @@ de \emph{comunicação insuficiente} entre os times de desenvolvimento e
 operações. Em segundo lugar, como \textit{DevOps} requer
 uma mudança cultural, existe o desafio da existência de \emph{culturas
 profundamente arraigadas}. O terceiro desafio apontado é a possibilidade de
-\emph{restrições legais} relacionadas por exemplo ao acesso de dados protegidos
-para execução de testes. Por fim, o quarto desafio é que \textit{DevOps}
+\emph{restrições legais} relacionadas, por exemplo, ao acesso, para execução de
+testes, de dados protegidos. Por fim, o quarto desafio é que \textit{DevOps}
 ainda não é completamente compreendido mas continua evoluindo rapidamente.
 
 Já no trabalho de Smeds et al. \cite{devops_a_definition}, as percepções de
