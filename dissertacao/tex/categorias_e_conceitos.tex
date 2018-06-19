@@ -1,78 +1,78 @@
-\section{Categorias e Conceitos da Adoção de \textit{DevOps}}
+\section{A Categoria Principal: Cultura de Colaboração}\label{secao_core_category}
 
-Como resultado da pesquisa, foram identificados 33 conceitos que foram agrupados
-em sete categorias. Nesta seção são detalhados todos os conceitos e categorias
-que foram  identificados como parte da adoção de \textit{DevOps}.
-
-\subsection{A Categoria Principal: Cultura de Colaboração}
-
-The \cc is the core category
-for DevOps adoption. A \cc essentially aims to remove
-the silos between development and operations teams and activities.
-As a result, operations tasks---like deployment, infrastructure provisioning
-management, and monitoring--- should be considered as regular, day-to-day,
-development activities. This leads to the first concept related to
-this core category: {\bf operations tasks should be performed by
-the development teams in a seamless way.}
+A categoria principal da adoção de {\it DevOps} é \cc. A \cc visa essencialmente
+remover os silos entre os times de desenvolvimento e operações, o que até certo
+ponto se confunde com os próprios objetivos de {\it DevOps}. Inicialmente, uma
+\cc envolve que as tarefas tipicamente de operaçõe---como {\it deployment},
+provisionamento e gerenciamento de infraestrutura e monitoramento---devem ser
+consideradas atividades regulares, parte do dia a dia de desenvolvimento de
+{\it software}. As organizações relatam que não aguardam mais momentos específicos
+para performar essas atividades, elas são executadas continuamente. Isso leva
+ao primeiro conceito relacionado à categoria principal: {\bf operações no dia
+a dia de desenvolvimento}.
 
 \begin{mq}
-``\emph{A very important step was to bring the deployment into day-to-day
-development, no more waiting for a specific day of the week or month. We wanted
-to do deployment all the time, even if in a first moment it were not in
-production, a staging environment was enough. [...] Of course, to carry out the deployment
-continuously, we had to provide all the necessary infrastructure at the same
-pace.}" (P14, IT Manager, Brazil)
+``\emph{Uma etapa muito importante foi trazer o {\it deployment} para dentro do
+dia a dia de desenvolvimento, sem ter que ficare esperando um dia específico
+da semana ou do mês. Nós queríamos fazer {\it deploy} o tempo inteiro, mesmo
+que em um primeiro momento não fosse em produção, um ambiente de {\it staging}
+era suficiente. [...] É claro que para que a gente pudesse fazer o {\it deployment}
+continuamente, a gente tinha que prover toda a infraestrutura necessária no
+mesmo ritmo.}" (P14, Gerente de \acrshort{TI}, Brasil)
 \end{mq}
 
-Without DevOps, a common scenario is an accelerated software development
-without concerns about operations. At the end, when the development team has a
-minimum viable software product, it is sent to the operations team for
-publication. Knowing few things about the nature of the software and how it
-was produced, the operations team has to create and configure an environment
-and to publish the software. In this scenario, software delivery is typically
-delayed and conflicts between teams manifest themselves. When a \cc is fomented, teams collaborate to perform the tasks from the first day
-of software development. With the constant exercise of provisioning, management,
-configuration and deployment practices, software delivery becomes more natural,
-reducing delays and, consequently, the conflicts between teams.
+Sem {\it DevOps}, um cenário comum é a existência de um processo acelerado de
+desenvolvimento de {\it software} sem preocupações relacionadas a operações.
+No final, quando o time de desenvolvimento tem um mínimo produto viável, ele
+o envia para o time de operações para publicação. Conhecendo poucas coisas sobre
+a natureza do {\it software} e como ele foi produzido, o time de operações tem
+que criar e configurar o ambiente necessário e publicar o {\it software}. Neste
+cenário, a entrega de {\it software} tipicamente atrasa e os conflitos entre
+os times se manifestam. Quando uma \cc é fomentada, os times colaboram para
+executar as tarefas desde o primeiro dia do desenvolvimento do {\it software}.
+Com o constante exercício das práticas de provisionamento, gerenciamento,
+configuração e {\it deployment}, a entrega de {\it software} se torna mais
+natural, reduzindo os atrasos e, consequentemente, os conflitos entre os times.
 
 \begin{mq}
-``\emph{We work using an agile approach, planning 15-day sprints where we focused on
-producing software and producing new releases at a high frequency. However, at the time of
-delivering the software, complications start to appear. (...) Deliveries was often delayed,
-having to deliver with delays of weeks, which was not good either for us or for
-the stakeholders.}" (P6, Developer, Portugal)
+``\emph{Nós trabalhamos usando uma abordagem ágil, com {\it sprints} de quinze
+dias, onde a gente foca em produzir {\it software} e gera novas versões em
+altíssima frequência. Mas, na hora da entrega do {\it software} é que as
+complicações começavam a aparecer. [...] As entregas frequentemente atrasavam,
+e a gente tinha que entregar com atrasos de semanas, o que não era bom nem para
+nós e nem para os clientes.}'' (P6, {\it Developer}, Portugal)
 \end{mq}
 
-As a result of constructing a \cc, the development
-team no longer needs to stop their work waiting for the creation
-of one application server, or for the execution of some database script, or for
-the publication of a new version of the software in a staging environment.
-Everyone needs to know the way this is done and, with the collaboration of the
-operations team, this can be performed in a regular basis. If any task can be
-performed by the development team and there is trust between the teams, this task is
-incorporated into the development process in a natural way, manifesting the
-second concept related to \cc category: \textbf{software
-development empowerment}.
+Um dos resultados da construção de uma \cc é que o time de desenvolvimento não
+precisa mais parar o seu trabalho aguardando pela disponibilização de um
+servidor de aplicação, ou pela execução de um {\it script} na base de dados, ou
+ainda pela publicação de uma nova versão do {\it software} em um ambiente de
+testes. Todos os envolvidos precisam conhecer a maneira como todas essas coisas
+são feitas e, com a colaboração do time de operações, isso pode ser executado
+de maneira regular. Se uma tarefa pode ser executada pelo time de desenvolvimento
+e há confiança entre os times, essa tarefa será incorporada ao processo de
+desenvolvimento de uma maneira natural, manifestando o segundo conceito
+relacionado à categoria \cc: {\bf empoderamento do desenvolvimento de {\it software}}.
 
 \begin{mq}
 ``\emph{
-%We had several people working on development, the amount of developers is
-%impressive.
-It was not feasible to have so many developers generating artifacts and
-stopping their work to wait another completely separate team to publish. Or
-needing a test environment and having to wait for the operations team to
-provide it only when possible. These activities have to be available to quickly
-serve the development team. With DevOps we supply the need of freedom and
-more power to execute some tasks which are intrinsically linked to their work.}"
-(P5, Systems Engineer, Spain)
+Não era viável a gente ter tantos desenvolvedores produzindo artefatos e
+parando o trabalho deles para aguardar outro time completamente separado
+publicar. Ou também precisar de um ambiente de teste e ter que esperar o time
+de operações prover isto quando possível. Essas atividades tinham que estar
+disponíveis para servir rapidamente ao time de desenvolvimento. Com DevOps
+nós conseguimos suprir essa necessidade de liberdade e mais poder para executar
+algumas tarefas que são intrisicamente relacionadas ao trabalho deles.}''
+(P5, {\it Systems Engineer}, Espanha)
 \end{mq}
 
-A \cc requires  \textbf{product thinking}, in substitution to
-\textbf{operations or development thinking}. The development team has to understand that
-the software is a product that does not end after ``pushing'' the code to a
-project's repository and the operations team has to understand that its processes does not
-start when an artifact is received for publication. \textbf{Product thinking}
-is the third concept related to our core category.
+Uma \cc requer {\bf pensamento de produto}, em substituição a pensamento de
+desenvolvimento ou de operações. O time de desenvolvimento precisa compreender
+que o {\it software} é um produto que não se encerra após o ``{\it push}'' do código
+para o repositório de código-fonte, e o time de operações precisa entender que
+o processo também não se inicia quand oum artefato é recebido para publicação.
+{\bf Pensamento de produto} é o terceiro conceito relacionado à categoria
+principal.
 
 \begin{mq}
 ``\emph{We wanted to
@@ -137,10 +137,10 @@ three other sets of categories: the enablers
 of DevOps adoption, the consequences of adopting
 DevOps, and the categories that are both enablers and consequences.
 
-%\subsection{Enabler Categories}
+\section{Facilitadores DevOps}\label{secao_facilitadores}
 
-%Here we detail the categories that support the adoption of
-%DevOps practices, including \cat{automation}, \cat{sharing and transparency}.
+Here we detail the categories that support the adoption of
+DevOps practices, including \cat{automation}, \cat{sharing and transparency}.
 
 \subsection{Automation} \label{ssec:automation}
 
@@ -282,7 +282,8 @@ Manager, Brazil)
 \end{mq}
 
 
-%\subsection{Categories related to the DevOps adoption outcomes}
+\section{Categorias Relacionadas a \emph{Saídas} da Adoção de {\it DevOps}}
+\label{secao_saidas}
 
 %In this section we detail the categories that correspond to
 %the expected consequences with the adoption of
@@ -324,11 +325,12 @@ previous one must be restored. This auto restore of a previous version
 decrease the chance of downtimes due to errors in specific versions, which
 is the concept of \textbf{zero down-time}, the last one of the \cat{resilience} category.
 
-%\subsection{Categories that are both Enablers and Outcomes}
+\section{Categorias que são tanto \emph{Facilitadores} como \emph{Saídas} da Adoção de {\it DevOps}}
+\label{secao_facilitadores_e_saidas}
 
-%Finally, here we detail the categories that are both enablers
-%and outcomes, including \cat{continuous measurement}
-%and \cat{quality assurance}; as discussed as follows.
+Finally, here we detail the categories that are both enablers
+and outcomes, including \cat{continuous measurement}
+and \cat{quality assurance}; as discussed as follows.
 
 \subsection{Continuous Measurement}
 
