@@ -1,0 +1,165 @@
+\section{Trabalhos Relacionados}
+
+\subsection{Trabalhos Parcialmente Relacionados}
+
+Conforme ilustrado no capítulo anterior, os trabalhos de pequisa existentes
+apresentam algumas caracterizações de \textit{DevOps} por meio da enumeração
+de conceitos, princípios e práticas relacionadas. Apesar de alguns desses
+estudos conterem abordagens qualitativas para investigar empresas adotando
+\textit{DevOps}, conduzindo entrevistas com praticantes, o foco desses estudos
+tipicamente é em caracterizar \textit{DevOps}, ao invés de prover recomendações
+na adoção de \textit{DevOps}. Além das diferenças de foco, existem algumas
+diferenças metodológicas em relação ao estudo aqui proposto. Essas diferenças
+são resumidas na tabela \ref{related_work_table}.
+
+%% Table~\ref{related_work_table} compares the most relevant literature to
+%% out work. Since the work of Lwakatare et al.~\cite{extending_dimensions} is an
+%% extension of a previous contribution of the authors and her team \cite{dimensions_of_devops_xp_15},
+%% we only compared the most recent study at Table~\ref{related_work_table}.
+
+\begin{table}[hb!]
+\centering
+\caption{Comparação de Metodologia e Foco dos Trabalhos Relacionados}
+\label{related_work_table}
+\begin{tabular}{|p{3cm}|p{6cm}|p{6cm}|}
+\hline
+
+\textbf{Estudo}
+& \textbf{Abordagem de Pesquisa}
+& \textbf{Foco do Trabalho} \\
+
+\hline
+
+\textbf{Este estudo}
+
+& Grounded Theory study interviewing practitioners which contributed to DevOps
+adoption in 15 companies across 5 countries.
+
+& Explain how DevOps has been successfully adopted in practice;\newline
+\newline Provide guidelines to be used in new DevOps adoptions. \\
+
+\hline
+
+\textbf{J. Smeds et al.~\cite{devops_a_definition}}
+
+& Systematic literature review; \newline \newline Semi structured interviews
+with 13 employees of a single company whose DevOps adoption process was at
+an initial stage.
+
+& Identify in literature the main defining characteristics of DevOps; \newline
+\newline Build a list of possible impediments to DevOps adoption through an
+empirical study. \\
+
+\hline
+
+\textbf{Lwakatare et al.~\cite{extending_dimensions}}
+
+&
+Multivocal literature review using data from gray literature; \newline \newline
+Three interviews with software practitioners in one company that was applying
+DevOps practices in one project.
+
+& Identify how do practitioners describe DevOps as a phenomenon; \newline
+\newline Identify the DevOps practices according to software practitioners. \\
+
+\hline
+
+\textbf{Fran\c{c}a et al.~\cite{characterizing_devops}}
+
+& Multivocal literature review with qualitative analysis procedures from
+Grounded Theory.
+
+& Provide a DevOps definition; \newline \newline
+Identify DevOps practices, required skills, characteristics, benefits and
+issues motivating its adoption.  \\
+
+\hline
+
+\textbf{Erich et al.~\cite{qualitative_devops_journalsw_17}}
+
+& Systematic literature review; \newline \newline
+Interviews with practitioners from 6 companies across 3 countries.
+
+& Identify how literature defines DevOps; \newline \newline
+Investigate how DevOps is being implemented in practice. \\
+
+\hline
+
+\end{tabular}
+\end{table}
+
+Como consequência dessas diferenças de foco, algumas questões práticas a
+respeito da adoção de DevOps permancem em aberto: (1) Existe um caminho
+recomendado para se adotar \textit{DevOps}? (2) Já que \textit{DevOps} é
+constituído de múltiplos elementos, eles
+possuem a mesma relevância quando se adota \textit{DevOps}? (3) Qual é o papel
+desempenhado por cada um desses elementos - tais como medição, compartilhamento e
+automação - em uma adoção de \textit{DevOps}? Para responder a essas questões,
+é necessário um entendimento holístico dos caminhos seguidos por organizações
+que adotaram \textit{DevOps} de uma maneira bem sucedida.
+
+Os trabalhos listados anteriormente concentram-se em caracterizar
+\textit{DevOps}, há pouco conteúdo dedicado a \emph{como} adotar \textit{DevOps},
+com indicação de caminhos seguidos por companhias que passaram pelo processo
+e que eventualmente poderiam ser usados por novos praticantes, com indicações
+de lições aprendidas e possíveis abordagens que possam ser seguidas.
+
+\subsection{A Caracterização da Adoção de {\it DevOps} em 6 Companhias Proposta por Erich et al. \cite{qualitative_devops_journalsw_17}}
+
+O trabalho de Erich et al. \cite{qualitative_devops_journalsw_17} investigou
+o processo de adoção de \textit{DevOps} por meio de entrevistas com praticantes
+de seis companhias. Todavia, as percepções obtidas não detalham a maneira como
+as companhias aplicaram os elementos de \textit{DevOps} ao longo do processo,
+e são apresentadas de maneira individualizada, não se colocando em perspectiva
+o que há de comum no entendimento dessas companhias. Os dados de como cada
+companhia relata ter implementado \textit{DevOps} são apresentados de maneira
+sucinta e os principais pontos são descritos a seguir.
+
+Na primeira companhia, é relatado que o pessoal de desenvolvimento e
+operações passou a trabalhar de maneira conjunta diariamente, foi criado um
+novo cargo na companhia chamado \textit{DevOps Engineer}, o pessoal de gestão
+foi treinado para ser capaz de gerenciar tanto pessoas de desenvolvimento como
+de operações, o pessoal de recursos humanos alterou os processos de avaliação e,
+por fim, a organização está automatizando seus processos de infraestrutura, não
+são apresentados detalhes de como isso está sendo feito.
+
+Na segunda companhia, \textit{DevOps} é visto como uma extensão de
+\textit{Scrum} e \textit{Lean}. A adoção de \textit{DevOps} lá foi guiada por
+dois princípios: colaboração diária e ambiente de trabalho compartilhado.
+Havia a premissa de que o \textit{software} deve ir para produção a cada
+iteração. É relatado então que a organização usou \textit{frameworks}
+comerciais para guiar a implantação de \emph{entrega contínua}, também sem maiores
+detalhamentos de como foi feito.
+
+Na terceira companhia, é relatado que três times que trabalhavam em
+funcionalidades separadas foram agrupados em um \emph{time DevOps}. A organização
+passou então a experimentar \textit{entrega contínua}, mas ainda estava em
+um estágio inicial quando a entrevista foi realizada.
+
+A quarta companhia criou uma única equipe de \textit{DevOps} para
+experimentar ferramentas, princípios e práticas \textit{DevOps}. Os
+membros dessa equipe possuem habilidades multidisciplinares. É relatado ainda
+o uso de ferramentas para controle de versão e o desenvolvimento de ferramentas
+próprias para criar facilmente ambientes de nuvem.
+
+Na quinta companhia, é relatado que \textit{DevOps} é visto como
+um papel responsável por gerenciamento de incidentes, gerenciamento de
+capacidade, gerenciamento de riscos e suporte ao processo de criação.
+O uso de computação em nuvem ocasionou a necessidade de se existir uma
+abordagem mais sistemática para execução das atividades de operações, exigindo
+que o pessoal responsável aprendesse técnicas de desenvolvimento de
+\textit{software}. O time de desenvolvimento foi dividido em vários subtimes,
+um dos quais focado em \textit{DevOps}, com responsabilidade de apoiar os demais
+times. São também enumerados alguns princípios e práticas utilizados na companhia
+durante a adoção de \textit{DevOps}.
+
+Por fim, com relação a como a sexta companhia implementou \textit{DevOps},
+é apresentado um detalhamento de como ocorre a \emph{integração contínua} na
+organização. As evoluções de código são feitas por meio de \textit{pull
+requests} que após aprovadas são integradas ao código principal. Após a
+integração dos códigos das \textit{pull requests}, um \textit{pipeline} de entrega
+contínua é executado para publicar o \textit{software}.
+
+\subsection{As Considerações de Hamunen \cite{challenges_in_adopting_devops} Sobre Como Superar os Desafios na Adoção de {\bf {\it DevOps}}}
+
+\subsection{O Modelo de Maturidade Proposto por Feijter et al. \cite{feijter2017towards}}
