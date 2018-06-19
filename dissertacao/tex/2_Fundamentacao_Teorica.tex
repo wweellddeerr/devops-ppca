@@ -202,6 +202,11 @@ compõem o acrônimo \acrshort{CAMS}: cultura, automação, medição e comparti
 (\textit{sharing}, em inglês). Esse modelo é conhecido como \acrshort{CAMS}
 \textit{Framework}.
 
+O trabalho de Hamunen \cite{challenges_in_adopting_devops}, após
+investigar quais são os componentes-chave de {\it DevOps}, identificou que
+diversas fontes adicionaram {\it Lean} como novo componente, culminando
+na formação do que foi chamado de CALMS \textit{Framework}.
+
 Uma revisão de literatura de Erich et al. \cite{cooperation_dev_ops_esem_2014}
 identificou oito conceitos principais relacionados a \textit{DevOps}, os quatro
 presentes no \acrshort{CAMS} \textit{framework} acrescidos de (1) serviços,
@@ -223,10 +228,11 @@ Em \emph{Characterizing DevOps by Hearing Multiple Voices}, França et al.
 \cite{characterizing_devops} organizam os elementos de \textit{DevOps} em seis
 categorias de princípios: (1) automação, (2) garantia da qualidade,
 (3) compartilhamento, (4) medição, (5) \textbf{aspectos sociais} e (6)
-\textbf{\textit{leanness}}, os dois últimos são elementos novos em relação
-aos já apresentados aqui. Para chegar a estes resultados os autores conduziram
-uma revisão de literatura multivocal, e os dados foram analisados usando
-algumas técnicas de codificação de \textit{\acrfull{GT}}.
+\textbf{\textit{leanness}}. Apenas a categoria \emph{aspectos sociais}
+representa um elemento novo em relação aos já apresentados aqui. Para
+chegar a estes resultados os autores conduziram uma revisão de literatura
+multivocal, e os dados foram analisados usando algumas técnicas de
+codificação de \textit{\acrfull{GT}}.
 
 Por fim, por meio de uma nova revisão sistemática de literatura, Erich et al.
 \cite{qualitative_devops_journalsw_17} identificaram sete agrupamentos de
@@ -248,56 +254,56 @@ colaboração).
 \centering
 \caption{Elementos de \textit{DevOps}}
 \label{tabela_elementos_devops}
-\begin{tabular}{|p{0.3cm}|p{2.7cm}|p{2.1cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+\begin{tabular}{|p{0.3cm}|p{2.7cm}|p{2cm}|p{1.55cm}|p{1.35cm}|p{1.7cm}|p{1.35cm}|p{1.45cm}|}
 \hline
 
-        & Elemento               & \acrshort{CAMS} \textit{Framework} \cite{what_devops_means_2010} & Erich et al. \cite{cooperation_dev_ops_esem_2014} & Lwakatare et al. \cite{extending_dimensions} & França et al. \cite{characterizing_devops} & Erich et al. \cite{qualitative_devops_journalsw_17} \\
+& Elemento & \acrshort{CAMS} \textit{Framework} \cite{what_devops_means_2010} & Hamunen \cite{challenges_in_adopting_devops} & Erich et al. \cite{cooperation_dev_ops_esem_2014} & Lwakatare et al. \cite{extending_dimensions} & França et al. \cite{characterizing_devops} & Erich et al. \cite{qualitative_devops_journalsw_17} \\
 \end{tabular}
 
-\begin{tabular}{|p{0.3cm}|p{2.7cm}|m{2.1cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|}
+\begin{tabular}{|p{0.3cm}|p{2.7cm}|p{2cm}|p{1.55cm}|p{1.35cm}|p{1.7cm}|p{1.35cm}|p{1.45cm}|}
 
 \hline
 
-1  & Cultura de Colaboração & X & X & X & X & X \\
+1  & Cultura de Colaboração & X & X & X & X & X & X \\
 
 \hline
 
-2  & Automação              & X & X & X & X & X \\
+2  & Automação              & X & X & X & X & X & X \\
 
 \hline
 
-3  & Medição                & X & X & X & X & X \\
+3  & Medição                & X & X & X & X & X & X \\
 
 \hline
 
-4  & Compartilha-\newline mento & X & X &    & X & X \\
+4  & Compartilha-\newline mento & X & X & X &    & X & X \\
 
 \hline
 
-5  & Serviços               &        & X &        &        & X \\
+5  & Serviços               & & & X &        &        & X \\
 
 \hline
 
-6  & Garantia da Qualidade  &        & X &        & X & X \\
+6  & Garantia da Qualidade  & & & X &        & X & X \\
 
 \hline
 
-7  & Estruturas             &        & X &        &        &        \\
+7  & Estruturas             & & & X &        &        &        \\
 
 \hline
 
-8  & Padrões                &        & X &        &        &        \\
+8  & Padrões                & & & X &        &        &        \\
 
 \hline
 
-9  & Monitoramento          &        &        & X &        &        \\
+9  & Monitoramento          & & &        & X &        &        \\
 
 \hline
 
-10 & \textit{Leanness}      &        &        &        & X &        \\
+10 & \textit{Leanness} & & X & & & X & \\
 
 \hline
-11 & Governança             &        &        &        &        & X \\
+11 & Governança             & & &        &        &        & X \\
 
 \hline
 
@@ -322,6 +328,13 @@ Assim sendo, esses elementos não fazem parte do detalhamento apresentado a
 seguir.
 
 \subsection{Cultura de Colaboração}
+
+Uma parte essencial de {\it DevOps} é a mudança de cultura organizacional de
+uma coleção de silos para uma forma de trabalho colaborativa. Isso implica
+envolver o pessoal de operações no processo de projeto e transição de uma
+aplicação. A cultura {\it DevOps} desfoca a linha entre os papéis dos
+desenvolvedores e da equipe de operações. Em alguns casos, esse desfoque
+elimina totalmente a distinção \cite{challenges_in_adopting_devops}.
 
 No \acrshort{CAMS} \textit{framework} \cite{what_devops_means_2010}, este
 elemento é chamado apenas de \emph{cultura} e é apresentado de maneira sucinta
@@ -382,28 +395,19 @@ de responsabilidades.
 \end{enumerate}
 
 Enquanto que em \cite{characterizing_devops}, são apresentadas mais oito
-práticas:
-
-\begin{enumerate}
-\item Avaliação coletiva de desempenho;
-\item Cultura de confiança;
-\item Comunicação efetiva;
-\item Aprendizagem mútua;
-\item Abertura para mudanças;
-\item Responsabilidade pessoal;
-\item Relevância de aspectos culturais;
-\item Respeito entre os membros dos times.
-\end{enumerate}
-
-Ambos os trabalhos apresentam poucos detalhes a respeito das práticas, fazem
-apenas uma enumeração delas.
+práticas: (1) avaliação coletiva de desempenho, (2) cultura de confiança, (3)
+comunicação efetiva, (4) Aprendizagem mútua, (5) abertura para mudanças, (6)
+responsabilidade pessoal, (7) relevância de aspectos culturais e (8) respeito
+entre os membros dos times.
 
 \subsection{Automação}
 
 Organizações praticando \textit{DevOps} almejam ter um maior nível de automação
-\cite{qualitative_devops_journalsw_17}.
+\cite{qualitative_devops_journalsw_17}. O objetivo por trás das práticas de
+automação em {\it DevOps} está em alcançar {\it feedback} rápido e baixos
+tempos de espera \cite{challenges_in_adopting_devops}.
 
-No \acrshort{CAMS} \textit{framework} \cite{what_devops_means_2010}, é citado
+No \acrshort{CAMS} \textit{framework} \cite{what_devops_means_2010}, é explicado
 que as ferramentas \textit{DevOps} possibilitam uma ampla gama de possibilidades
 para automação. Ferramentas para gerenciamento de versões, provisionamento,
 gerenciamento de configuração, integração de sistemas, monitoramento e controle
@@ -437,22 +441,23 @@ automatização de tarefas repetitivas, (3) automatização da coleta de métric
 
 Organizações que praticam \textit{DevOps} tentam usar métricas que envolvem
 disciplinas de desenvolvimento e operações, ao invés de métricas separadas
-para cada um dos times \cite{qualitative_devops_journalsw_17}.
+para cada um dos times \cite{qualitative_devops_journalsw_17}. As métricas são
+importantes para que os times tenham uma clara visão do que está acontecendo
+com as aplicações em qualquer momento do tempo e para auxiliar na descoberta
+de gargalos no processo \cite{challenges_in_adopting_devops}.
 
-Sem \emph{medição} não há como melhorar, uma implementação bem sucedida de
-\textit{DevOps} irá medir tudo o que for possível com a maior frequência
-possível, há a coleta de métricas de desempenho, de processo e até mesmo de
-pessoas \cite{what_devops_means_2010}.
+O processo de melhoria contínua requer a coleta de métricas, uma implementação
+bem sucedida de \textit{DevOps} irá medir tudo o que for possível com a maior
+frequência possível, há a coleta de métricas de desempenho, de processo e até
+mesmo de pessoas \cite{what_devops_means_2010}.
 
 A \emph{medição} em \textit{DevOps} é obtida quando os esforços vão além do
 controle básico de qualidade, há medições usando dados de desempenho e uso em
 tempo real das funcionalidades do \textit{software} em ambiente de produção.
 Com uma \emph{medição} efetiva, os esforços de desenvolvimento de
-\textit{software} são efetivamente medidos \cite{dimensions_of_devops}.
-
-\textit{DevOps} envolve a coleta de métricas eficientes para apoiar a tomada
-de decisões no ciclo de vida de desenvolvimento e operações de
-\textit{software} \cite{characterizing_devops}.
+\textit{software} são efetivamente medidos \cite{dimensions_of_devops}. \textit{DevOps}
+envolve a coleta de métricas eficientes para apoiar a tomada de decisões no
+ciclo de vida de desenvolvimento e operações de \textit{software} \cite{characterizing_devops}.
 
 \subsubsection{Práticas Relacionadas}
 
@@ -476,15 +481,18 @@ e (4) monitoramento de equipes por meio de métricas.
 
 \subsection{Compartilhamento}
 
+Segundo Hamunen \cite{challenges_in_adopting_devops}, uma cultura transparente
+com mecanismos eficazes de disseminação de conhecimento entre as equipes é
+essencial para derrubar as barreiras entre desenvolvimento e operações.
 As organizações que praticam \textit{DevOps} tentam facilitar o desenvolvimento
-e as operações por meio do uso de sistemas compartilhados para registrar o
+e as operações por meio do uso de práticas para compartilhar o
 conhecimento \cite{qualitative_devops_journalsw_17}.
 
 O compartilhamento é considerado o \textit{loopback} no ciclo do \acrshort{CAMS}
 \textit{framework}. Segundo Willis, criar uma cultura onde as pessoas
-compartilham idéias e problemas é fundamental, ademais o compartilhamento de
-ideias cria um \textit{feedback} aberto que no final as ajuda a melhorar
-\cite{what_devops_means_2010}.
+compartilham ideias e problemas é fundamental pois isso
+gera um cenário de \textit{feedback} aberto que no final possibilita melhorias
+na cultura \cite{what_devops_means_2010}.
 
 \textit{DevOps} envolve cenários onde a informação e o conhecimento são
 disseminados entre os indivíduos para promover o intercâmbio de aprendizado
@@ -557,12 +565,16 @@ relação a \emph{medição} apenas foi realizado por Lwakatare et al.
 
 \subsection{\textit{Leanness}}
 
-Este elemento é apontado apenas em \cite{characterizing_devops}. Segundo os
-autores, algumas práticas \textit{DevOps} são baseadas nos princípios de
-\emph{pensamento enxuto}\footnote{Lean Thinking \cite{lean_thinking}}. Considerando
-que \textit{DevOps} visa garantir um fluxo contínuo para desenvolver e entregar
-\textit{software} regularmente, em pequenas e incrementadas mudanças, o processo
-precisa ser enxuto (\textit{lean}).
+De acordo com França et al. \cite{characterizing_devops}, algumas práticas
+\textit{DevOps} são baseadas nos princípios de \emph{pensamento enxuto}\footnote{Lean
+Thinking \cite{lean_thinking}}. Considerando que \textit{DevOps} visa garantir
+um fluxo contínuo para desenvolver e entregar {\it software} regularmente, em
+pequenas e incrementadas mudanças, o processo precisa ser enxuto (\textit{lean}).
+
+Já Hamunen \cite{challenges_in_adopting_devops}, cita a redução de desperdícios,
+a limitação do trabalho em andamento e a redução de tamanho das entregas para
+ilustrar os motivos de as metodologias ``{\it Lean}'' serem um importante
+elemento de {\it DevOps}.
 
 \subsubsection{Práticas Relacionadas}
 França et al. \cite{characterizing_devops} apresentam seis práticas
@@ -577,31 +589,32 @@ seção são apresentados os principais desafios relatados na literatura
 relacionada a respeito da adoção de \textit{DevOps}.
 
 Riungu-Kalliosaari et al. \cite{devops_benefits_challenges} apontam quatro
-desafios relacionados à adoção de \textit{DevOps}. O primeiro é a existência
+desafios relacionados à adoção de \textit{Dev-Ops}. O primeiro é a existência
 de \emph{comunicação insuficiente} entre os times de desenvolvimento e
 operações. Em segundo lugar, como \textit{DevOps} requer
 uma mudança cultural, existe o desafio da existência de \emph{culturas
 profundamente arraigadas}. O terceiro desafio apontado é a possibilidade de
 \emph{restrições legais} relacionadas, por exemplo, ao acesso, para execução de
 testes, de dados protegidos. Por fim, o quarto desafio é que \textit{DevOps}
-ainda não é completamente compreendido mas continua evoluindo rapidamente.
+ainda não é completamente compreendido mas continua evoluindo rapidamente. Este
+quarto desafio é endossado por Smeds et al. \cite{devops_a_definition}, que
+afirmam que a definição e os objetivos de se adotar {\it DevOps} não são claros,
+e também por Hamunen \cite{challenges_in_adopting_devops} que observou uma
+falta de maturidade para o conceito de {\it DevOps}.
 
-Já no trabalho de Smeds et al. \cite{devops_a_definition}, as percepções de
-praticantes foram utilizadas para gerar um conjunto de onze possíveis
-impedimentos na adoção de \textit{DevOps}. Esse conjunto de impedimentos é
-listado a seguir.
+Mais dois desafios foram identificados tanto em \cite{devops_a_definition} quanto em \cite{challenges_in_adopting_devops}:
+{\it DevOps} ser visto como uma \textit{buzzword} e a distribuição geográfica
+dos times.
 
-\begin{enumerate}
-\item Definição e objetivos de se adotar \textit{DevOps} não são claros;
-\item Estrutura organizacional não compatível;
-\item Clientes podem não querer \textit{DevOps};
-\item Distribuição geográfica dos times;
-\item \textit{DevOps} ser visto como uma \textit{buzzword};
-\item \textit{DevOps} gera mais trabalho para os desenvolvedores;
-\item \textit{DevOps} requer habilidades e conhecimentos tanto de desenvolvedores
-como de operadores;
-\item Falta de interesse de um dos lados (desenvolvimento ou operações);
-\item Arquitetura monolítica;
-\item Ambientes de desenvolvimento e teste não refletindo o ambiente de produção;
-\item Múltiplos ambientes de produção.
-\end{enumerate}
+Adicionalmente, Hamunen \cite{challenges_in_adopting_devops} aponta que a falta
+de suporte tanto a nível de gerência quanto a nível de time, bem como a falta
+de confiança e as dificuldades para implementar tecnologias {\it DevOps} e para
+adaptar os processos organizacionais são os outros principais agrupamentos de
+desafios relacionados a {\it DevOps}.
+
+Enquanto que Smeds et al. apontam ainda como desafios para {\it DevOps}:
+dificuldades relacionadas a estruturas organizacionais não compatíveis, onde
+clientes não vêem valor em {\it DevOps}; a falta de interesse de algum dos times;
+e dificuldades técnicas como a existência e múltiplos ambientes de produção e
+o fato de ambientes como desenvolvimento e teste não refletirem o ambiente de
+produção.
