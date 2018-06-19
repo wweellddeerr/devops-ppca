@@ -1,10 +1,39 @@
 Neste capítulo é apresentado um modelo que pode ser utilizado para guiar a
 implantação de \textit{DevOps} por novos praticantes. Este modelo foi construído
 com base na teoria apresentada no capítulo anterior e está sendo
-utilizado para guiar a adoção de DevOps no \acrshort{TCU}. Detalhes da
-utilização no \acrshort{TCU} são apresentados em conjunto com as explicações
-das etapas do modelo.
+utilizado para fomentar a adoção de DevOps no \acrshort{TCU}. É detalhada a
+realização de um grupo focal \cite{focus_group_handbook,shull2007guide} para
+identificar a percepção dos profissionais envolvidos tanto a respeito da adoção
+de {\it DevOps} em geral, quanto da aplicabilidade e utilidade do modelo proposto.
+Este capítulo contém ainda detalhamento técnico de ações desenvolvidas no
+\acrshort{TCU} no intuito de ampliar a utilização de {\it DevOps} no
+desenvolvimento das aplicações corporativas.
 
+\section{Um Modelo para Adoção de DevOps}
+
+Com base nas hipótese H1-H4 apresentadas no capítulo anterior, foi construído
+um modelo de três etapas para guiar a adoção de {\it DevOps}. A figura \ref{modelo_adocao_devops}
+representa graficamente o modelo, cujas etapas são descritas na enumeração a
+seguir:
+
+\begin{enumerate}
+\item Na primeira etapa, a companhia interessada em adotar {\it DevOps} deve
+compreender e disseminar que o objetivo principal é o estabelecimento de uma
+\cc entre os times de desenvolvimento e operações.
+
+\item Na segunda etapa, devem ser selecionados e desenvolvidos os facilitadores
+mais adequados para o contexto da organização. Os facilitadores são meios
+tipicamente utilizados para desenvolver a \cc e seus conceitos relacionados.
+
+\item Por fim, na terceira etapa, a organização deve verificar as saídas que o
+processo está produzindo, visando alinhá-las com a prática de mercado e
+explorá-las de acordo com a sua necessidade.
+
+\end{enumerate}
+
+\figura{modelo_adocao_devops}{Modelo para Adoção de \textit{DevOps}}{modelo_adocao_devops}{width=.8\textwidth}
+
+\section{A Adoção de DevOps \acrshort{TCU}}
 We instantiated our model in the Brazilian Federal Court of Accounts (hereafter TCU), a Brazilian Federal
 Government institution. TCU was bogged down in implanting specific DevOps tools, repeating the same non-DevOps problems, with
 conflicts between development and operations teams about how to divide the responsibilities related to different facets in the intersection between software development and software provisioning.
@@ -12,25 +41,93 @@ When instantiated, our model helped TCU to change its focus to
 improve the collaboration between teams, and to use the tooling
 to support (rather than being the goal of) the entire process.
 
-Based on H1-H4 hypothesis, we present a three step model that
-explains how to adopt DevOps according with our understanding. The
-model considers the following steps:
+\subsection{Grupo Focal}
 
-\begin{itemize}
-\item In the first step, a company should
-disseminate that the goal with a DevOps adoption is to
-establish a \cc between
-development and operations teams.
+Para obtenção da avaliação empírica sobre a adoção de {\it DevOps} no \acrshort{TCU},
+bem como da aplicabilidade e utilidade do modelo descrito,
+proposta como objetivo deste trabalho de pesquisa, foi utilizado o método qualitativo
+de pesquisa \emph{grupo focal} \cite{focus_group_handbook}.
 
-\item In the second step, a company should select and develop
-the most suitable enablers according with its context. The enablers
-are means commonly used to develop the \cc
-and its concepts.
+A população envolvida no processo de adoção de \textit{DevOps} no TCU é
+relativamente pequena (em torno de 12 desenvolvedores e 6 profissionais do time
+de operações) e há um maior número de profissionais nos times de
+desenvolvimento do que no time de operações. Para que as percepções obtidas
+na avaliação não possuíssem o viés do time de desenvolvimento, foi adotada a
+estratégia de ouvir um número similar de profissionais de cada um dos times.
+Com essa limitação do número de profissionais do time de desenvolvimento que
+poderiam ser ouvidos na pesquisa, o número total de participantes na amostra
+(estimado entre 8 e 12 pessoas) mostrou-se pequeno para realização de um
+questionário.
 
-\item In the third step, a company should check the outcomes of the
-DevOps adoption in order to verify the alignment with
-industrial practices and to explore them according to the
-need of the company.
-\end{itemize}
+Ao mesmo tempo, a realização de entrevistas, além de alongar a obtenção do
+\textit{feedback} desejado, poderia gerar um grande número de respostas
+repetitivas, uma vez que são todos profissionais envolvidos no mesmo processo
+de adoção de \textit{DevOps}.
 
-\figura{modelo_adocao_devops}{Modelo para Adoção de \textit{DevOps}}{modelo_adocao_devops}{width=.8\textwidth}
+Grupo focal emergiu como método de pesquisa nas ciências sociais nos anos 1950
+e atualmente é amplamente utilizado, por exemplo, em estudos sociológicos,
+pesquisas de mercado, planejamento de produtos e estudos de usabilidade de
+sistemas \cite{shull2007guide}. Morgan \cite{morgan1996focus} define grupo focal
+como uma técnica de pesquisa que coleta dados através da interação de grupo em
+um tópico específico determinado pelo pesquisador.
+
+Segundo F. Shull et al. \cite{shull2007guide}, grupos focais tipicamente
+possuem entre três e doze participantes e são projetados para obter percepções
+pessoais de membros de um ou mais grupos envolvidos em uma área definida de
+interesse de pesquisa e possuem como benefícios a produção de informações
+cândidas, muitas vezes perspicazes, com um baixo custo e rápida execução.
+Estas características tornam o grupo focal uma alternativa adequada aos
+propósitos desta pesquisa. Ainda segundo os autores, a discussão é guiada e
+facilitada por um pesquisador-moderador que segue uma estrutura predefinida
+de questionamentos.
+
+\begin{table}[hb!]
+\centering
+\caption{Participantes do Grupo Focal}
+\label{tabela_participantes_grupo_focal}
+\begin{tabular}{|p{1cm}|p{4cm}|p{3cm}|p{7cm}|} \hline
+{\bf P\#} & {\bf Time de atuação} & {\bf Formação} & {\bf Experiência}\\ \hline
+P1 & Desenvolvimento & Graduação & Atua há 3 anos no desenvolvimento de {\it software} do \acrshort{TCU} e possui 9 anos de experiência prévia \\ \hline
+P2 & Desenvolvimento & Pós-graduação & Atua há 6 anos no desenvolvimento de {\it software} do \acrshort{TCU} e possui 7 anos de experiência prévia \\ \hline
+P3 & Operações & Graduação & Atua há 3 anos no time de operações do \acrshort{TCU} e possui 8 anos de experiência prévia \\ \hline
+P4 & Operações & Graduação & Atua há 3 anos no time de operações do \acrshort{TCU} e possui 10 anos de experiência prévia \\ \hline
+\end{tabular}
+\end{table}
+
+Seguindo uma estrutura similar ao realizado por Lehtola et al. \cite{requirementes_priorization_in_practice},
+o grupo focal foi conduzido da seguinte forma: (1) o pesquisador-moderador atuou
+como facilitador do grupo focal fornecendo aos participantes três tópicos de
+discussão, listados na tabela \ref{tabela_topicos}. No início da discussão de
+cada tópico, as perguntas foram apresentadas aos participantes que escreveram
+suas ideias e palavras-chave em notas {\it post-it}. Depois disso, as notas
+foram postas em um quadro branco e serviram como ponto de partida para a
+realização de discussões sobre o respectivo tópico com o propósito de se obter
+conclusões a respeito da respectiva pergunta.
+
+\begin{table}[hb!]
+\centering
+\caption{Tópicos do Grupo Focal}
+\label{tabela_topicos}
+\begin{tabular}{|p{0.3cm}|p{6.4cm}|p{7cm}|} \hline
+& \textbf{Tópico} & \textbf{Perguntas} \\ \hline
+
+1 & Estágio atual da adoção de {\it DevOps} no \acrshort{TCU} &
+1. Quais ações já desenvolvidas no \acrshort{TCU} você considera que fazem parte da adoção de {\it DevOps}?\newline\newline
+2. Quais problemas existentes anteriormente foram resolvidos por essas ações? \\ \hline
+
+2 & Aplicabilidade e utilidade do modelo proposto &
+1. Você considera que este modelo que foi aprovado no \acrshort{CPA} tem contribuído para a adoção de {\it DevOps} no \acrshort{TCU}?\newline\newline
+2. Caso positivo, quais as principais contribuições? \\ \hline
+
+3 & Desafios enfrentados e próximos passos na adoção de {\it DevOps} &
+1. Quais os principais desafios que a adoção de {\it DevOps} enfrenta atualmente no \acrshort{TCU}?\newline\newline
+2. Quais os próximos passos para a adoção de {\it DevOps} no \acrshort{TCU}?\\ \hline
+
+\end{tabular}
+\end{table}
+
+\subsection{Estágio Atual da Adoção de DevOps no TCU}
+
+\subsection{Aplicabilidade e Utilidade do Modelo proposto}
+
+\subsection{Desafios enfrentados e Próximos Passos na Adoção de DevOps}
