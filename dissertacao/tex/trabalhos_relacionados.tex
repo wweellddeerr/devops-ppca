@@ -1,21 +1,29 @@
 \section{Trabalhos Relacionados}
 
-\subsection{Trabalhos Parcialmente Relacionados}
+Após construída, a teoria descrita acima foi reintegrada com a literatura
+existente sobre {\it DevOps}. A subseção \ref{secao_caracterizacoes_devops}
+apresenta as semelhanças e diferenças de trabalhos que foram construídos
+visando caracterizar {\it DevOps}, tipicamente por meio da identificação de
+elementos relacionados. Já na subseção \ref{secao_adocao_6_companhias} é
+feita a comparação com um estudo cujo foco foi similar, de caracterizar a
+adoção de {\it DevOps} em companhias de mercado. A seção \ref{como_superar_desafios}
+apresenta uma comparação de um trabalho cujo foco foi identificar desafios na
+adoção de {\it DevOps} e que apresentou algumas orientações a respeito de como
+superar estes desafios. Por fim, na subseção \ref{modelo_maturidade} a teoria é
+comparada a um trabalho relacionado no qual é proposto um modelo de maturidade
+para adoção de {\it DevOps} e também detalhes de como progredir nesse modelo,
+aumentando o nível de maturidade de {\it DevOps} de uma companhia.
 
-Conforme ilustrado no capítulo anterior, os trabalhos de pequisa existentes
-apresentam algumas caracterizações de \textit{DevOps} por meio da enumeração
-de conceitos, princípios e práticas relacionadas. Apesar de alguns desses
-estudos conterem abordagens qualitativas para investigar empresas adotando
-\textit{DevOps}, conduzindo entrevistas com praticantes, o foco desses estudos
-tipicamente é em caracterizar \textit{DevOps}, ao invés de prover recomendações
-na adoção de \textit{DevOps}. Além das diferenças de foco, existem algumas
+\subsection{Trabalhos com Foco em Caracterizar DevOps}\label{secao_caracterizacoes_devops}
+
+Conforme mencionado acima, os trabalhos comparados nessa subseção tiveram como
+foco principal caracterizar {\it DevOps}, o que difere do propósito da produção
+da teoria que foi de caracterizar {emph como DevOps é adotado}. Embora
+exista essa diferença de foco, existe uma sobreposição de resultados que se
+justifica por ser natural que os elementos {\it DevOps} apareçam no processo de
+adoção de {\it DevOps}. Além das diferenças de foco, existem algumas
 diferenças metodológicas em relação ao estudo aqui proposto. Essas diferenças
 são resumidas na tabela \ref{related_work_table}.
-
-%% Table~\ref{related_work_table} compares the most relevant literature to
-%% out work. Since the work of Lwakatare et al.~\cite{extending_dimensions} is an
-%% extension of a previous contribution of the authors and her team \cite{dimensions_of_devops_xp_15},
-%% we only compared the most recent study at Table~\ref{related_work_table}.
 
 \begin{table}[hb!]
 \centering
@@ -32,79 +40,70 @@ são resumidas na tabela \ref{related_work_table}.
 
 \textbf{Este estudo}
 
-& Grounded Theory study interviewing practitioners which contributed to DevOps
-adoption in 15 companies across 5 countries.
+& Abordagem {\it grounded theory} entrevistando praticantes que contribuíram
+para a adoção de {\it DevOps} em 15 companhias de 5 países.
 
-& Explain how DevOps has been successfully adopted in practice;\newline
-\newline Provide guidelines to be used in new DevOps adoptions. \\
+& Explicar {\bf como} {\it DevOps} tem sido adotado de maneira bem sucedida na prática de mercado;\newline
+\newline Prover orientações que possam ser usadas em novas adoções de {\it DevOps}. \\
 
 \hline
 
 \textbf{J. Smeds et al.~\cite{devops_a_definition}}
 
-& Systematic literature review; \newline \newline Semi structured interviews
-with 13 employees of a single company whose DevOps adoption process was at
-an initial stage.
+& Revisão sistemática de literatura; \newline \newline Entrevistas semi-estruturadas
+com 13 funcionários de uma única companhia cujo processo de adoção de {\it DevOps}
+estava em um estágio inicial.
 
-& Identify in literature the main defining characteristics of DevOps; \newline
-\newline Build a list of possible impediments to DevOps adoption through an
-empirical study. \\
+& Identificar na literatura as principais características que definem {\it DevOps}
+\newline \newline
+Construir uma lista de possíveis impedimentos na adoção de {\it DevOps} por meio
+de um estudo empírico. \\
 
 \hline
 
 \textbf{Lwakatare et al.~\cite{extending_dimensions}}
 
 &
-Multivocal literature review using data from gray literature; \newline \newline
-Three interviews with software practitioners in one company that was applying
-DevOps practices in one project.
+Revisão de literatura multivocal utilizando dados da literatura cinza; \newline \newline
+Três entrevistas com praticantes de desenvolvimento de {\it software} em uma
+companhia que estava aplicando práticas {\it DevOps} em um projeto.
 
-& Identify how do practitioners describe DevOps as a phenomenon; \newline
-\newline Identify the DevOps practices according to software practitioners. \\
+& Identificar como praticantes descrevem {\it DevOps} como um fenômeno; \newline
+\newline Identificar as práticas {\it DevOps} de acordo com os praticantes de
+desenvolvimento de {\it software}. \\
 
 \hline
 
 \textbf{Fran\c{c}a et al.~\cite{characterizing_devops}}
 
-& Multivocal literature review with qualitative analysis procedures from
-Grounded Theory.
+& Revisão de literatura multivocal com procedimentos de análise qualitativa de
+{\it grounded theory}.
 
-& Provide a DevOps definition; \newline \newline
-Identify DevOps practices, required skills, characteristics, benefits and
-issues motivating its adoption.  \\
-
-\hline
-
-\textbf{Erich et al.~\cite{qualitative_devops_journalsw_17}}
-
-& Systematic literature review; \newline \newline
-Interviews with practitioners from 6 companies across 3 countries.
-
-& Identify how literature defines DevOps; \newline \newline
-Investigate how DevOps is being implemented in practice. \\
+& Prover uma definição para {\it DevOps}; \newline \newline
+Identificar práticas {\it DevOps}, habilidades requeridas, características,
+benefícios, e problemas motivando a adoção de {\it DevOps}. \\
 
 \hline
 
 \end{tabular}
 \end{table}
 
-Como consequência dessas diferenças de foco, algumas questões práticas a
-respeito da adoção de DevOps permancem em aberto: (1) Existe um caminho
+Em relação aos trabalhos apresentados nessa subseção, a teoria apresentam detalhes que ajudam a
+compreender como podem ser respondidas algumas questões práticas a
+respeito da adoção de {\it DevOps} que permaneceram em aberto: (1) Existe um caminho
 recomendado para se adotar \textit{DevOps}? (2) Já que \textit{DevOps} é
-constituído de múltiplos elementos, eles
-possuem a mesma relevância quando se adota \textit{DevOps}? (3) Qual é o papel
-desempenhado por cada um desses elementos - tais como medição, compartilhamento e
-automação - em uma adoção de \textit{DevOps}? Para responder a essas questões,
-é necessário um entendimento holístico dos caminhos seguidos por organizações
-que adotaram \textit{DevOps} de uma maneira bem sucedida.
+constituído de múltiplos elementos, eles possuem a mesma relevância quando se
+adota \textit{DevOps}? (3) Qual é o papel desempenhado por cada um desses
+elementos - tais como medição, compartilhamento e automação - em uma adoção de
+\textit{DevOps}?
 
-Os trabalhos listados anteriormente concentram-se em caracterizar
-\textit{DevOps}, há pouco conteúdo dedicado a \emph{como} adotar \textit{DevOps},
-com indicação de caminhos seguidos por companhias que passaram pelo processo
-e que eventualmente poderiam ser usados por novos praticantes, com indicações
-de lições aprendidas e possíveis abordagens que possam ser seguidas.
+\subsection{A Caracterização da Adoção de DevOps em 6 Companhias Proposta por Erich et al. \cite{qualitative_devops_journalsw_17}}\label{secao_adocao_6_companhias}
 
-\subsection{A Caracterização da Adoção de {\it DevOps} em 6 Companhias Proposta por Erich et al. \cite{qualitative_devops_journalsw_17}}
+Systematic literature review;
+Interviews with practitioners from 6 companies across 3 countries.
+
+Identify how literature defines DevOps;
+Investigate how DevOps is being implemented in practice.
 
 O trabalho de Erich et al. \cite{qualitative_devops_journalsw_17} investigou
 o processo de adoção de \textit{DevOps} por meio de entrevistas com praticantes
@@ -160,6 +159,6 @@ requests} que após aprovadas são integradas ao código principal. Após a
 integração dos códigos das \textit{pull requests}, um \textit{pipeline} de entrega
 contínua é executado para publicar o \textit{software}.
 
-\subsection{As Considerações de Hamunen \cite{challenges_in_adopting_devops} Sobre Como Superar os Desafios na Adoção de {\bf {\it DevOps}}}
+\subsection{As Considerações de Hamunen \cite{challenges_in_adopting_devops} Sobre Como Superar os Desafios na Adoção de DevOps}\label{como_superar_desafios}
 
-\subsection{O Modelo de Maturidade Proposto por Feijter et al. \cite{feijter2017towards}}
+\subsection{O Modelo de Maturidade Proposto por Feijter et al. \cite{feijter2017towards}}\label{modelo_maturidade}
