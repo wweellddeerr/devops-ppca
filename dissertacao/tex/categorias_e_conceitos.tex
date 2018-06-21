@@ -16,7 +16,8 @@ a dia de desenvolvimento}.
 dia a dia de desenvolvimento, sem ter que ficare esperando um dia específico
 da semana ou do mês. Nós queríamos fazer {\it deploy} o tempo inteiro, mesmo
 que em um primeiro momento não fosse em produção, um ambiente de {\it staging}
-era suficiente. [...] É claro que para que a gente pudesse fazer o {\it deployment}
+era suficiente. [...] O que a gente queria era incorporar o {\it deployment} ao
+desenvolvimento. É claro que para que a gente pudesse fazer o {\it deployment}
 continuamente, a gente tinha que prover toda a infraestrutura necessária no
 mesmo ritmo.}" (P14, Gerente de \acrshort{TI}, Brasil)
 \end{mq}
@@ -38,7 +39,9 @@ natural, reduzindo os atrasos e, consequentemente, os conflitos entre os times.
 ``\emph{Nós trabalhamos usando uma abordagem ágil, com {\it sprints} de quinze
 dias, onde a gente foca em produzir {\it software} e gera novas versões em
 altíssima frequência. Mas, na hora da entrega do {\it software} é que as
-complicações começavam a aparecer. [...] As entregas frequentemente atrasavam,
+complicações começavam a aparecer. O trabalho de construir todo o ambiente
+e fazer o {\it deploy} não fazia parte das {\it sprints}, a gente focava apenas
+em codificar a aplicação. As entregas frequentemente atrasavam,
 e a gente tinha que entregar com atrasos de semanas, o que não era bom nem para
 nós e nem para os clientes.}'' (P6, {\it Developer}, Portugal)
 \end{mq}
@@ -52,11 +55,10 @@ são feitas e, com a colaboração do time de operações, isso pode ser executa
 de maneira regular. Se uma tarefa pode ser executada pelo time de desenvolvimento
 e há confiança entre os times, essa tarefa será incorporada ao processo de
 desenvolvimento de uma maneira natural, manifestando o segundo conceito
-relacionado à categoria \cc: {\bf empoderamento do desenvolvimento de {\it software}}.
+relacionado à categoria \cc: {\bf empoderamento do desenvolvimento de {\emph software}}.
 
 \begin{mq}
-``\emph{
-Não era viável a gente ter tantos desenvolvedores produzindo artefatos e
+``\emph{Não era viável a gente ter tantos desenvolvedores produzindo artefatos e
 parando o trabalho deles para aguardar outro time completamente separado
 publicar. Ou também precisar de um ambiente de teste e ter que esperar o time
 de operações prover isto quando possível. Essas atividades tinham que estar
@@ -70,155 +72,177 @@ Uma \cc requer {\bf pensamento de produto}, em substituição a pensamento de
 desenvolvimento ou de operações. O time de desenvolvimento precisa compreender
 que o {\it software} é um produto que não se encerra após o ``{\it push}'' do código
 para o repositório de código-fonte, e o time de operações precisa entender que
-o processo também não se inicia quand oum artefato é recebido para publicação.
+o processo também não se inicia quando um artefato é recebido para publicação.
 {\bf Pensamento de produto} é o terceiro conceito relacionado à categoria
 principal.
 
 \begin{mq}
-``\emph{We wanted to
-contract people who could have a product vision. People who could see the
-problem and think in the better solution to it. But not only think in a
-software solution, also think about the moment when that application will be
-published. We also bring together developers to reinforce that everyone
-%should think that way. Everyone
-has to think in the product and not only in
-their code or in their infrastructure}" (P12, Cloud Engineer, United States)
+``\emph{Nós alteramos o perfil profissional buscado em nossas contratações. Nós
+queríamos contratar pessoas que tivessem uma visão de produto. Pessoas que eram
+capazes de olhar para um problema e pensar na melhor solução para ele. Mas não
+apenas pensar em uma solução de software, pensar também no momento em que essa
+aplicação vai ser publicada. Nós também reunimos os desenvolvedores para
+reforçar que todos deviam atuar dessa maneira. Todos deviam pensar no produto e
+não apenas em seu código ou em sua infraestrutura.}" (P12, Cloud Engineer,
+Estados Unidos)
 \end{mq}
 
-There should be a \textbf{straightforward communication} between teams. Ticketing
-systems are cited as a typical and inappropriate means of communication
-between development and operations teams. Face-to-face communication is the best
-option, but considering that it is not always feasible, the continuous use of
-tools like \emph{Slack} and \emph{Hip Chat} was cited as appropriate options.
+Deve haver uma {\bf comunicação direta} entre os times. Sistemas de {\it
+ticket} são citados como um meio típico e inadequado de comunicação entre os
+times de desenvolvimento e operações. A comunicação face a face é a melhor
+opção, mas considerando que nem sempre é viável, o uso contínuo de ferramentas
+como \emph{Slack}\footnote{https://slack.com/} e \emph{Hipchat}\footnote{https://www.hipchat.com/}
+é citado como opção apropriada. {\bf Comunicação direta} é o quarto conceito
+relacionado à categoria principal.
 
 \begin{mq}
-``\emph{We also use this tool (Hip Chat) as a way to facilitate communication between
-development and operations teams. The pace of work there is very accelerated, and thus
-it is not feasible to have a bureaucratic communication. (...) This gave us a lot of
-freedom to the development activities, in case of any doubt, the operations staff
-is within reach of a message.}" (P5, Systems Engineer, Spain)
+``\emph{Nós também usamos essa ferramenta ({\it Hipchat})
+como uma maneira de facilitar a comunicação entre os times de desenvolvimento e
+operações. O ritmo de trabalho é bastante acelerado, e por isso não é viável ter
+uma comunicação burocrática. Pra agilizar as coisas, a gente usa bastante o
+{\it Hipchat}, todos estão sempre atentos às mensagens, as respostas são
+rápidas e a gente tem um controle bem adequado por lá. Isso deu muita liberdade
+nas tarefas de desenvolvimento, em caso de qualquer dúvida, a equipe de
+operações está ao alcance de uma mensagem.}" (P5, Engenheiro de Sistemas, Espanha)
 \end{mq}
 
-There is a \emph{shared} responsibility to identify and fix the issues
-of a software when transitioning to production. The strategy of avoiding liability should be kept away.
-The development team must not say that a given issue is a problem in the infrastructure, then
-it is responsibility of the operations team. Or the opposite, the operations team
-must not say that a given failure was motivated by a problem in the application, then it is
-responsibility of development team. A \textbf{blameless} context must exist.
-The teams need to focus on solving problems, not on finding blame and
-running away from responsibility. The context of \textbf{shared
-responsibilities} involves not only solving problems, but also any other
-responsibility inherent in the software product must be shared.
-\textbf{Blameless} and \textbf{shared responsibilities} are the remaining
-concepts of the core category.
+Existe uma {\bf responsabilidade compartilhada} de identificar e corrigir os
+problemas de um {\bf software} ao fazer a transição para produção. A estratégia
+de evitar a responsabilidade deve ser evitada. A equipe de desenvolvimento não
+deve afirmar que uma determinada questão é um problema na infraestrutura, então
+é responsabilidade da equipe de operações. Ou o contrário, a equipe de operações
+não deve afirmar que uma determinada falha foi motivada por um problema na
+aplicação, então é responsabilidade da equipe de desenvolvimento. Um contexto de
+{\bf blameless} deve ser fomentado. Os times precisam focar na resolução dos
+problemas e não em encontrar um culpado e fugir da responsabilidade. O contexto
+de {\bf responsabilidade compartilhada} envolve não apenas a resolução de
+problemas, mas também qualquer outra responsabilidade inerente ao produto de
+{\it software} deve ser compartilhada. {\bf Blameless} e {\bf responsabilidade
+compartilhada} são os conceitos restantes da categoria principal.
 
 \begin{mq}
-``\emph{We realized that some people were afraid of making mistakes. Our
-culture was not strong enough to make everyone feel comfortable to innovate and
-experiment without fear of making mistakes. We made a great effort to spread
-this idea that there are no blame for any problem that may occur. We take every possible
-measure to avoid failures, but they
-will happen, and only without blame we will be able to solve a problem quickly.}" (P8,
-DevOps Engineer, Brazil)
+``\emph{Como consequência dessa busca contínua por melhoria da qualidade, em um
+momento já avançado do processo, quando nós já tínhamos um bom nível de
+colaboração, automação e tudo mais, nós identificamos um ponto de melhoria na
+nossa cultura. Nós percebemos que algumas pessoas tinham medo de cometer erros.
+Nossa cultura não era forte o suficiente para fazer com que todos se sentissem
+à vontade para inovar e experimentar sem medo de errar. Nós fizemos um grande
+esforço para espalhar essa ideia de que não há culpados por qualquer problema
+que possa ocorrer. Nós fazemos todo o possível para evitar falhas, mas elas
+vão acontecer, e apenas sem essa busca por culpados nós vamos ser capazes de
+resolver os problemas rapidamente.}" (P8, {\it DevOps Engineer}, Brasil)
 \end{mq}
 
-At first glance, considering the creation and strengthening of the \cc as the most important step towards DevOps adoption seems somewhat obvious, but
-the respondents cited some mistakes that they consider recurrent in not
-prioritizing this aspect in a DevOps adoption:
+À primeira vista, considerar a criação e o fortalecimento da \cc como o passo
+mais importante para a adoção de {\it DevOps} pode parecer um tanto óbvio, mas
+os próprios entrevistados citaram alguns equívocos que consideram recorrentes
+em não priorizar esse aspecto na adoção de {\it DevOps}:
 
-\begin{mq}``\emph{In a DevOps adoption, there is a very strong cultural issue that the teams
-sometimes are not adapted. Related to this, one thing that bothers me a lot and
-that I see happen a lot is people hitching DevOps exclusively by tooling or
-automation.}" (P9, IT Manager, Brazil)
+\begin{mq}``\emph{Na adoção de {\it DevOps}, há uma questão cultural muito forte
+que os times muitas vezes não estão adaptados. Relacionado a isso, uma coisa
+que me incomoda muito e que eu vejo acontecer muito é que as pessoas tomam
+{\it DevOps} exclusivamente por ferramentas ou automação}'' (P9, Gerente de
+\acrshort{TI}, Brasil)
 \end{mq}
 
-Besides the core category (\cc), we identified
-three other sets of categories: the enablers
-of DevOps adoption, the consequences of adopting
-DevOps, and the categories that are both enablers and consequences.
+Além da categoria principal (\cc), foram identificados três outros conjuntos de
+categorias: os \emph{facilitadores} da adoção de {\it DevOps}, as \emph{saídas}
+da adoção de {\it DevOps}, e as categorias que são tanto facilitadores como
+saídas. Uma explicação mais abrangente sobre esses dois papéis desempenhados
+pelas categorias de conceitos em uma adoção de {\it DevOps} será apresentada
+na seção \ref{secao_teoria}. Nas próximas seções as categorias são descritas
+por meio dos seus conceitos relacionados.
 
-\section{Facilitadores DevOps}\label{secao_facilitadores}
+\section{Facilitadores \emph{DevOps}}\label{secao_facilitadores}
 
-Here we detail the categories that support the adoption of
-DevOps practices, including \cat{automation}, \cat{sharing and transparency}.
+Aqui serão detalhadas as duas categorias que sustentam a adoção das práticas
+{\it DevOps}: \cat{automação} e \cat{compartilhamento e transparência}.
 
-\subsection{Automation} \label{ssec:automation}
+\subsection{Automação} \label{ssec:automation}
 
-This category presents the higher number of related concepts. This
-occurs because manual proceedings are considered strong candidates to
-propitiate the formation of a silo, hindering the construction
-of a \cc. If a task is manual, a single person or
-team will be responsible to execute it. Although \cat{transparency} and \cat{sharing} can
-be used to ensure collaboration even in manual tasks, with automation the
-points where silos may arise are minimized.
+Essa é a categoria que apresenta o maior número de conceitos relacionados. Isso
+ocorre porque procedimentos manuais são considerados fortes candidatos para
+propiciar a formação de um silo, dificultado a criação de uma \cc. Se uma tarefa
+é manual, uma pessoa ou um time será responsável por executá-la. Apesar de
+\cat{compartilhamento e transparência} poderem ser usados para garantir a
+colaboração mesmo em tarefas manuais, com a \cat{automação}, os pontos onde os
+silos podem surgir são minimizados.
 
 \begin{mq}
-``\emph{When a developer needed to build a new application, the previous workflow demanded her
-to create a ticket to the operations teams, which should then manually evaluate and solve
-the requested issue. This task could take a lot of time and there was no
-visibility between teams about what was going on (\ldots). Today, those silos do not exist
-anymore within the company, in particular because it is not necessary to execute all these tasks manually,
-everything has been automated.}" (P12, Cloud Engineer, United States)
+``\emph{Quando um desenvolvedor precisava criar uma nova aplicação, o workflow
+antigo exigia que ele criasse um ticket para a equipes de operações, que então
+avaliava e resolveria manualmente o problema solicitado. Essa tarefa podia levar
+muito tempo e não havia visibilidade entre os times sobre o que estava
+acontecendo [\ldots]. Hoje, esses silos não existem mais dentro da empresa,
+em particular porque não é mais necessário executar todas essas tarefas
+manualmente, tudo foi automatizado.}" (P12, Cloud Engineer, Estados Unidos)
 \end{mq}
 
-In addition to contribute to \cat{transparency}, \cat{automation} is also considered
-important to ensure \emph{reproducibility} of tasks, reducing rework and risk of
-human failure. Consequently, \cat{automation} increases the confidence
-between teams, which is an important aspect of the \cc.
+Além de contribuir para transparência, a \cat{automação} de procedimentos
+também é considerada importante para garantir \emph{reprodutibilidade} de
+tarefas, reduzindo retrabalho e risco de falha humana. Consequentemente,
+\cat{automação} aumenta a confiança entre os times o que é um aspecto importante
+da \cc.
 
 \begin{mq}
-``\emph{Before we adopted DevOps, there was a lot of manual work. For example, if you
-needed to create a database schema, it was a manual process; if you needed to create a
-database server, it was a manual process; if you needed to create additional EC2 \footnote{Amazon Elastic
-Compute Cloud} instances, such a process was also manual.
-This manual work was time consuming and often caused errors and
-rework.}" (P1, DevOps Developer, Ireland)
+``\emph{Antes de nós adotarmos DevOps, havia muito trabalho manual. Por exemplo,
+se você precisasse criar um esquema no banco de dados, era um processo manual;
+se você precisava criar um servidor de banco de dados, era um processo manual;
+se você precisasse criar instâncias EC2\footnote{Amazon Elastic Compute Cloud}
+adicionais, mais uma vez um processo manual. Este trabalho manual era demorado
+e muitas vezes causava erros e retrabalho.}'' (P1, {\it DevOps Developer}, Irlanda)
 \end{mq}
 
-%\begin{mq}
-%``\emph{Our main motivation to adopt DevOps was basically reduce rework. Almost every
-%week, we had to basically make new servers and start them manually, which was
-%very time-consuming.}" (P4, Computer Technician, Brazil)
-%\end{mq}
+\begin{mq}
+``\emph{Nossa principal motivação para adotar DevOps foi basicamente reduzir o
+retrabalho. Quase toda semana a gente tinha que basicamente construir novos
+servidores e iniciá-los manualmente, o que era muito demorado.}'' (P4, Técnico
+em Computação, Brasil)
+\end{mq}
 
-The eight concepts of the \cat{automation} category will be detailed next.
-In all interviews we extracted explanations about \textbf{deployment
-automation} (1), as part of DevOps adoption. Software delivery is the clearest
-manifestation of value delivery in software development. In case of problems
-in deployment, the expectation of delivering value to business can quickly
-generate conflicts and manifest the existence of silos.
-In this way, \cat{automation} typically increases agility and reliability. Some other
-concepts of automation go exactly around deployment automation.
+Os oito conceitos da categoria \cat{automação} são detalhados a seguir.
+Todas as entrevistas continham explicações sobre (1) {\bf automação do \emph{deployment}},
+como parte da adoção de {\it DevOps}. A entrega de {\it software} é a
+manifestação mais clara da entrega de valor no desenvolvimento de {\it software}.
+Em caso de problemas no {\it deployment}, a expectativa de entregar valor ao
+negócio pode rapidamente gerar conflitos e manifestar a existência de silos.
+Desta forma, a \cat{automação} normalmente aumenta a agilidade e a confiabilidade.
+Alguns outros conceitos de automação giram exatamente em torno da automação do
+{\it deployment}.
 
-It is important to note that frequent and successfully
-deployments are not sufficient to generate value to business. Surely, the quality of
-the software is more relevant. Therefore, quality checks need to be automated as well, so they can be part of the
-deployment pipeline, as is the case of \textbf{test automation} (2). In addition, to
-automate application deployment, the environment where the
-application will run needs to be available. So, \textbf{infrastructure
-provisioning automation} (3) must be also considered in the process. Beyond being available,
-the environment needs to be properly configured, including the amount of memory and CPU,
-availability of the correct libraries versions, and database structure. If the configuration of some of these concerns
-has not been automated, the deployment activity can go wrong. Therefore,
-the automation of \textbf{infrastructure management} (4) is another
-concept of the \cat{automation} category.
+É importante observar que a ocorrência frequente de {\it deployments} bem
+sucedidos não é suficiente para garantir a geração de valor para o negócio.
+Certamente, a qualidade do software é mais relevante. Portanto, para que possam
+fazer parte do {\it pipeline} do {\it deployment}, as verificações de qualidade
+também precisam ser automatizadas, como é o caso da (2) {\bf automação de testes}.
+Além disso, para automatizar o {\it deployment} de aplicações, o ambiente em
+que elas serão executadas precisa estar disponível. Portanto, a (3) {\bf automação
+do provimento da infraestrutura} também deve ser considerada no processo. Além
+de estar disponível, o ambiente precisa ser configurado adequadamente,
+incluindo a quantidade de memória e CPU disponibilizada, as versões corretas de
+bibliotecas  e a estrutura do banco de dados. Se a configuração de algum
+desses aspectos não tiver sido automatizada, o {\it deployment} automatizado
+pode não funcionar. Portanto, a (4) {\bf automação do gerenciamento da
+infraestrutura} é outro conceito da categoria \cat{automação}.
 
-Modern software is built around services. Microservices  was commonly cited
-as one aspect of DevOps adoption. To Fowler and Lewis
-\cite{martinfowler2014microservices}, in the
-microservice architectural style, services need to be independently deployable
-by fully automated deployment machinery. We call this part of microservices
-characteristics of \textbf{autonomous services} (5). \textbf{Containerization}
-(6) is also mentioned as a way to automate the provisioning of containers---the
-environment where these autonomous services will execute.
-\textbf{Monitoring automation} (7) and \textbf{recovery automation} (8) are the
-remaining concepts. The first refers to the ability to monitor the
-applications and infrastructure without human intervention. One classic example
-is the widespread use of tools for sending messages reporting
-alarms---through SMS, Slack/Hip Chat, or even
-cellphone calls-- in case of incidents. And the second is related to the ability
-to either replace a component that is not working or
-roll back a failed deployment without human intervention.
+{\it Software} moderno é tipicamente construído em torno de serviços.
+Microsserviços foram comumente citados como um aspecto da adoção de {\it DevOps}.
+Para Fowler e Lewis \cite{martinfowler2014microservices}, no estilo arquitetural
+de microsserviços, os serviços precisam ser independentemente implantáveis por
+mecanismos de {\it deployment} totalmente automatizados. Essa parte das
+características de microsserviços relacionada a \cat{automação} foi aqui
+denominada de (5) {\bf serviços autônomos}. Os relatos sobre a adoção de {\it DevOps}
+tipicamente citam a (6) {\bf conteinerização} como uma maneira de automatizar o
+provisionamento do ambiente onde esses serviços autônomos são executados: os
+contêineres. (7) {\bf Automação do monitoramento} e (8) {\bf automação da
+recuperação} são os conceitos restantes. O primeiro refere-se à capacidade de
+monitorar as aplicações e a infraestrutura subjacente sem intervenção humana.
+Um exemplo clássico é o uso generalizado de ferramentas para enviar mensagens
+relatando alarmes - por meio de SMS, {\it Slack} / {\it Hipchat}, ou até mesmo
+chamadas de celular - em caso de incidentes relacionados às aplicações
+detectados automaticamente. E o segundo está relacionado à capacidade de
+substituir um componente que não está funcionando adequadamente ou reverter uma
+falha no {\it deployment} sem intervenção humana.
 
 \subsection{Transparency and Sharing} Represents the grouping of concepts
 emerged from recurrent interviews that help to disseminate concepts and
@@ -282,8 +306,7 @@ Manager, Brazil)
 \end{mq}
 
 
-\section{Categorias Relacionadas a \emph{Saídas} da Adoção de {\it DevOps}}
-\label{secao_saidas}
+\section{\emph{Saídas} da Adoção de {\emph DevOps}}\label{secao_saidas}
 
 %In this section we detail the categories that correspond to
 %the expected consequences with the adoption of
@@ -325,7 +348,7 @@ previous one must be restored. This auto restore of a previous version
 decrease the chance of downtimes due to errors in specific versions, which
 is the concept of \textbf{zero down-time}, the last one of the \cat{resilience} category.
 
-\section{Categorias que são tanto \emph{Facilitadores} como \emph{Saídas} da Adoção de {\it DevOps}}
+\section{Categorias que são tanto \emph{Facilitadores} como \emph{Saídas} da Adoção de \emph{DevOps}}
 \label{secao_facilitadores_e_saidas}
 
 Finally, here we detail the categories that are both enablers

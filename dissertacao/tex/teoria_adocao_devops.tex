@@ -1,35 +1,45 @@
 \section{Uma Teoria Sobre a Adoção de \textit{DevOps}}\label{secao_teoria}
 
-\iffalse
-Os resultados de um estudo de grounded theory, como o próprio nome do método sugere, baseiam-se nos dados coletados, de modo que as hipóteses emergem dos dados.
-Grounded Theory deve descrever as relações-chave entre as
-categorias que a compõem, ou seja, um conjunto de hipóteses inter-relacionadas ~ \ cite {hoda2017becoming}.
+Os resultados de um estudo utilizando {\it grounded theory}, como o próprio
+nome do método sugere, são fundamentados nos dados coletados, de modo que as
+hipóteses emergem dos dados, ao invés de serem definidas no início da pesquisa
+e validadas utilizando algum modelo estatítico. Hoda et. al~\cite{hoda2017becoming}
+explicam que uma teoria produzida utilizando \emph{grounded theory} deve produzir
+um conjunto de hipóteses inter-relacionadas e que o termo \emph{hipótese} neste
+contexto se refere às descrições das relações-chave entre as categorias que
+compõem uma determinada teoria.
 
-Apresentamos as categorias de nossa grounded theory sobre a adoção do DevOps como uma rede das três categorias de facilitadores  (\cat{automation}, \cat{sharing and transparency}) que são comumente usados para desenvolver a categoria central\ cc, conforme discutido na seção anterior.
-Baseado em nosso entendimento, implementar os facilitadores para desenvolver o \ cc normalmente leva aos conceitos relacionados a duas categorias de resultados esperados:
-\ cat {agilidade} e \ cat {resiliência}.
+Nas próximas seções serão apresentadas as hipóteses que descrevem as principais
+relações entre as categorias que fazem parte da adoção de {\it DevOps}. Estas
+hipóteses constituem a teoria produzida e indicam que a adoção
+de {\it DevOps} é explicada por meio de uma rede de categorias que contribuem
+para o desenvolvimento da \cc, os facilitadores. E que as demais categorias
+relacionadas são consideradas resultados esperados do processo de adoção de
+{\it DevOps}, as {\emph saídas DevOps}. É ainda explicado que algumas categorias
+em alguns momentos podem ser consideradas facilitadores e em outros saídas.
 
-Além disso, existem duas categorias que podem ser consideradas
-tanto como facilitadoras quanto como resultados: \ cat {medição contínua} e \ cat {garantia de qualidade}.
-Nesta seção, descrevemos as relações entre essas categorias, construindo uma teoria
-de adoção do DevOps.
-\subsection{A General Path for DevOps Adoption}
+\subsection{Uma Abordagem Geral para a Adoção de DevOps}
 
-Na seção~\ref{sec:introduction} apresentamos a questão geral desta
-pesquisa: existe algum caminho recomendado para adotar DevOps? Aqui, nós elaboramos uma resposta,
-com base nas análises realizadas conforme detalhado na seção~\ref{sec:research_method}. O principal
-ponto que deve ser formulado é a construção de um \cc entre as equipes de desenvolvimento e operações de software e
-atividades relacionadas. De acordo com nossas descobertas, as outras categorias,
-muitas das quais também estão presentes em outros estudos que investigaram DevOps,
-só fazem sentido se as práticas e conceitos relacionados à elas contribuírem para o nível de um \ cc ou levarem às conseqüências esperadas
-de um \ cc. Esse entendimento induz à várias hipóteses, como discutido a seguir.
-
+Aqui é apresentado um possível caminho que pode ser utilizado por
+novos praticantes que desejam adotar {\it DevOps}. Esta abordagem foi construída
+com base nas análises realizadas conforme detalhado na subseção~\ref{subsecao:abordagem_gt}.
+Conforme já mencionado anteriormente, a categoria principal na adoção de {\it DevOps}
+é \cc. Isto implica que a principal preocupação na adoção de {\it DevOps} deve
+ser a formação e o desenvolvimento de uma \cc entre as equipes de desenvolvimento
+e operações de {\it software}. De acordo com as análises, as outras categorias,
+muitas das quais também estão presentes em outros estudos que investigaram
+{\it DevOps}, só podem ser consideradas como efetivas para a adoção de {\it DevOps}
+se as práticas e conceitos relacionados a elas contribuírem para o nível de \cc
+ou levarem às conseqüências esperadas de uma \cc. Esse entendimento induz algumas
+hipóteses, como discutido a seguir.
 
 \begin{mh}
-\ textbf {Hypothesis 1:} \ textit {Existe um grupo de categorias relacionadas à adoção de DevOps que só fazem sentido se usadas para aumentar o nível} \ cc \ emph {. Nós
-chamamos esse grupo de categorias de \ textbf {enablers}}.
-\ end {mh}
+{\bf Hipótese 1:} {\it Existe um conjunto de categorias relacionadas à adoção de
+{\it DevOps} que apenas fazem sentido se usadas para aumentar o nível da \cc.
+Esse conjunto de categorias é chamado de {\bf facilitadores DevOps}}.
+\end{mh}
 
+\iffalse
 Com base nesta primeira hipótese, a maturidade da adoção de DevOps não
 avança em situações em que apenas uma equipe é responsável por entender, adaptar ou
 evoluir a automação --- mesmo quando essa automação suportar diferentes atividades, como implantação, provisionamento de infraestrutura,
@@ -57,79 +67,79 @@ Consultor, Brasil)
 
 
 %% \begin{mq}
-%% ``\emph{Keeping the culture alive remains a challenge to us, and it is very
-%% important. Here in our company, for example, we have Tech Talks that are
-%% monthly conversations that we have with the teams. The purpose of these Tech
-%% Talks is to share knowledge about technologies and work processes increasing the
-%% transparency of how everything works. We also have a Slack channel called
-%% DevOps as Culture where we discuss things of DevOps culture. The idea is not to
-%% let the culture die, we are always feeding it with something, because that is
-%% the DevOps essence for us.}" (P12, Cloud Engineer, United States)
+%% ``\emph{Manter a cultura viva continua a ser um desafio para nós e é muito
+%% importante. Aqui na nossa empresa, por exemplo, temos Tech Talks que são
+%% conversas mensais que temos com as equipes. O objetivo destes Tech
+%% Talks é compartilhar conhecimentos sobre tecnologias e processos de trabalho aumentando a
+%% transparência de como tudo funciona. Nós também temos um canal Slack chamado
+%% DevOps como cultura, onde discutimos as coisas da cultura de DevOps. A ideia é não
+%% deixar a cultura morrer, estamos sempre alimentando-a com alguma coisa, porque isso é
+%% a essência de DevOps para nós.} "(P12, Cloud Engineer, Estados Unidos)
 %% \end{mq}
 
 \begin{mh}
-\textbf{Hypothesis 2:} \textit{There is a group of categories related to DevOps adoption
-that does not contribute to increase the} \cc \emph{level, but that instead are
-pointed out as DevOps adoption related, because they emerge as an expected or
-necessary consequence of the adoption. These categories represent the group of
-\textbf{outcomes}}.
+\textbf{Hipótese 2:} \textit{Há um grupo de categorias relacionadas à adoção do DevOps
+que não contribuem para aumentar o nível} \ cc \ emph {, mas
+apontado como a adoção de DevOps relacionada, porque eles emergem como um
+conseqüência necessária da adoção. Essas categorias representam o grupo de
+\ textbf {resultados}}.
 \end{mh}
 
-In a first moment, the simple fact that a team is more
-\cat{agile} in delivering software, or more \cat{resilient} in failure recovery, does not
-contribute directly to bring operations teams closer to development teams.
-Nevertheless, a signal of a mature DevOps adoption is an increasing of the capacity for continuously
-delivering software (and thus being more \cat{agile})
-and for building \cat{resilient} infrastructures.
+Em um primeiro momento, o simples fato de que uma equipe é mais
+\ cat {agile} na entrega de software, ou mais \ cat {resilient} na recuperação de falhas, não
+contribui diretamente para aproximar as equipes de operações das equipes de desenvolvimento.
+No entanto, um sinal de uma adoção madura de DevOps é um aumento da capacidade de continuar
+entregando software (e sendo assim mais \ cat {ágil})
+e para construir infraestruturas \ cat {resilient}.
 
 \begin{mh}
-\textbf{Hypothesis 3:} \textit{The categories \cat{Continuous Measurement} and \cat{Quality Assurance}
-are both related to DevOps enabling capacity and to DevOps outcomes}.
+\textbf{Hypothesis 3:} \textit{As categorias \ cat {Continuous Measurement} e \ cat {Quality Assurance}
+ambas estão relacionadas ao DevOps permitindo capacidade e aos resultados de DevOps}.
 \end{mh}
 
-Measurement is cited as a typical responsibility of the operations team.
-At the same time that sharing this responsibility reduces silos,
-it is also cited that measurement is a necessary consequence of DevOps adoption. Particularly because
-the continuous delivery of software requires more control,
-which is supplied by concepts related to the \cat{continuous measurement} category.
-The same premise is valid to the \cat{quality assurance} category. At first glance,
-\cat{quality assurance} appears as one response to the context of agility in operations
-as a result of DevOps adoption. But, the efforts in quality assurance of software products
-increase the confidence between the development and operations teams, increasing the level
-of \cc.
+A medição é citada como uma responsabilidade típica da equipe de operações.
+Ao mesmo tempo que compartilhar essa responsabilidade reduz os silos,
+também é citado que a medição é uma consequência necessária da adoção de DevOps. Particularmente porque
+a entrega contínua de software requer mais controle,
+que é fornecido por conceitos relacionados à categoria \ cat {mensuração contínua}.
+A mesma premissa é válida para a categoria \ cat {quality assurance}. À primeira vista,
+\ cat {quality assurance} aparece como uma resposta ao contexto de agilidade nas operações
+como resultado da adoção do DevOps. Mas, os esforços na garantia de qualidade de produtos de software
+aumentam a confiança entre as equipes de desenvolvimento e operações, aumentando o nível de
+de \ cc.
 
 \subsection{DevOps Enablers}
 
-Altogether, DevOps enablers are the means commonly used to increase the level of
-the \cc in a DevOps adoption process.
-We have identified five categories of DevOps enablers:
-\cat{ Automation}, \cat{Continuous Measurement}, \cat{Quality Assurance},
-\cat{Sharing}, and {\cat{Transparency}. Another finding of our
-study leads to our fourth hypothesis.
+Ao todo, os facilitadores DevOps são os meios comumente usados para aumentar o nível de
+\ cc em um processo de adoção do DevOps.
+Nós identificamos cinco categorias de ativadores do DevOps:
+\ cat {Automation}, \ cat {Medição Contínua}, \ cat {Quality Assurance},
+\ cat {Sharing} e {\ cat {Transparency}. Outra descoberta do nosso
+estudo leva à nossa quarta hipótese.
 
 \begin{mh}
-\textbf{Hypothesis 4:} \textit{There is no precedence between enablers in a DevOps adoption process}.
+\textbf{Hypothesis 4:} \textit{Não há precedência entre os facilitadores em um processo de adoção de DevOps}.
 \end{mh}
 
-We have realized that the adoption process might not have
-to priorize any enabler, and a company that aims to implement
-DevOps should start with  the enablers that seem more appropriate (in terms
-of its specificities). Accordingly, we did not find any evidence that an enbler
-is more efficient than another for creating a \cc. \cat{Automation} is the category
-that appears more frequently in our study, though several participants make
-clear that associating DevOps with automation is a misconception.
-%% For
-%% instance, although 14 respondents cite \cat{automation} as an important
-%% enabler to adopt DevOps, some respondents also ponder that considering
-%% automation with greater importance than other parts can actually be a risk:
+Percebemos que o processo de adoção pode não ter que priorizar nenhum ativador, e uma empresa que visa implementar
+DevOps deve começar com os facilitadores que parecem mais apropriados (em termos
+das suas especificidades). Assim, não encontramos nenhuma evidência de que um enebler
+é mais eficiente que outro para criar um \ cc. \cat{Automation} é a categoria
+que aparece com mais frequência em nosso estudo, embora vários participantes
+É claro que associar o DevOps à automação é um equívoco.
+Por exemplo, embora 14 entrevistados citam \ cat {automation} como um importante
+ facilitador para adotar o DevOps, alguns entrevistados também ponderam que considerar
+ a automação com maior importância do que outras partes pode realmente ser um risco:
 
 \begin{mq}
-``\emph{I think that the expansion of collaboration between teams involved other
-things, it was not just automation. There must be an alignment with the
-business needs. (...) I think that DevOps made possible a broader understanding
-of software production and we were realizing exactly that it is not about
-automating everything. (...) So, I see with caution a supposed vision that automate things can
-be the way to implement DevOps.}" (P7, Support Analyst, Brazil)
+``\emph{Eu penso que a expansão da colaboração entre as equipes envolveu outras
+coisas, não foi apenas automação. Deve haver um alinhamento com o
+necessidades de negócios. (...) Eu acho que o DevOps possibilitou um entendimento
++mais amplo da produção de software e estávamos percebendo exatamente que não se
+trata de automatizar tudo. (...) Então, vejo com cautela uma suposta visão que
+automatizar as coisas pode ser a maneira de implementar o DevOps.} "(P7, Analista
+de Suporte, Brasil
+)
 \end{mq}
 
 %\begin{mq}
@@ -142,7 +152,10 @@ be the way to implement DevOps.}" (P7, Support Analyst, Brazil)
 %% increase the level of \cc without focus on automating. And
 %% this premise is valid to the other enablers.
 
-\subsection{DevOps Outcomes}
+\subsection{Saídas DevOps}
+
+{\emph Saídas DevOps} é aquele grupo de categorias que não produz primariamente
+o efeito esperado de um {\emph facilitador DevOps}
 
 DevOps outcomes is that group of categories that does not produces primarily the
 expected effect of a DevOps enabler, typically concepts that are expected as
