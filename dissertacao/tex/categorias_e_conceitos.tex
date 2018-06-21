@@ -3,8 +3,8 @@
 A categoria principal da adoção de {\it DevOps} é \cc. A \cc visa essencialmente
 remover os silos entre os times de desenvolvimento e operações, o que até certo
 ponto se confunde com os próprios objetivos de {\it DevOps}. Inicialmente, uma
-\cc envolve que as tarefas tipicamente de operaçõe---como {\it deployment},
-provisionamento e gerenciamento de infraestrutura e monitoramento---devem ser
+\cc envolve que as tarefas tipicamente de operações --- como {\it deployment},
+provisionamento e gerenciamento de infraestrutura e monitoramento --- devem ser
 consideradas atividades regulares, parte do dia a dia de desenvolvimento de
 {\it software}. As organizações relatam que não aguardam mais momentos específicos
 para performar essas atividades, elas são executadas continuamente. Isso leva
@@ -244,67 +244,93 @@ detectados automaticamente. E o segundo está relacionado à capacidade de
 substituir um componente que não está funcionando adequadamente ou reverter uma
 falha no {\it deployment} sem intervenção humana.
 
-\subsection{Transparency and Sharing} Represents the grouping of concepts
-emerged from recurrent interviews that help to disseminate concepts and
-activities. Training, tech talks, committees lectures, and round tables
-are examples of these events. Creating
-channels using communication tools is another recurrent topic
-related to \cat{sharing} along the processes of DevOps adoption.
-According with the content of what is shared, we
-have identified three main concepts:
+\subsection{Compartilhamento e Transparência}
 
-\begin{itemize}
-\item Knowledge sharing: the professionals interviewed mention a wide range of
-skills they need to acquire during the adoption of DevOps, citing
-structured events of sharing to smooth the learning curve of both technical and
-cultural knowledge.
+Esta categoria representa o agrupamento de conceitos emergidos que emergiram de
+maneira recorrente nas entrevistas a respeito de atividades que ajudam a
+disseminar conhecimento e atividades entre os times de modo a incrementar a
+colaboração entre eles. Ações de treinamento interno e externo, palestras,
+discussões em grupos e {\it round tables} são exemplos desses eventos. Criar
+canais usando ferramentas de comunicação é outro tópico recorrente relacionado
+a \cat{compartilhamento e transparência} ao longo do processo de adoção de
+{\it DevOps}. De acordo com o conteúdo e o meio onde há o compartilhamento,
+foram identificados inicialmente três conceitos para esta categoria:
 
+\begin{enumerate}
+\item {\bf Compartilhamento de conhecimento}: os profissionais entrevistados
+mencionaram que existe uma ampla gama de habilidades técnicas e culturais que
+precisaram adquirir durante a adoção de {\it DevOps}. Como meio para suavizar a
+curva de aprendizagem existente foi mencionada a realização de eventos de
+compartilhamento de conhecimento, tais quais, ações estruturadas de treinamento
+(cursos) com participação de profissionais dos dois times e participação em
+eventos da comunidade de desenvolvimento de {\it software}.
 
-\item Activities sharing: where the focus is on sharing how simple tasks can or
-should be performed. Communication tools, committees, and round tables are the common
-forum for sharing this type of content.
+\item {\bf Compartilhamento de atividades}: esse conceito trata de ações onde o
+foco é em compartilhar a maneira como tarefas simples foram realizadas, por
+exemplo, como um erro específico foi corrigido, ou detalhes de configuração de
+alguma ferramenta específica. As próprias ferramentas de comunicação, junto com
+existência de comitês e a realização de {\it round tables} foram citados como
+fóruns adequados para compartilhamento deste tipo de conteúdo.
 
-\item Process sharing: here, the focus is on sharing whole working processes. The
-content is more comprehensive than in sharing activities. Tech talks and
-lectures are the common forum for sharing processes.
-
-\end{itemize}
-
-Sharing concepts contribute with the \cc. For example,
-all team members gain best insight about the entire software production
-process, with a solid understanding of shared responsibilities. A shared vocabulary also
-emerged from \cat{sharing} and this facilitates communication.
-
-The use of \textbf{infrastructure as code} was
-recurrently cited as a means for guaranteeing that everyone knows how the execution environment of
-an application is provided and managed. Bellow, we present an interview
-transcript which sums up this concept.
-
-\begin{mq}
-``\emph{So, here we adopted this type of strategy that is the infrastructure as code,
-consequently we have the versioning of our entire infrastructure in a common
-language, in such a way that any person, a developer, an architect, the
-operations guy of even the manager, he looks and is able to describe that the
-configuration of application x is y. So, it aggregates too much value for us
-exactly with more transparency.}" (P12, Cloud Engineer, United States)
-\end{mq}
-
-Regarding cat{transparency and sharing}, we also found the concept of \textbf{sharing on a regular basis}, which suggests
-that sharing should be embedded in the process of software
-development, in order to contribute effectively to transparency.
-As we will detail in the \emph{continuous integration} concept of
-the \cat{agility} category, a common way to integrate all tasks is a pipeline. Here, there is the
-concept of \textbf{shared pipelines}, which indicates that the code of pipelines
-must be accessible to everyone, in order to foment transparency.
+\item {\bf Compartilhamento de processos}: aqui, o foco é em compartilhar um
+processo de trabalho como um todo. Por exemplo: como configurar um {\it pipeline}
+no {\it Jenkins} utilizando {\it Jenkinsfile}. O conteúo é mais abrangente do
+que no compartilhamento de atividades. A realização de apresentações e palestras
+foram citados como o fórum mais comum para o compartilhamento de processos.
+\end{enumerate}
 
 \begin{mq}
-``\emph{The code of how the infrastructure is
-made is open to developers and the sysadmins need to know some aspects of how
-the application code is built. The code of our pipelines is accessible to
-everyone in the company to know how activities are automated}" (P13, Technology
-Manager, Brazil)
+``\emph{Hoje em dia eu vejo as pessoas na empresa muito preocupadas em que todo
+mundo saiba o que ela está fazendo e como ela está fazendo. Por isso a gente
+tem essas ações estruturadas que eu te falei, se alguma pessoa quer repassar
+algum conteúdo relevante para o restante da equipe, ela tem total liberdade para
+reservar a sala e realizar a própria tech talk. Antigamente tinha um negócio de
+meio que fazer as coisas às escondidas para o cara até mesmo tentar valorizar
+o passe dele, 'ah, só fulano sabe como fazer isso'. Agora com esse investimento
+em horizontalizar a cultura, o cara sabe que tudo tem que ser compartilhado e
+transparente para todos, e isso gera um ciclo positivo que aumenta o senso
+de colaboração e faz ele querer compartilhar ainda mais o que ele faz.}''
+(P7, Analista de Suporte, Brasil)
 \end{mq}
 
+Estes conceitos de compartilhamento contribuem com a \cc. Por exemplo, todos os
+membros dos times ganho uma melhor compreensão sobre todo o processo de produção
+de {\it software}, com um sólido entendimento de que as responsabilidades devem
+ser compartilhadas. Um vocabulário compartilhado também tende a se formar por
+meio dessas ações de compartilhamento e isso facilita a comunicação.
+
+O uso de {\bf infraestrutura como código} foi recorrentemente citado como um
+meio de se garantir que todos saibam como o ambiente de execução de aplicação
+é provido e gerenciado. Abaixo, é apresentada um trecho de transcrição de
+entrevista que resume bem este conceito:
+
+\begin{mq}
+``\emph{Então, aqui nós adotamos este tipo de estratégia
+que é a infraestrutura como código, consequentemente, nós temos um versionamento
+de toda a nossa infraestrutura em uma linguagem comum, de tal maneira que
+qualquer pessoa, um desenvolvedor, um arquiteto, o cara de operações, ou mesmo
+o gerente, ele olha e consegue descrever que a configuração da aplicação x é
+y. Então, isto agrega muito valor para nós exatamente com mais transparência.}" (P12, Cloud Engineer, Estados Unidos)
+\end{mq}
+
+Em relação a \cat{compartilhamento e transparência}, foi também identificado o
+conceito de \textbf{compartilhamento em bases regulares}, que sugere que as
+ações de compartilhamento devem ser incorporadas no processo de
+desenvolvimento de {\it software}, de modo a contribuir de maneira eficaz
+para a transparência. Conforme será detalhado no conceito de \emph{integração
+contínua} da categoria \cat{agilidade} (subseção \ref{subsecao_agilidade}), uma
+maneira comum de se integrar todas as tarefas é um {\it pipeline}. Aqui existe
+o conceito de \textbf{{\emph pipelines} compartilhados}, que indica que o
+código dos {\it pipelines} deve ser acessível a todos, buscando fomentar a
+transparência.
+
+\begin{mq}
+``\emph{O código de como a infraestrutura é feita é aberto aos desenvolvedores
+e os sysadmins precisam conhecer alguns aspectos de como o código da aplicação
+é construído. O código dos nossos pipelines é acessível a todos na empresa
+para saberem como as atividades estão automatizadas.}"
+(P13, Gerente de Tecnologia, Brasil)
+\end{mq}
 
 \section{\emph{Saídas} da Adoção de {\emph DevOps}}\label{secao_saidas}
 
@@ -313,7 +339,7 @@ Manager, Brazil)
 %DevOps practices, including \cat{agility} and \cat{resilience};
 %as discussed as follows.
 
-\subsection{Agility}
+\subsection{Agility}\label{subsecao_agilidade}
 
 Agility is frequently discussed as a major outcome of DevOps adoption. With more
 collaboration between teams, \textbf{continuous integration} with execution of
