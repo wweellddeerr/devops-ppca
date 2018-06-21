@@ -334,28 +334,48 @@ para saberem como as atividades estão automatizadas.}"
 
 \section{\emph{Saídas} da Adoção de {\emph DevOps}}\label{secao_saidas}
 
-%In this section we detail the categories that correspond to
-%the expected consequences with the adoption of
-%DevOps practices, including \cat{agility} and \cat{resilience};
-%as discussed as follows.
+Nesta seção são detalhadas as categorias que correspondem às consequências
+esperadas do processo de adoção de {\it Devops}: \cat{agilidade} e \cat{resiliência}.
 
-\subsection{Agility}\label{subsecao_agilidade}
+\subsection{Agilidade}\label{subsecao_agilidade}
 
-Agility is frequently discussed as a major outcome of DevOps adoption. With more
-collaboration between teams, \textbf{continuous integration} with execution of
-multidisciplinary pipelines is possible and it is an agile related concept
-frequently explored. These pipelines might contain
-infrastructure provisioning, automated regression testing, code analysis,
-automated deployment and any other task considered important to
-execute continuously.
+A maior {\it agilidade} dos times foi frequentemente descrita como um dos
+principais resultados da adoção do {\it DevOps}. Com mais colaboração entre os
+times, a {\bf integração contínua} com execução de {\it pipelines}
+multidisciplinares é possível e este é um conceito relacionado a agilidade que
+é frequentemente explorado. Esses {\it pipelines} podem conter provimento
+de infraestrutura, testes automatizados, análise de código, {\it deployment}
+automatizado e qualquer outra tarefa considerada importante no processo de
+desenvolvimento para que possa ser executada continuamente.
 
-These pipelilnes encourage two other agile concepts: \textbf{continuous
-infrastructure provisioning} and \textbf{continuous deployment}. The latter is
-one of the most recurrent concepts identified in the interview analysis. Before
-DevOps, deployment had been seen as a major event with high risk of downtime and
-failure involved. After DevOps, the sensation of risk in deployment decreases
-and this activity became more natural and frequent. Some practitioners claim
-to perform dozens of deployments daily.
+\begin{mq}
+``\emph{O nosso pipeline tem etapas com toda uma estrutura para criar e destruir
+containeres de maneira rápida e gerar ambientes rapidamente utilizando Docker.
+Ele também passa pelo Sonar\footnote{https://www.sonarqube.org/} para
+analisar o código utilizando os plugins e bibliotecas dele [...]. Tem também os
+testes automatizados e em qualquer dessas etapas que estou falando o pipeline
+pode ser interrompido com envio de mensagem para que o desenvolvedor ajuste
+algum aspecto no código. Tem também pontos específicos de uso do Nessus
+para checagem de vulnerabilidade, então, se a aplicação consegue passar por
+todas essas etapas do pipeline, a gente não tem motivos para se preocupar em
+fazer o deployment dessa versão.}'' (P7, Analista de Suporte, Brasil)
+\end{mq}
+
+Estes pipelilnes ocasionam dois outros conceitos da categoria \cat{agilidade}:
+{\bf privisionamento contínuo de infraestrutura} e {\bf deployment contínuo}.
+Este último é um dos conceitos mais recorrentes identificados na análise das
+entrevistas. Sem {\it DevOps}, o {\it deployment} é visto como um grande evento
+com alto risco de {\it down-time} e falhas. Com {\it DevOps}, a sensação de
+risco no {\it deployment} diminui e essa atividade torna-se mais natural e
+frequente. Alguns praticantes afirmam realizar dezenas de {\it deployments}
+diariamente.
+
+\begin{mq}
+``\emph{Quando a gente adotou DevOps, a nossa curva de ganho foi muito grande.
+Então a gente foi de um deploy a cada 15 dias para 40 deploys por dia. Então,
+é uma curva muito gigante, a entrega de valor para a empresa foi gigante.}''
+(P12, {\it Cloud Engineer}, Estados Unidos)
+\end{mq}
 
 \subsection*{Resilience}
 
