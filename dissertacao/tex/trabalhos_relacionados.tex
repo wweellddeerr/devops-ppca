@@ -1,176 +1,80 @@
-\section{Trabalhos Relacionados}
+\subsection{Trabalhos Relacionados}
 
-Após construída, a teoria descrita acima foi reintegrada com a literatura
-existente sobre {\it DevOps}.
+O trabalho de Smeds et al.~\cite{devops_a_definition} propôs a existência de
+{\it enablers} técnicos e culturais que compõem a definição de {\it DevOps} e
+{\it capabilities} resultantes do uso das técnicas {\it DevOps}. Estes
+{\it enablers} e {\it capabilities} se assemelham aos \emph{facilitadores} e
+\emph{saídas DevOps} apresentados aqui. Ademais, alguns conceitos coincidem:
+(1) automação de testes, {\it deployment}, monitoramento, infraestrutura e
+recuperação; (2) integração, testes e {\it deployment} contínuos; (3) recuperação
+de falhas em serviços sem {\it delay}; e (4) comunicação constante e {\it effortless}.
+Todavia, algumas outras diferenças também podem ser identificadas: (1) o não
+agrupamento de conceitos em categorias, a maior parte dos facilitadores são
+relacionados a automação; (2) apresentam os aspectos culturais como responsáveis
+por contribuir com a formação de capacidades {\it DevOps} e não como a
+preocupação principal de {\it DevOps}; (3) o foco da parte empírica do estudo,
+onde foram conduzidas entrevistas semi-estruturadas com 13 funcionários de uma única
+companhia cujo processo de adoção de {\it DevOps} estava em um estágio inicial,
+foi em construir uma lista de possíveis impedimentos na adoção de {\it DevOps} e
+não em prover orientações para novos praticantes a respeito de \emph{como} se
+adotar {\it DevOps}.
 
+Já Lwakatare et al.~\cite{dimensions_of_devops,extending_dimensions} propuseram
+um {\it framework} conceitual para explicar ``{\it DevOps} como um fenômeno''.
+O {\it framework} foi construído por meio de uma revisão de literatura multivocal
+utilizando dados da literatura cinza combinada com entrevistas a praticantes de
+três companhias que estavam aplicando práticas {\it DevOps} e organizado em
+torno de cinco dimensões (colaboração, automação, cultura, monitoramento e
+medição) e estas dimensões foram apresentadas com práticas relacionadas. O foco
+deste trabalho também não foi em investigar a adoção de {\it DevOps} na prática.
+A principal semelhança identificada foi a presença de todas as dimensões aqui
+também, embora \emph{cultura} e \emph{colaboração} sejam aqui apresentadas como
+uma única abstração (cultura de colaboração) e os conceitos relacionados a
+monitoramento estejam aqui presentes como parte da categoria de \cat{medição
+contínua} e não em duas categorias separadas. Ademais, infraestrutura como
+código foi lá apresentada como um conceito relacionado a automação enquanto que
+aqui está relacionado a \cat{compartilhamento e transparência}.
 
+Fran\c{c}a et al.~\cite{characterizing_devops}, por sua vez, realizaram uma
+revisão multivocal de literatura, utilizando dados de diversas fontes () com
+procedimentos de análise qualitativa de {\it grounded theory} para prover uma
+definição para {\it DevOps} e identificar práticas {\it DevOps}, habilidades
+requeridas, características, benefícios, e problemas motivando a adoção
+de {\it DevOps}. O uso de {\it grounded theory} representa uma semelhança entre
+os estudos, embora, neste caso tenham sido utilizados apenas os procedimentos
+de análise e não a abordagem como um todo. Os resultados também apresentam
+algumas semelhanças.
 
-
-
-%A subseção \ref{secao_caracterizacoes_devops}
-%apresenta as semelhanças e diferenças de trabalhos que foram construídos
-%visando caracterizar {\it DevOps}, tipicamente por meio da identificação de
-%elementos relacionados. Já na subseção \ref{secao_adocao_6_companhias} é
-%feita a comparação com um estudo cujo foco foi similar, de caracterizar a
-%adoção de {\it DevOps} em companhias de mercado. A seção \ref{como_superar_desafios}
-%apresenta uma comparação de um trabalho cujo foco foi identificar desafios na
-%adoção de {\it DevOps} e que apresentou algumas orientações a respeito de como
-%superar estes desafios. Por fim, na subseção \ref{modelo_maturidade} a teoria é
-%comparada a um trabalho relacionado no qual é proposto um modelo de maturidade
-%para adoção de {\it DevOps} e também detalhes de como progredir nesse modelo,
-%aumentando o nível de maturidade de {\it DevOps} de uma companhia.
-
-\subsection{Trabalhos com Foco em Caracterizar DevOps}\label{secao_caracterizacoes_devops}
-
-Foram identificados três estudos que tiveram como foco principal
-caracterizar {\it DevOps}, o que difere do propósito da produção
-da teoria aqui apresentada que foi de caracterizar {emph como DevOps é adotado}.
-Embora exista essa diferença de foco, existe uma sobreposição de resultados que se
-justifica por ser natural que os elementos {\it DevOps} apareçam no processo de
-adoção de {\it DevOps}. Além das diferenças de foco, existem algumas
-diferenças metodológicas em relação ao estudo aqui proposto. Essas diferenças
-são resumidas na tabela \ref{related_work_table}.
-
-\begin{table}[hb!]
-\centering
-\caption{Comparação de Metodologia e Foco dos Trabalhos Relacionados}
-\label{related_work_table}
-\begin{tabular}{|p{3cm}|p{6cm}|p{6cm}|}
-\hline
-
-\textbf{Estudo}
-& \textbf{Abordagem de Pesquisa}
-& \textbf{Foco do Trabalho} \\
-
-\hline
-
-\textbf{Este estudo}
-
-& Abordagem {\it grounded theory} entrevistando praticantes que contribuíram
-para a adoção de {\it DevOps} em 15 companhias de 5 países.
-
-& Explicar {\bf como} {\it DevOps} tem sido adotado de maneira bem sucedida na prática de mercado;\newline
-\newline Prover orientações que possam ser usadas em novas adoções de {\it DevOps}. \\
-
-\hline
-
-\textbf{J. Smeds et al.~\cite{devops_a_definition}}
-
-& Revisão sistemática de literatura; \newline \newline Entrevistas semi-estruturadas
-com 13 funcionários de uma única companhia cujo processo de adoção de {\it DevOps}
-estava em um estágio inicial.
-
-& Identificar na literatura as principais características que definem {\it DevOps}
-\newline \newline
-Construir uma lista de possíveis impedimentos na adoção de {\it DevOps} por meio
-de um estudo empírico. \\
-
-\hline
-
-\textbf{Lwakatare et al.~\cite{extending_dimensions}}
-
-&
-Revisão de literatura multivocal utilizando dados da literatura cinza; \newline \newline
-Três entrevistas com praticantes de desenvolvimento de {\it software} em uma
-companhia que estava aplicando práticas {\it DevOps} em um projeto.
-
-& Identificar como praticantes descrevem {\it DevOps} como um fenômeno; \newline
-\newline Identificar as práticas {\it DevOps} de acordo com os praticantes de
-desenvolvimento de {\it software}. \\
-
-\hline
-
-\textbf{Fran\c{c}a et al.~\cite{characterizing_devops}}
-
-& Revisão de literatura multivocal com procedimentos de análise qualitativa de
-{\it grounded theory}.
-
-& Prover uma definição para {\it DevOps}; \newline \newline
-Identificar práticas {\it DevOps}, habilidades requeridas, características,
-benefícios, e problemas motivando a adoção de {\it DevOps}. \\
-
-\hline
-
-\end{tabular}
-\end{table}
-
-Parte do trabalho de Erich et al. \cite{qualitative_devops_journalsw_17} também
+Uma parte do trabalho de Erich et al. \cite{qualitative_devops_journalsw_17} também
 se concentrou em identificar elementos que compõem {\it DevOps} por meio de uma
-revisão de literatura.
+revisão de literatura. Uma segunda parte do trabalho de Erich et al. \cite{qualitative_devops_journalsw_17}
+se concentrou em investigar como {\it DevOps} é implementado na prática por
+meio de entrevistas com praticantes de seis companhias. Todavia, as percepções
+lá apresentadas foram apresentaram de maneira individual para cada companhia,
+não direcionando os pontos comuns com o intuito de formular um modelo geral de
+como {\it DevOps} pode ser adotado.
 
-Em relação aos trabalhos apontados acima, a teoria apresenta detalhes que ajudam a
+O trabalho de Hamunen \cite{challenges_in_adopting_devops}
+
+O Modelo de Maturidade Proposto por Feijter et al. \cite{feijter2017towards}
+
+\subsubsection{Considerações Gerais a Respeito dos Trabalhos Relacionados}
+
+Em relação aos trabalhos cujo propósito é de apresentar elementos {\it DevOps} e
+práticas relacionadas, a teoria apresenta detalhes que ajudam a
 compreender como podem ser respondidas algumas questões práticas a
-respeito da adoção de {\it DevOps} que permaneceram em aberto: (1) Existe um caminho
+respeito da adoção de {\it DevOps} que permaneciam em aberto: (1) Existe um caminho
 recomendado para se adotar \textit{DevOps}? (2) Já que \textit{DevOps} é
 constituído de múltiplos elementos, eles possuem a mesma relevância quando se
 adota \textit{DevOps}? (3) Qual é o papel desempenhado por cada um desses
 elementos - tais como medição, compartilhamento e automação - em uma adoção de
 \textit{DevOps}?
 
-
-
-Uma segunda parte do trabalho de Erich et al. \cite{qualitative_devops_journalsw_17}
-
-Systematic literature review;
-Interviews with practitioners from 6 companies across 3 countries.
-
-Identify how literature defines DevOps;
-Investigate how DevOps is being implemented in practice.
-
-O trabalho de Erich et al. \cite{qualitative_devops_journalsw_17} investigou
-o processo de adoção de \textit{DevOps} por meio de entrevistas com praticantes
-de seis companhias. Todavia, as percepções obtidas não detalham a maneira como
-as companhias aplicaram os elementos de \textit{DevOps} ao longo do processo,
-e são apresentadas de maneira individualizada, não se colocando em perspectiva
-o que há de comum no entendimento dessas companhias. Os dados de como cada
-companhia relata ter implementado \textit{DevOps} são apresentados de maneira
-sucinta e os principais pontos são descritos a seguir.
-
-Na primeira companhia, é relatado que o pessoal de desenvolvimento e
-operações passou a trabalhar de maneira conjunta diariamente, foi criado um
-novo cargo na companhia chamado \textit{DevOps Engineer}, o pessoal de gestão
-foi treinado para ser capaz de gerenciar tanto pessoas de desenvolvimento como
-de operações, o pessoal de recursos humanos alterou os processos de avaliação e,
-por fim, a organização está automatizando seus processos de infraestrutura, não
-são apresentados detalhes de como isso está sendo feito.
-
-Na segunda companhia, \textit{DevOps} é visto como uma extensão de
-\textit{Scrum} e \textit{Lean}. A adoção de \textit{DevOps} lá foi guiada por
-dois princípios: colaboração diária e ambiente de trabalho compartilhado.
-Havia a premissa de que o \textit{software} deve ir para produção a cada
-iteração. É relatado então que a organização usou \textit{frameworks}
-comerciais para guiar a implantação de \emph{entrega contínua}, também sem maiores
-detalhamentos de como foi feito.
-
-Na terceira companhia, é relatado que três times que trabalhavam em
-funcionalidades separadas foram agrupados em um \emph{time DevOps}. A organização
-passou então a experimentar \textit{entrega contínua}, mas ainda estava em
-um estágio inicial quando a entrevista foi realizada.
-
-A quarta companhia criou uma única equipe de \textit{DevOps} para
-experimentar ferramentas, princípios e práticas \textit{DevOps}. Os
-membros dessa equipe possuem habilidades multidisciplinares. É relatado ainda
-o uso de ferramentas para controle de versão e o desenvolvimento de ferramentas
-próprias para criar facilmente ambientes de nuvem.
-
-Na quinta companhia, é relatado que \textit{DevOps} é visto como
-um papel responsável por gerenciamento de incidentes, gerenciamento de
-capacidade, gerenciamento de riscos e suporte ao processo de criação.
-O uso de computação em nuvem ocasionou a necessidade de se existir uma
-abordagem mais sistemática para execução das atividades de operações, exigindo
-que o pessoal responsável aprendesse técnicas de desenvolvimento de
-\textit{software}. O time de desenvolvimento foi dividido em vários subtimes,
-um dos quais focado em \textit{DevOps}, com responsabilidade de apoiar os demais
-times. São também enumerados alguns princípios e práticas utilizados na companhia
-durante a adoção de \textit{DevOps}.
-
-Por fim, com relação a como a sexta companhia implementou \textit{DevOps},
-é apresentado um detalhamento de como ocorre a \emph{integração contínua} na
-organização. As evoluções de código são feitas por meio de \textit{pull
-requests} que após aprovadas são integradas ao código principal. Após a
-integração dos códigos das \textit{pull requests}, um \textit{pipeline} de entrega
-contínua é executado para publicar o \textit{software}.
-
-\subsection{As Considerações de Hamunen \cite{challenges_in_adopting_devops} Sobre Como Superar os Desafios na Adoção de DevOps}\label{como_superar_desafios}
-
-\subsection{O Modelo de Maturidade Proposto por Feijter et al. \cite{feijter2017towards}}\label{modelo_maturidade}
+De maneira geral, é possível destacar que: (1) nenhum dos estudos utilizou
+{\it grounded theory} para investigar o processo de adoção de {\it DevOps};
+(2) exceto o trabalho de Feijter et al. \cite{feijter2017towards}, os demais
+focaram em caracterizar {\it DevOps} de maneira geral ou desafios relacionados
+a {\it DevOps} e não em produzir orientação para novos praticantes; (3) entre os
+trabalhos que realizaram entrevistas, o que maior número de companhias distintas
+ouviu foi o de Erich et al. \cite{qualitative_devops_journalsw_17}, com 6
+companhias, enquanto que aqui foram coletadas experiência de 15 companhias.
