@@ -379,20 +379,35 @@ Então a gente foi de um deploy a cada 15 dias para 40 deploys por dia. Então,
 
 \subsection{Resiliência}
 
-Also related to an expected outcome of adopting DevOps, \cat{resilience} in this
-context refers to the ability of applications to adapt quickly to adverse situations.
-The first related concept is \textbf{auto scaling}---i.e.,
-allocating more or less resources to applications that increase or
-decrease on demand. Another concept related to
-the \cat{resilience} category is \textbf{recovery automation}, that is
-the capability of the applications and infrastructure to recovery itself in case of
-failures. There are two typical cases of recovery automation: (1) in cases
-of some instability in the execution environment of an application (a
-container, for example) occurs an auto restart of that environment; and (2) in
-cases of new version deployment, if the new version does not work properly, the
-previous one must be restored. This auto restore of a previous version
-decrease the chance of downtimes due to errors in specific versions, which
-is the concept of \textbf{zero down-time}, the last one of the \cat{resilience} category.
+Também relaciona à uma saída esperada do processo de adoção de {\it DevOps}, a
+categoria \cat{resiliência} nesse contexo à capacidade que as aplicações
+desenvolvidas possuem de se adaptar rapidamente a situações adversas. O primeiro
+conceito relacionado é {\bf auto \emph{scaling}}, que indica que a presença de
+mecanismos que possibilitam a alocação automática de mais ou menos recursos para
+aplicações que aumentam ou diminuem sua demanda de acesso em momentos
+específicos. Outro conceito relacionado à categoria de \cat{resiliência} é
+\textbf{automação da recuperação}, que é a capacidade das aplicações e
+infraestrutura subjacente se recuperarem em caso de falhas. Foram relatados dois
+casos típicos de automação de recuperação: (1) em casos de alguma instabilidade
+no ambiente de execução de uma aplicação (um container, por exemplo) ocorre
+uma reinicialização automática desse ambiente; e (2) em casos de implantação
+de nova versão, se ela não funcionar adequadamente, a anterior é automaticamente
+restaurada. Essa restauração automática de uma versão anterior diminui a chance
+de inatividade devido a erros em versões específicas, que é o conceito de {\bf
+zero \emph{down-time}}, que é o último da categoria de \cat{resilience} e indica
+que uma aplicação que esteja executanto corretamente não sofrerá
+indisponibilidade por conta de falhas que possam ser evitadas.
+
+\begin{mq}
+``\emph{Quando era necessário dar um deploy em alguma das aplicações que a
+gente tinha sempre acontecia um downtime de alguns minutos e, obviamente, se
+tinha o downtime e o deploy não dava certo, o downtime era ainda maior. Mas com
+a adoção de DevOps a gente conseguiu justamente diminuir para, na verdade a
+gente diminuiu para quase nada, acho que era em torno de um minuto ou menos e
+posteriormente a gente conseguiu eliminar qualquer downtime, utilizando o
+Kubernetes\footnote{https://kubernetes.io/}}''
+(P1, {\it DevOps Developer}, Irlanda)
+\end{mq}
 
 \section{Categorias que são tanto \emph{Facilitadores} como \emph{Saídas} da Adoção de \emph{DevOps}}
 \label{secao_facilitadores_e_saidas}
