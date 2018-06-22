@@ -1,23 +1,12 @@
-Neste capítulo é apresentado um modelo que pode ser utilizado para guiar a
-implantação de \textit{DevOps} por novos praticantes. Este modelo foi construído
-com base na teoria apresentada no capítulo anterior e está sendo
-utilizado para fomentar a adoção de DevOps no \acrshort{TCU}. É detalhada a
-realização de um grupo focal \cite{focus_group_handbook,shull2007guide} para
-identificar a percepção dos profissionais envolvidos tanto a respeito da adoção
-de {\it DevOps} em geral, quanto da aplicabilidade e utilidade do modelo proposto.
-Este capítulo contém ainda detalhamento técnico de ações desenvolvidas no
-\acrshort{TCU} no intuito de ampliar a utilização de {\it DevOps} no
+Neste capítulo é detalhada a realização de um grupo focal \cite{focus_group_handbook,shull2007guide}
+para identificar a percepção dos profissionais envolvidos tanto a respeito da
+adoção de {\it DevOps} em geral, quanto da aplicabilidade e utilidade do modelo
+proposto a adoção de {\it DevOps} no \acrshort{TCU}. Este capítulo contém ainda
+detalhamento técnico de ações desenvolvidas no \acrshort{TCU} utilizando
+experiências obtidas no intuito de ampliar a utilização de {\it DevOps} no
 desenvolvimento das aplicações corporativas.
 
-\section{A Adoção de DevOps \acrshort{TCU}}
-We instantiated our model in the Brazilian Federal Court of Accounts (hereafter TCU), a Brazilian Federal
-Government institution. TCU was bogged down in implanting specific DevOps tools, repeating the same non-DevOps problems, with
-conflicts between development and operations teams about how to divide the responsibilities related to different facets in the intersection between software development and software provisioning.
-When instantiated, our model helped TCU to change its focus to
-improve the collaboration between teams, and to use the tooling
-to support (rather than being the goal of) the entire process.
-
-\subsection{Grupo Focal}
+\section{Grupo Focal}
 
 Para obtenção da avaliação empírica sobre a adoção de {\it DevOps} no \acrshort{TCU},
 bem como da aplicabilidade e utilidade do modelo descrito,
@@ -104,6 +93,62 @@ conclusões a respeito da respectiva pergunta.
 
 \subsection{Estágio Atual da Adoção de DevOps no TCU}
 
+O primeiro tópico de discussão no grupo focal foi o estágio atual da adoção de
+{\it DevOps} no \acrshort{TCU} onde foram discutidas as ações já desenvolvidas
+e quais problemas essas ações resolveram. A seguir são apresentados os
+resultados da discussão nestes tópico.
+
+\begin{enumerate}
+\item A primeira ação indicada foi a disponibilização de ambientes (\acrshort{VM}s)
+para instalação de ferramentas que são relacionadas ao trabalho de
+desenvolvimento. Essa ação foi exemplificada com as instalações bem sucedidas
+das ferramentas Elasticsearch e Kafka. O problema existente anteriormente era
+que quando o desenvolvedor necessitava de uma ferramenta desse tipo, inerente
+ao trabalho que realizava, dependia de abrir uma solicitação para que o time
+de operações provesse. Com o provisionamento de \acrshort{VM}s e cooperação
+entre os dois times, essas ferramentas ficaram disponíveis rapidamente para uso
+e são administradas de maneira conjunta. Este é um claro exemplo do conceito de
+{\bf empoderamento do desenvolvimento de \emph{software}} da categoria principal
+\cat{cultura de colaboração}.
+
+\item Execução conteinerizada de aplicações
+
+\item Facilitação da comunicação por meio do Slack
+
+\item Pipelines multidisciplinares
+
+\item Versionamento de bancos de dados
+
+\item Monitoramento automatizado
+
+\end{enumerate}
 \subsection{Aplicabilidade e Utilidade do Modelo proposto}
 
 \subsection{Desafios enfrentados e Próximos Passos na Adoção de DevOps}
+
+\begin{enumerate}
+\item Inicialmente foi debatida a percepção apontada por um dos participantes do
+grupo focal de que ainda há muita {\it hype} em torno do que seria a adoção de
+{\it DevOps}. Que muitos desenvolvedores pensam que isso possibilita a tomada de
+iniciativas técnicas sem consultar outros profissionais e que algumas pessoas de
+operações ainda não se sentem confortáveis com essa mudança de paradigma, pois
+entendem que {\it DevOps} pode provocar uma desorganização em um ambiente que já
+possuia estabilidade. Foi mencionado espontaneamente que o modelo apresentado
+ajuda a lidar com esse desafio, mas que é necessária uma melhor conscientização
+de todos o profissionais sobre fomentar a colaboração entre os times e não
+apenas sair querendo resolver tudo de acordo com convicções pessoais.
+
+\item Foi apontada também a dificuldade de disseminar o conhecimento relacionado
+às novas ferramentas e técnicas que vieram junto com a adoção de {\it DevOps}.
+Ações para mitigação desse desafio foram discutidas, incluindo a ampliação das
+palestras internas do \acrshort{TCU} que são chamadas internamente de bate-bola
+técnico, a participação nos eventos tais qual o \emph{DevOpsDays}, e os estímulos
+que o \acrshort{TCU} já dá para os servidores, como licença capacitação,
+reembolso de treinamentos e disponibilização da plataforma {\it safari books}.
+
+\item Responsabilidade formal da setic, resolução de incidentes apenas o pessoal
+de infra tem as senhas
+
+\item Distanciamento físico das equipes
+
+\end{enumerate}
