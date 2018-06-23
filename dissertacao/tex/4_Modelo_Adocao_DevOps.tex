@@ -1,17 +1,16 @@
 Neste capítulo é detalhada a realização de um grupo focal \cite{focus_group_handbook,shull2007guide}
 para identificar a percepção dos profissionais envolvidos tanto a respeito da
 adoção de {\it DevOps} em geral, quanto da aplicabilidade e utilidade do modelo
-proposto a adoção de {\it DevOps} no \acrshort{TCU}. Este capítulo contém ainda
-detalhamento técnico de ações desenvolvidas no \acrshort{TCU} utilizando
-experiências obtidas no intuito de ampliar a utilização de {\it DevOps} no
-desenvolvimento das aplicações corporativas.
+proposto na adoção de {\it DevOps} no \acrshort{TCU}. Este capítulo contém ainda
+detalhamento de ações desenvolvidas no \acrshort{TCU} após o intercâmbio de
+experiências ocorrido durante a elaboração do modelo.
 
 \section{Grupo Focal}
 
 Para obtenção da avaliação empírica sobre a adoção de {\it DevOps} no \acrshort{TCU},
-bem como da aplicabilidade e utilidade do modelo descrito,
-proposta como objetivo deste trabalho de pesquisa, foi utilizado o método qualitativo
-de pesquisa \emph{grupo focal} \cite{focus_group_handbook}.
+bem como da aplicabilidade e utilidade do modelo descrito, proposta como
+objetivo deste trabalho de pesquisa, foi utilizado o método qualitativo de
+pesquisa \emph{grupo focal} \cite{focus_group_handbook}.
 
 A população envolvida no processo de adoção de \textit{DevOps} no TCU é
 relativamente pequena (em torno de 12 desenvolvedores e 6 profissionais do time
@@ -27,7 +26,8 @@ questionário.
 Ao mesmo tempo, a realização de entrevistas, além de alongar a obtenção do
 \textit{feedback} desejado, poderia gerar um grande número de respostas
 repetitivas, uma vez que são todos profissionais envolvidos no mesmo processo
-de adoção de \textit{DevOps}.
+de adoção de \textit{DevOps}. Optou-se, portanto, por se realizar um grupo
+focal.
 
 Grupo focal emergiu como método de pesquisa nas ciências sociais nos anos 1950
 e atualmente é amplamente utilizado, por exemplo, em estudos sociológicos,
@@ -37,7 +37,7 @@ como uma técnica de pesquisa que coleta dados através da interação de grupo 
 um tópico específico determinado pelo pesquisador.
 
 Segundo F. Shull et al. \cite{shull2007guide}, grupos focais tipicamente
-possuem entre três e doze participantes e são projetados para obter percepções
+possuem entre três e doze participantes, são projetados para obter percepções
 pessoais de membros de um ou mais grupos envolvidos em uma área definida de
 interesse de pesquisa e possuem como benefícios a produção de informações
 cândidas, muitas vezes perspicazes, com um baixo custo e rápida execução.
@@ -46,32 +46,35 @@ propósitos desta pesquisa. Ainda segundo os autores, a discussão é guiada e
 facilitada por um pesquisador-moderador que segue uma estrutura predefinida
 de questionamentos.
 
+O grupo focal realizado no \acrshort{TCU} contou com a participação de quatro
+profissionais, cujo perfil está brevemente descrito na Tabela \ref{tabela_participantes_grupo_focal}.
+
 \begin{table}[hb!]
 \centering
-\caption{Participantes do Grupo Focal}
 \label{tabela_participantes_grupo_focal}
-\begin{tabular}{|p{1cm}|p{4cm}|p{3cm}|p{7cm}|} \hline
+\begin{tabular}{|p{0.7cm}|p{3.5cm}|p{2.8cm}|p{6.5cm}|} \hline
 {\bf P\#} & {\bf Time de atuação} & {\bf Formação} & {\bf Experiência}\\ \hline
 P1 & Desenvolvimento & Graduação & Atua há 3 anos no desenvolvimento de {\it software} do \acrshort{TCU} e possui 9 anos de experiência prévia \\ \hline
 P2 & Desenvolvimento & Pós-graduação & Atua há 6 anos no desenvolvimento de {\it software} do \acrshort{TCU} e possui 7 anos de experiência prévia \\ \hline
 P3 & Operações & Graduação & Atua há 3 anos no time de operações do \acrshort{TCU} e possui 8 anos de experiência prévia \\ \hline
 P4 & Operações & Graduação & Atua há 3 anos no time de operações do \acrshort{TCU} e possui 10 anos de experiência prévia \\ \hline
 \end{tabular}
+\caption{Participantes do Grupo Focal}
 \end{table}
 
 Seguindo uma estrutura similar ao realizado por Lehtola et al. \cite{requirementes_priorization_in_practice},
-o grupo focal foi conduzido da seguinte forma: (1) o pesquisador-moderador atuou
+o grupo focal foi conduzido da seguinte forma: o pesquisador-moderador atuou
 como facilitador do grupo focal fornecendo aos participantes três tópicos de
-discussão, listados na tabela \ref{tabela_topicos}. No início da discussão de
+discussão, listados na Tabela \ref{tabela_topicos}. No início da discussão de
 cada tópico, as perguntas foram apresentadas aos participantes que escreveram
 suas ideias e palavras-chave em notas {\it post-it}. Depois disso, as notas
 foram postas em um quadro branco e serviram como ponto de partida para a
 realização de discussões sobre o respectivo tópico com o propósito de se obter
-conclusões a respeito da respectiva pergunta.
+conclusões a respeito da respectiva pergunta. Os resultados das discussões de
+cada tópico são apresentados na próximas subseções.
 
 \begin{table}[hb!]
 \centering
-\caption{Tópicos do Grupo Focal}
 \label{tabela_topicos}
 \begin{tabular}{|p{0.3cm}|p{6.4cm}|p{7cm}|} \hline
 & \textbf{Tópico} & \textbf{Perguntas} \\ \hline
@@ -89,45 +92,156 @@ conclusões a respeito da respectiva pergunta.
 2. Quais os próximos passos para a adoção de {\it DevOps} no \acrshort{TCU}?\\ \hline
 
 \end{tabular}
+\caption{Tópicos do Grupo Focal}
 \end{table}
 
 \subsection{Estágio Atual da Adoção de DevOps no TCU}
 
 O primeiro tópico de discussão no grupo focal foi o estágio atual da adoção de
-{\it DevOps} no \acrshort{TCU} onde foram discutidas as ações já desenvolvidas
-e quais problemas essas ações resolveram. A seguir são apresentados os
-resultados da discussão nestes tópico.
+{\it DevOps} no \acrshort{TCU}, onde foram discutidas as ações já desenvolvidas
+e quais problemas essas ações resolveram. A seguir são enumerados os
+resultados da discussão neste tópico.
 
-\begin{enumerate}
-\item A primeira ação indicada foi a disponibilização de ambientes (\acrshort{VM}s)
+\subsubsection{Disponibilização de \acrshort{VM}s para Ferramentas de Desenvolvimento}
+
+A primeira ação indicada e discutida foi a disponibilização de ambientes (\acrshort{VM}s)
 para instalação de ferramentas que são relacionadas ao trabalho de
-desenvolvimento. Essa ação foi exemplificada com as instalações bem sucedidas
-das ferramentas Elasticsearch e Kafka. O problema existente anteriormente era
-que quando o desenvolvedor necessitava de uma ferramenta desse tipo, inerente
-ao trabalho que realizava, dependia de abrir uma solicitação para que o time
-de operações provesse. Com o provisionamento de \acrshort{VM}s e cooperação
-entre os dois times, essas ferramentas ficaram disponíveis rapidamente para uso
-e são administradas de maneira conjunta. Este é um claro exemplo do conceito de
-{\bf empoderamento do desenvolvimento de \emph{software}} da categoria principal
-\cat{cultura de colaboração}.
+desenvolvimento. Essa ação foi exemplificada com as recentes instalações bem
+sucedidas das ferramentas Elasticsearch\footnote{https://www.elastic.co/} e Kafka\footnote{https://kafka.apache.org/}.
+O problema existente anteriormente era que quando o desenvolvedor necessitava de
+uma ferramenta desse tipo, inerente ao trabalho que realizava e necessária para
+atender de maneira adequada problemas específicos, dependia de abrir uma
+solicitação para que o time de operações a provesse, com prazos muitas vezes
+tão dilatados que inviabilizavam o uso da solução mais adequada. Com o
+provisionamento de \acrshort{VM}s e cooperação entre os dois times, essas
+ferramentas ficaram disponíveis rapidamente para uso e são administradas de
+maneira conjunta. Este é um claro exemplo de aplicação dos conceitos de
+{\bf empoderamento do desenvolvimento de \emph{software}} e {\bf responsabilidade
+compartilhada} da categoria principal \cat{cultura de colaboração}.
 
-\item Execução conteinerizada de aplicações
+\subsubsection{Execução Conteinerizada de Aplicações}
 
-\item Facilitação da comunicação por meio do Slack
+Na sequência do grupo focal, a utilização de conteineres para execução de
+aplicações foi debatida. O primeiro problema que essa ação solucionou, no
+entendimento dos participantes do grupo focal, foi a paridade entre os
+ambientes. Foram relembrados os problemas recorrentes de aplicações que
+funcionavam em ambiente de desenvolvimento mas apresentavam problemas em
+produção.
 
-\item Pipelines multidisciplinares
+Em seguida foi apontado que a disponibilização do {\it Dockerfile}\footnote{Arquivo
+que descreve os passos a serem executados para construção de uma imagem
+{\it Docker} que, ao ser executada, instancia um conteiner} no repositório de
+código-fonte de cada projeto possibilita que tanto os desenvolvedores como o
+pessoal de operações possam ter uma primeira ideia sobre o ambiente de execução
+de cada aplicação.
 
-\item Versionamento de bancos de dados
+Ainda sobre o uso de conteineres, foi debatida a exploração do {\it Kubernetes}\footnote{Ferramenta
+de orquestração de conteineres: https://kubernetes.io/}. Com Kubernetes foi
+possível avançar ainda mais na disponibilização de infraestrutura como código.
+Foi relembrado que o \acrfull{CPIC} do \acrshort{TCU} determinou que as
+aplicações que executem em conteiner devem possuir um diretório chamado de \emph{k8s}
+na raiz do repositório de código fonte, onde devem constar os arquivos de
+configuração do {\it Kubernetes}. A aplicação do conceito de {\it deployment} da
+ferramenta tem permitido a configuração de mecanismos para escalabilidade
+horizontal, alocação de recursos para os containers e alta disponibilidade. Foi
+também citado que a possibilidade de publicação sem {\it down-time}, possibilitada,
+pelos mecanismos do {\it Kubernetes} resolve o problema de interromper o
+trabalho das secretarias estaduais de controle externo que possuem fuso horário
+em relação a Brasília.
 
-\item Monitoramento automatizado
+Neste ponto da discussão, foi possível identificar a aplicação de sete
+conceitos: (1) paridade entre ambientes, (2) automação do provimento da
+infraestrutura, (3) serviços autônomos, (4) conteinerização, (5) auto {\it scaling},
+(6) automação da recuperação e (7) zero {\it down-time}.
 
-\end{enumerate}
+\subsubsection{Desburocratização da Comunicação}
+
+A experiência obtida em outras organizações que adotaram {\it DevOps}
+possibilitou o direcionamento de evitar o uso de meios burocráticos de
+comunicação. Durante este tópico foi relembrado o processo de comunicação
+extremamente cerimonioso contido no âmbito da publicação programada. Há uma
+diretriz atual de se evitar o uso do {\it servicedesk} para resolução de
+problemas simples. O uso do {\it Slack} tem sido institucionalizado e facilitado
+o contato entre os dois times.
+
+Aqui, é possível notar a aplicação do conceito de {\bf comunicação facilitada}
+da categoria \cat{cultura de colaboração}.
+
+\subsubsection{Pipelines Multidisciplinares}
+
+As aplicações mais recentes do \acrshort{TCU} executam {\it pipelines}
+multidisciplinares cujas etapas envolvem desde o {\it build}, passa por testes
+automatizados e análise estática de código fonte, execução dos conteineres
+utilizando {\it Kubernetes} e publicação de maneira isonômica nos diversos
+ambientes (desenvolvimento, aceite e produção). Estes {\it pipelines} são
+acessíveis por meio de um {\it Jenkinsfile} na raiz do repositório de código-fonte
+de cada projeto e são automaticamente acionados a partir de cada {\it push}
+executado. A Figura x.y contem um exemplo de {\it pipeline} em execução em uma
+aplicação real do \acrshort{TCU}. Na visão dos participantes do grupo focal,
+a implementação efetiva destes {\it pipelines} possibilita a entrega contínua
+de {\it software} solucionando diversos problemas contidos na publicação
+programada, principalmente as recorrentes demoras para publicação em produção
+de funcionalidades já prontas.
+
+A utilização de Jenkinsfile como maneira de se implementar um {\it pipeline}
+compartilhado também foi obtida a partir da experiência de uma das companhias
+entrevistadas durante a produção do modelo para adoção de {\it DevOps}.
+
+São claramente identificados
+
+\subsubsection{Versionamento de Bancos de Dados Relacionais}
+
+Foi relembrado que o uso de ferramentas de versionamento de bancos de dados
+havia sido anteriormente declarado como incompatível com o processo de
+desenvolvimento de {\it software} do \acrshort{TCU}. Apenas com a aproximação
+dos times, foi possível gerar uma compreensão de quais procedimentos eram
+executados quando se solicitava a alteração de uma estrutura de banco de dados.
+Essencialmente, foi identificado que as alterações de bancos de dados geravam
+atualizações nas estruturas de auditoria de banco de dados. Com essa compreensão,
+foi possível automatizar essas atualizações de auditoria viabilizando o uso
+da ferramenta para versionamento de bancos de dados escolhida, que é o {\it Flyway}\footnote{https://flywaydb.org/}.
+
+O uso do {\it Flyway} é um exemplo da aplicação do conceito de {\bf automação do
+gerenciamento da infraestrutura} da categoria \cat{automação}.
+
+\subsubsection{Monitoramento Automatizado}
+
+A respeito do monitoramento das aplicações, especificamente quando da ocorrência
+de erros em tempo de execução, a solução construída de monitoramento automatizado
+foi posta como parte das ações já desenvolvidas e que resolveu o problema da
+falta de proatividades na correção de erros.
+
+Convém destacar que a solução foi implementada como fruto direto da experiência
+coletada sobre a adoção de {\it DevOps} em uma das companhias entrevistasd. A
+solução envolve a execução de um procedimento usando uma ferramenta chamada
+{\it Logstash}\footnote{https://www.fluentd.org/} para coleta dos {\it logs}
+de aplicações e carga no {\it Elasticsearch}. Após essa carga, há um plugin do
+próprio {\it Elasticsearch} que executa buscas semânticas pré-configuradas e,
+em caso de ocorrência de algum padrão nos {\it logs} de aplicações (mensagem de
+erro, por exemplo), envia automaticamente uma mensagem aos times de
+desenvolvimento e operações por meio do {\it Slack}.
+
 \subsection{Aplicabilidade e Utilidade do Modelo proposto}
+
+Todos os participantes do grupo focal concordaram que o modelo proposto possui
+grande utilidade para a adoção de {\it DevOps} do \acrshort{TCU}. Relembraram
+que boa parte das ações discutidas no tópico anterior foram fruto direto do
+desenvolvimento dessa pesquisa e que, portanto, consideram, que o modelo tem
+sido aplicado de maneira bem sucedida como um dos fatores que tem colaborado
+para a ampliação do uso de {\it DevOps} no desenvolvimento das aplicações
+corporativas do {\it TCU}. A seguir, são apresentados os dois principais
+benefícios do modelo discutidos durante o grupo focal.
+
+\subsubsection{Compreensão Institucional sobre \emph{DevOps}}
+
+
+
+\subsubsection{Experiências de Mercado}
 
 \subsection{Desafios enfrentados e Próximos Passos na Adoção de DevOps}
 
-\begin{enumerate}
-\item Inicialmente foi debatida a percepção apontada por um dos participantes do
+\subsubsection{Maturidade do Entendimento Interno sobre \emph{DevOps}}
+Inicialmente foi debatida a percepção apontada por um dos participantes do
 grupo focal de que ainda há muita {\it hype} em torno do que seria a adoção de
 {\it DevOps}. Que muitos desenvolvedores pensam que isso possibilita a tomada de
 iniciativas técnicas sem consultar outros profissionais e que algumas pessoas de
@@ -138,7 +252,7 @@ ajuda a lidar com esse desafio, mas que é necessária uma melhor conscientizaç
 de todos o profissionais sobre fomentar a colaboração entre os times e não
 apenas sair querendo resolver tudo de acordo com convicções pessoais.
 
-\item Foi apontada também a dificuldade de disseminar o conhecimento relacionado
+Foi apontada também a dificuldade de disseminar o conhecimento relacionado
 às novas ferramentas e técnicas que vieram junto com a adoção de {\it DevOps}.
 Ações para mitigação desse desafio foram discutidas, incluindo a ampliação das
 palestras internas do \acrshort{TCU} que são chamadas internamente de bate-bola
@@ -146,9 +260,19 @@ técnico, a participação nos eventos tais qual o \emph{DevOpsDays}, e os estí
 que o \acrshort{TCU} já dá para os servidores, como licença capacitação,
 reembolso de treinamentos e disponibilização da plataforma {\it safari books}.
 
-\item Responsabilidade formal da setic, resolução de incidentes apenas o pessoal
-de infra tem as senhas
+\subsubsection{Segurança da Informação}
 
-\item Distanciamento físico das equipes
+\subsubsection{Coleta de Métricas em Aplicações}
 
-\end{enumerate}
+\subsubsection{Portarias de Responsabilidade}
+
+Aqui, foi apontado que, embora o modelo tenha possibilitado a compreensão de que
+o mais importante deve ser fomentar a \cat{cultura de colaboração}, muitos
+profissionais do órgão ainda pensam de maneira mais formal e a portaria
+estabelece que as responsabilidades por questões relacionadas à infraestrutura
+de aplicações é do \acrshort{SINAP}, o que dificulta a consolidação de um senso
+de responsabilidade compartilhada. Há um grupo de estudo constituído no intuito
+de propor modificações nas portarias para ajustar essas responsabilidades ao
+cenário de {\it DevOps}.
+
+\subsubsection{Distanciamento Físico das Equipes}
