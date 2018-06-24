@@ -1,10 +1,65 @@
 Neste capítulo são apresentadas as considerações finais do trabalho de
-dissertação contendo uma retrospectiva da pesquisa e a indicação de limitações
-e possíveis trabalhos futuros.
+dissertação contendo uma retrospectiva da pesquisa (seção \ref{secao_retro}) e
+a indicação de limitações e possíveis trabalhos futuros (seção \ref{limitacoes}).
+
+\section{Retrospectiva da Pesquisa}\label{secao_retro}
 
 Os problemas existentes no \acrshort{TCU} decorrentes da baixa colaboração entre
 seus times de desenvolvimento e operações durante o desenvolvimento de {\it software}
-culminaram na inclusão de um indicador no \acrshort{PDTI} do \acrshort{TCU}
+culminaram na inclusão de um indicador no \acrshort{PDTI} do órgão
+tratando especificamente da ampliação do uso de {\it DevOps} no desenvolvimento
+das suas aplicações corporativas. Decorrente da necessidade de cumprimento deste
+indicador, o \acrshort{CPA}, comitê responsável por orientar e padronizar as
+decisões tecnológicas e arquiteturais do \acrshort{TCU}, direcionou que esse
+processo de adoção de {\it DevOps} deveria ser conduzido pautado no intercâmbio
+de experiências com praticantes de mercado que foram bem sucedidos na adoção de
+{\it DevOps}.
+
+Alinhado com as necessidades do \acrshort{TCU}, neste trabalho de pesquisa foram
+ouvidos 15 praticantes que contribuíram para a adoção de {\it DevOps} em suas
+companhias e, por meio da utilização da metodologia {\it grounded theory}, foi
+produzida uma teoria que explica como {\it DevOps} foi adotado nessas companhias
+e um modelo para guiar novas adoções de {\it DevOps} com base nessas
+experiências. Por meio de uma análise da literatura realizada após a condução
+do estudo, foi identificado que a teoria e o modelo representam uma contribuição
+acadêmica para a compreensão de {\it DevOps}, uma vez que: (1) não foi
+identificado outro estudo que tenha investigado a adoção de {\it DevOps}
+utilizando {\it grounded theory} como metodologia; (2) o número de companhias
+estudadas é maior que o presente nos demais trabalhos, ampliando os cenários
+dos quais foram extraídas compreensões sobre a adoção de {\it DevOps}; e (3) as
+explicações a respeito de como os elementos {\it DevOps} se relacionam em um
+processo de adoção, constitui um acréscimo à compreensão previamente existente.
+
+Os resultados da pesquisa ilustram que a adoção de {\it DevOps} envolve 34
+conceitos agrupados em sete categorias: \cat{agilidade}, \cat{automação},
+\cat{compartilhamento e transparência} \cc, \cat{medição contínua},
+\cat{garantia da qualidade} e \cat{resiliência}. A categoria principal da adoção de
+{\it DevOps} é \cc. Algumas das categorias (\cat{automação} e \cat{compartilhamento e
+transparência}) atuam como \emph{facilitadores} para formação desta \cc.
+Outras categorias (\cat{agilidade} e \cat{resiliência}) são explicadas como
+\emph{saídas} esperadas da adoção de {\it DevOps}. Por fim, outras duas
+categorias (\cat{medição contínua} e \cat{garantia da qualidade}) atuam tanto
+como \emph{facilitadores} quanto como \emph{saídas} na adoção de {\it DevOps}.
+Essencialmente, este modelo simplifica o entendimento de como se organiza o
+complexo conjunto de elementos que são parte da adoção de {\it DevOps},
+possibilitando que o processo seja mais direto e com menores chances de focar
+em coisas erradas.
+
+As experiências coletadas durante a produção deste estudo já têm sido
+efetivamente aplicadas no processo de adoção de {\it DevOps} do \acrshort{TCU}.
+Já o modelo em si, foi introduzido por meio da apresentação em uma {\it tech talk}
+para os profissionais e envolvidos no desenvolvimento de {\it software} do \acrshort{TCU}
+e apresentado ao \acrshort{CPA} para análise. O \acrshort{CPA} entendeu que o
+processo de adoção de {\it DevOps} do \acrshort{TCU} deve se pautar no modelo apresentado.
+Embora a formação de percepções mais concretas sobre o papel efetivo do modelo
+durante o processo de adoção de {\it DevOps} requeira tempo, as percepções de
+profissionais do \acrshort{TCU} tanto a respeito do estado atual da adoção de
+{\it DevOps} como um todo, quanto da aplicabilidade e utilidade do modelo foram
+coletadas por meio da realização de um grupo focal. No grupo focal foram
+identificadas (1) as principais ações já desenvolvidas no âmbito da adoção de
+{\it DevOps} no \acrshort{TCU}; (2) quais as contribuições que já podem ser
+notadas a respeito da utilização do modelo, e (3) os desafios enfrentados e
+próximos passos na adoção de {\it DevOps}.
 
 \section{Limitações e Sugestões para Trabalho Futuro}\label{limitacoes}
 
@@ -13,14 +68,14 @@ em outros países, a busca por interessados em contribuir com uma pesquisa
 acadêmica é uma tarefa ainda mais desafiadora quando se vai além das fronteiras
 do Brasil. O resultado disso é que dois terços dos entrevistados são de
 companhias brasileiras. Assim sendo, uma primeira sugestão de trabalho
-futuro é a expansão da quantidade de entrevistados em outros países e contextos
+futuro é a expansão da quantidade de entrevistas em outros países e contextos
 para validar se a saturação teórica aqui atingida foi afetada por questões
 geográficas.
 
 Durante o trabalho buscou-se investigar organizações cujo processo de
-adoção de {\it DevOps} foi bem sucedido. Todavia, a percepção de o processo ter
+adoção de {\it Dev-Ops} foi bem sucedido. Todavia, a percepção de o processo ter
 sido bem sucedido é subjetiva e individual dos praticantes, não há uma maneira
-quantificável de se verificar. Ademais, embora os entrevistados tenham algumas
+quantificável de se verificar. Ademais, embora os entrevistados tenham fornecido algumas
 ideias sobre caminhos incorretos que podem comprometer a adoção de {\it DevOps},
 para se identificar orientações a respeito do que não deve ser feito, o ideal
 seria investigar organizações onde a adoção de {\it DevOps} não foi bem
@@ -62,5 +117,6 @@ Os estudos utilizando {\it grounded theory} em geral não reinvidicam ser
 definitivos, a teoria resultante deve ser modificável em outros contextos \cite{hoda2012developing}.
 A implicação disso é que não se reivindica que a teoria aqui apresentada seja
 absoluta ou final. São bem-vindas extensões da teoria baseadas em aspectos não
-percebidos ou detalhes mais sutis das categorias atuais ou potencial descoberta
-de novas dimensões ou conceitos a partir de estudos futuros.
+percebidos, detalhes mais sutis das categorias e conceitos atuais, ou ainda
+potencial descoberta de novas dimensões ou conceitos a partir de estudos
+futuros.
