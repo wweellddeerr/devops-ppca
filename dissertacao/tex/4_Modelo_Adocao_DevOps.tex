@@ -2,10 +2,10 @@ Neste capítulo é detalhada a realização de um grupo focal \cite{focus_group_
 para identificar a percepção dos profissionais envolvidos tanto a respeito da
 adoção de {\it DevOps} em geral, quanto da aplicabilidade e utilidade do modelo
 proposto na adoção de {\it DevOps} no \acrshort{TCU}. Este capítulo contém ainda
-detalhamento de ações desenvolvidas no \acrshort{TCU} após o intercâmbio de
-experiências ocorrido durante a elaboração do modelo.
+detalhamento das ações citadas no grupo focal que foram desenvolvidas no \acrshort{TCU}
+após o intercâmbio de experiências ocorrido durante a elaboração do modelo.
 
-\section{Grupo Focal}
+\section{Metodologia}
 
 Para obtenção da avaliação empírica sobre a adoção de {\it DevOps} no \acrshort{TCU},
 bem como da aplicabilidade e utilidade do modelo descrito, proposta como
@@ -71,7 +71,7 @@ suas ideias e palavras-chave em notas {\it post-it}. Depois disso, as notas
 foram postas em um quadro branco e serviram como ponto de partida para a
 realização de discussões sobre o respectivo tópico com o propósito de se obter
 conclusões a respeito da respectiva pergunta. Os resultados das discussões de
-cada tópico são apresentados na próximas subseções.
+cada tópico são apresentados na próxima seção.
 
 \begin{table}[hb!]
 \centering
@@ -95,7 +95,20 @@ cada tópico são apresentados na próximas subseções.
 \caption{Tópicos do Grupo Focal}
 \end{table}
 
-\subsection{Estágio Atual da Adoção de DevOps no TCU}
+A gravação do grupo focal foi proposta aos participantes e recusada.
+Como os times de desenvolvimento e operações do \acrshort{TCU} atualmente são
+partes de secretarias diferentes, foi levantado pelos participantes que a
+gravação necessitava ser tratada diretamente com ambos os secretários. Ademais,
+foi apontado que a gravação também limitaria a exposição de opiniões e ideias
+pelo receio existente de gerar alguma interpretação indevida.
+
+Foi então acordado que seria produzida uma ata de reunião cotendo o detalhamento
+das discussões, e que essa ata deveria ser enviada a todos os participantes para
+aprovação. Assim sendo, os resultados apontados na seção \ref{secao_resultados_grupo}
+foram validadas pelos participantes por meio da ratificação da ata que a todos
+foi enviada.
+
+\section{Resultados}\label{secao_resultados_grupo}
 
 O primeiro tópico de discussão no grupo focal foi o estágio atual da adoção de
 {\it DevOps} no \acrshort{TCU}, onde foram discutidas as ações já desenvolvidas
@@ -123,10 +136,10 @@ compartilhada} da categoria principal \cat{cultura de colaboração}.
 
 Na sequência do grupo focal, a utilização de conteineres para execução de
 aplicações foi debatida. O primeiro problema que essa ação solucionou, no
-entendimento dos participantes do grupo focal, foi a paridade entre os
+entendimento dos participantes, foi a anterior falta de paridade entre os
 ambientes. Foram relembrados os problemas recorrentes de aplicações que
 funcionavam em ambiente de desenvolvimento mas apresentavam problemas em
-produção.
+produção, o que deixou de acontecer a partir do uso dos conteineres.
 
 Em seguida foi apontado que a disponibilização do {\it Dockerfile}\footnote{Arquivo
 que descreve os passos a serem executados para construção de uma imagem
@@ -135,19 +148,21 @@ código-fonte de cada projeto possibilita que tanto os desenvolvedores como o
 pessoal de operações possam ter uma primeira ideia sobre o ambiente de execução
 de cada aplicação.
 
-Ainda sobre o uso de conteineres, foi debatida a exploração do {\it Kubernetes}\footnote{Ferramenta
-de orquestração de conteineres: https://kubernetes.io/}. Com Kubernetes foi
-possível avançar ainda mais na disponibilização de infraestrutura como código.
-Foi relembrado que o \acrfull{CPIC} do \acrshort{TCU} determinou que as
-aplicações que executem em conteiner devem possuir um diretório chamado de \emph{k8s}
-na raiz do repositório de código fonte, onde devem constar os arquivos de
-configuração do {\it Kubernetes}. A aplicação do conceito de {\it deployment} da
-ferramenta tem permitido a configuração de mecanismos para escalabilidade
-horizontal, alocação de recursos para os containers e alta disponibilidade. Foi
-também citado que a possibilidade de publicação sem {\it down-time}, possibilitada,
-pelos mecanismos do {\it Kubernetes} resolve o problema de interromper o
-trabalho das secretarias estaduais de controle externo que possuem fuso horário
-em relação a Brasília.
+Ainda sobre o uso de conteineres, foi debatida a exploração dos recursos providos
+pelo {\it Kubernetes}\footnote{Ferramenta de orquestração de conteineres: https://kubernetes.io/}
+nas aplicações. Com {\it Kubernetes} foi possível avançar ainda mais na
+disponibilização de infraestrutura como código. Foi relembrado que o \acrfull{CPIC}
+do \acrshort{TCU} determinou que as aplicações que executem em conteiner devem
+possuir um diretório chamado de \emph{k8s} na raiz do repositório de código-fonte,
+onde devem constar os arquivos de configuração do {\it Kubernetes}.
+A aplicação do conceito de {\it deployment} da ferramenta tem permitido a
+configuração de mecanismos para escalabilidade horizontal, alocação de recursos
+para os containers e alta disponibilidade. Foi também citado que a
+publicação de aplicações sem {\it down-time}, possibilitada pelos mecanismos do
+{\it Kubernetes}, resolveu o problema de interromper o trabalho das secretarias
+estaduais de controle externo que possuem fuso horário em relação a Brasília.
+
+{bf Incluir aqui uma girua com a pasta do kubernetes e código do deployment}
 
 Neste ponto da discussão, foi possível identificar a aplicação de sete
 conceitos: (1) paridade entre ambientes, (2) automação do provimento da
@@ -170,7 +185,7 @@ da categoria \cat{cultura de colaboração}.
 \subsubsection{Pipelines Multidisciplinares}
 
 As aplicações mais recentes do \acrshort{TCU} executam {\it pipelines}
-multidisciplinares cujas etapas envolvem desde o {\it build}, passa por testes
+multidisciplinares cujas etapas envolvem desde o {\it build}, passando por testes
 automatizados e análise estática de código fonte, execução dos conteineres
 utilizando {\it Kubernetes} e publicação de maneira isonômica nos diversos
 ambientes (desenvolvimento, aceite e produção). Estes {\it pipelines} são
@@ -183,11 +198,10 @@ de {\it software} solucionando diversos problemas contidos na publicação
 programada, principalmente as recorrentes demoras para publicação em produção
 de funcionalidades já prontas.
 
-A utilização de Jenkinsfile como maneira de se implementar um {\it pipeline}
-compartilhado também foi obtida a partir da experiência de uma das companhias
-entrevistadas durante a produção do modelo para adoção de {\it DevOps}.
-
-São claramente identificados
+A utilização de {\it Jenkinsfile} como maneira de se implementar um {\it pipeline}
+compartilhado é outro exemplo de ação  que decorreu diretamente do intercâmbio
+de experiências com praticantes de {\it DevOps} durante a condução deste
+trabalho de pesquisa.
 
 \subsubsection{Versionamento de Bancos de Dados Relacionais}
 
@@ -197,72 +211,148 @@ desenvolvimento de {\it software} do \acrshort{TCU}. Apenas com a aproximação
 dos times, foi possível gerar uma compreensão de quais procedimentos eram
 executados quando se solicitava a alteração de uma estrutura de banco de dados.
 Essencialmente, foi identificado que as alterações de bancos de dados geravam
-atualizações nas estruturas de auditoria de banco de dados. Com essa compreensão,
-foi possível automatizar essas atualizações de auditoria viabilizando o uso
+atualizações nos mecanismos de auditoria executados pelo time de operações. Com
+essa compreensão, foi possível automatizar essas atualizações de auditoria viabilizando o uso
 da ferramenta para versionamento de bancos de dados escolhida, que é o {\it Flyway}\footnote{https://flywaydb.org/}.
+Atualmente, quando se necessita, por exemplo, criar ou alterar uma tabela no
+banco de dados, basta incluir o {\it script} equivalente no diretório adequado
+de código fonte. Anteriormente era necessário abrir uma solicitação no {\it servicedesk}
+e sincronizar os horários e procedimentos para que pudessem ser executados na
+publicação programada.
 
 O uso do {\it Flyway} é um exemplo da aplicação do conceito de {\bf automação do
 gerenciamento da infraestrutura} da categoria \cat{automação}.
 
-\subsubsection{Monitoramento Automatizado}
+\subsubsection{Monitoramento Automatizado e Contínuo}
 
 A respeito do monitoramento das aplicações, especificamente quando da ocorrência
-de erros em tempo de execução, a solução construída de monitoramento automatizado
-foi posta como parte das ações já desenvolvidas e que resolveu o problema da
-falta de proatividades na correção de erros.
+de erros em tempo de execução, a solução construída de
+monitoramento automatizado e contínuo foi destacada como parte das ações já
+desenvolvidas e que resolveu o problema da falta de proatividade na correção de
+erros existente anteriormente. A obtenção de acesso aos {\it logs} de aplicações
+anteriormente precisava ser solicitada pelos desenvolvedores quando necessário,
+tipicamente no momento da resolução de algum incidente.
 
-Convém destacar que a solução foi implementada como fruto direto da experiência
-coletada sobre a adoção de {\it DevOps} em uma das companhias entrevistasd. A
-solução envolve a execução de um procedimento usando uma ferramenta chamada
-{\it Logstash}\footnote{https://www.fluentd.org/} para coleta dos {\it logs}
-de aplicações e carga no {\it Elasticsearch}. Após essa carga, há um plugin do
-próprio {\it Elasticsearch} que executa buscas semânticas pré-configuradas e,
-em caso de ocorrência de algum padrão nos {\it logs} de aplicações (mensagem de
-erro, por exemplo), envia automaticamente uma mensagem aos times de
-desenvolvimento e operações por meio do {\it Slack}.
+Esta solução também foi implementada como fruto direto da experiência
+coletada sobre a adoção de {\it DevOps} em uma das companhias entrevistadas
+durante a condução desta pesquisa. A solução envolve a execução de um
+procedimento utilizando a ferramenta {\it Fluentd}\footnote{https://www.fluentd.org/}
+para coleta dos {\it logs} de aplicações e carga no banco de dados não
+relacional {\it Elasticsearch}. Após essa carga, a ferramenta {\it ElastAlert}\footnote{http://elastalert.readthedocs.io/}
+executa buscas semânticas pré-configuradas e, em caso de ocorrência de algum
+padrão nos {\it logs} de aplicações (mensagem de erro, por exemplo), envia
+automaticamente uma mensagem aos times de desenvolvimento e operações por meio
+do {\it Slack}. A Figura \ref{monitoramento_logs} ilustra a solução
+implementada no \acrshort{TCU}.
 
-\subsection{Aplicabilidade e Utilidade do Modelo proposto}
+\figura{monitoramento_logs}{Solução do TCU para Monitoramento Contínuo}{monitoramento_logs}{width=.8\textwidth}
+
+\section{Aplicabilidade e Utilidade do Modelo proposto}
 
 Todos os participantes do grupo focal concordaram que o modelo proposto possui
 grande utilidade para a adoção de {\it DevOps} do \acrshort{TCU}. Relembraram
 que boa parte das ações discutidas no tópico anterior foram fruto direto do
-desenvolvimento dessa pesquisa e que, portanto, consideram, que o modelo tem
-sido aplicado de maneira bem sucedida como um dos fatores que tem colaborado
+desenvolvimento deste modelo e que, portanto, consideram, que a sua aplicação
+já está sendo efetiva e produzido resultados satisfatórios no sentido de colaborar
 para a ampliação do uso de {\it DevOps} no desenvolvimento das aplicações
 corporativas do {\it TCU}. A seguir, são apresentados os dois principais
-benefícios do modelo discutidos durante o grupo focal.
+benefícios da utilização do modelo, discutidos durante o grupo focal.
 
 \subsubsection{Compreensão Institucional sobre \emph{DevOps}}
 
+Como resposta à pergunta sobre as principais contribuições do modelo para o
+\acrshort{TCU}, inicialmente foi apontado que, durante provas
+de conceito realizadas anteriormente (que foi o primeiro encaminhamento dado
+pelo \acrshort{CPA} para cumprimento do indicador do \acrshort{PDTI} sobre {\it DevOps}), ficou
+nítido que o simples uso das ferramentas não estava aproximando os times, que
+alguns desenvolvedores estavam agindo como se houvesse um salvo conduto para
+``passar por cima'' dos procedimentos do time de operações e que o pessoal de
+operações estava bastante preocupado em delimitar formalmente as fronteiras de
+responsabilidade quanto à administração das ferramentas. O avanço da discussão
+mostrou que todos os participantes concordaram com o entendimento de que
+fomentar a cultura de colaboração não era um fator levado em conta pela maioria
+dos profissionais envolvidos, e que
+ver, através do modelo, que a adoção de {\it DevOps} no mercado passa
+principalmente por este ponto tem possibilitado uma mudança de postura das
+equipes, no sentido de colaborar mais ao invés de tentar defender interesses
+próprios de cada uma das equipes.
 
+Na sequência, foi discutido o conteúdo da nota {\it post-it} que continha uma
+anotação a respeito da ``ampla gama de práticas e experiências'' presentes no
+modelo. Foi mais uma vez relembrado que diversas práticas já foram implementadas usando como insumo experiências
+de mercado coletadas durante a produção do modelo. O modelo também foi apontado
+como uma ferramenta para avaliação de práticas que o \acrshort{TCU} ainda não
+adota, fornecendo um {\it roadmap} robusto para guiar os próximos passos.
 
 \subsubsection{Experiências de Mercado}
 
-\subsection{Desafios enfrentados e Próximos Passos na Adoção de DevOps}
+Por fim, foi destacado que o modelo foi construído levando em conta
+experiências bem sucedidas no mercado e que isso representa grande valor para
+o \acrshort{TCU}. No entendimento do grupo, embora o \acrshort{TCU} possua
+muitas das peculiaridades presentes em ambientes governamentais, a busca pela
+inovação tecnológica faz parte do mapa estratégico do órgão e não pode ser
+alcançada olhando-se apenas para cenários similares ao atual. Foi ressaltado
+que o mercado é um importante ator na definição de novas tecnologias que,
+adaptadas em maior ou menor grau, podem ser plenamente aplicáveis aos órgãos
+governamentais, como o TCU. Segundo o entendimento formado, o fato de um modelo
+construído com base em experiências de mercado estar sendo efetivamente
+aplicado, é mais uma constatação de que essa premissa é verdadeira.
+
+\section{Desafios Enfrentados e Próximos Passos na Adoção de \emph{DevOps}}
+
+As discussões do último tópico do grupo focal se concentraram em identificar
+os desafios enfrentados na evolução do uso de {\it DevOps} no \acrshort{TCU},
+bem como nos próximos passos para superar os desafios e institucionalizar
+{\it DevOps} como abordagem de desenvolvimento.
 
 \subsubsection{Maturidade do Entendimento Interno sobre \emph{DevOps}}
-Inicialmente foi debatida a percepção apontada por um dos participantes do
-grupo focal de que ainda há muita {\it hype} em torno do que seria a adoção de
-{\it DevOps}. Que muitos desenvolvedores pensam que isso possibilita a tomada de
+Inicialmente foi debatida a percepção apontada por um dos participantes de que
+ainda há muita {\it hype} em torno do que seria a adoção de {\it DevOps}. Que
+muitos desenvolvedores ainda pensam que isso possibilita a tomada de
 iniciativas técnicas sem consultar outros profissionais e que algumas pessoas de
 operações ainda não se sentem confortáveis com essa mudança de paradigma, pois
 entendem que {\it DevOps} pode provocar uma desorganização em um ambiente que já
-possuia estabilidade. Foi mencionado espontaneamente que o modelo apresentado
+possuia estabilidade. Foi mencionado que o modelo apresentado
 ajuda a lidar com esse desafio, mas que é necessária uma melhor conscientização
 de todos o profissionais sobre fomentar a colaboração entre os times e não
 apenas sair querendo resolver tudo de acordo com convicções pessoais.
 
 Foi apontada também a dificuldade de disseminar o conhecimento relacionado
-às novas ferramentas e técnicas que vieram junto com a adoção de {\it DevOps}.
+às novas ferramentas e processo que vieram junto com a adoção de {\it DevOps}.
 Ações para mitigação desse desafio foram discutidas, incluindo a ampliação das
 palestras internas do \acrshort{TCU} que são chamadas internamente de bate-bola
 técnico, a participação nos eventos tais qual o \emph{DevOpsDays}, e os estímulos
 que o \acrshort{TCU} já dá para os servidores, como licença capacitação,
 reembolso de treinamentos e disponibilização da plataforma {\it safari books}.
+Nesse sentido, formou-se o entendimento de que é um dos próximos passos a
+ampliação da capacitação técnica das equipes nos temas relativos à modernização
+das ferramentas e processos.
 
 \subsubsection{Segurança da Informação}
 
+Aqui, foi debatido que a adoção de {\it DevOps} aumentou consideravalmente a
+superfície de vulnerabilidades que o \acrshort{TCU} possui. Foi apontado que
+o time de operações tem grande preocupação com a segurança da informação, que
+estão avaliando algumas das ferramentas implantadas e que irão propor
+modificações. Foi então alinhado que este debate não pode ficar apenas no time
+de operações, pois isso é exatamente uma manifestação da falta de colaboração.
+
+Por iniciativa de um dos participantes, foi então debatido que essas preocupações
+ampliam um pouco do escopo de {\it DevOps}, indo para um contexto de {\it DevSecOps},
+quando as atividades de segurança também são integradas ao processo de
+desenvolvimento. Tem-se, então, mais um próximo passo, que é a ampliação da
+perspectiva de {\it DevSecOps}.
+
 \subsubsection{Coleta de Métricas em Aplicações}
+
+Nessa parte do debate, foi apontado que a solução de monitoramento contínuo
+atual se restringe aos erros das aplicações, e que o modelo contém ideias a
+respeito da coleta de métricas em aplicações para fomentar evoluções e decisões
+de negócio. Foi pontuado por um dos participantes que a mesma solução pode ser
+ampliada, desde que as aplicações sejam instrumentadas para gerar {\it logs} de
+quaisquer outras métricas. Por conseguinte, a coleta contínua de outras métricas
+de aplicações foi apontado como mais um dos próximos passos da adoção de
+{\it DevOps} do \acrshort{TCU}.
 
 \subsubsection{Portarias de Responsabilidade}
 
@@ -271,8 +361,48 @@ o mais importante deve ser fomentar a \cat{cultura de colaboração}, muitos
 profissionais do órgão ainda pensam de maneira mais formal e a portaria
 estabelece que as responsabilidades por questões relacionadas à infraestrutura
 de aplicações é do \acrshort{SINAP}, o que dificulta a consolidação de um senso
-de responsabilidade compartilhada. Há um grupo de estudo constituído no intuito
-de propor modificações nas portarias para ajustar essas responsabilidades ao
+de responsabilidade compartilhada.
+
+Não houve um consenso a respeito de qual a melhor solução para resolver as
+restrições contidas nas portarias de estruturação organizacional. Alguns (P1 e P4)
+entendem que seria adequado que o setor de operações (\acrshort{SINAP}) poderia
+ser transferido para a Secretaria de Soluções de \acrshort{TI} (atualmente é
+parte da Secretaria de Infraestrutura de \acrshort{TI}); outros (P2 e P3)
+demonstraram o entendimento de que basta uma alteração na portaria para definir
+que há responsabilidade compartilhada por questões relacionadas a infraestrutura
+de aplicações. Foi lembrado que há um grupo de trabalho constituído no intuito
+de propor modificações nas portarias para ajustar essas atribuições ao
 cenário de {\it DevOps}.
 
 \subsubsection{Distanciamento Físico das Equipes}
+
+A última dificuldade apontada foi que as equipes de desenvolvimento e operações
+atualmente atuam em salas separadas. A distância física foi apontada como um fator
+que dificulta a comunicação e atrapalha a formação da cultura de colaboração.
+Os participantes concordaram que a aproximação física das equipes passa pela
+questão da reestruturação das portarias discutidas acima. Caso o setor de
+operações seja incorporado à Secretaria de Soluções de \acrshort{TI}, é provável
+que a aproximação ocorra, caso contrário, é necessário buscar uma solução
+viável.
+
+\section{Considerações Gerais}
+
+O grupo focal não se concentrou especificamente na avaliação do modelo proposto
+nesta pesquisa porque a adoção de {\it DevOps} no \acrshort{TCU} não envolve
+apenas esta pesquisa. O modelo é mais um mecanismo na busca pela maturação do
+uso de {\it DevOps} no desenvolvimento das aplicações corporativas do \acrshort{TCU}.
+
+Mesmo não tendo sido o único ponto de debate, considerações a respeito do modelo
+permearam todos os tópicos debatidos, foram destacadas ações práticas que só
+se materializaram devido ao intercâmbio de experiências ocorridas durnate a
+pesquisa. Ademais, foi identificada uma conscientização a respeito da cultura
+de colaboração que não existia anteriormente, as ações têm sido compreendidas
+como parte dos esforços para se fomentar a cultura de colaboração.
+
+Por fim, cabe ressaltar que a versão final do modelo foi introduzida há pouco
+tempo (em torno de 1 mês) no \acrshort{TCU} e que uma percepção mais robusta
+do seu impacto requer mais tempo para se formar. Duas ações específicas foram
+realizadas para divulgação: (1) apresentação em um bate-bola técnico ({\it tech
+talk}) para todos os profissionais; e (2) apresentação para o \acrfull{CPA} em
+uma das suas reuniões quinzenais, oportunidade em que foi decidido que a
+adoção de {\it DevOps} no \acrshort{TCU} deve ser pautada por este modelo.
