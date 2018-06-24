@@ -6,10 +6,10 @@ ponto se confunde com os próprios objetivos de {\it DevOps}. Inicialmente, uma
 \cc envolve que as tarefas tipicamente de operações --- como {\it deployment},
 provisionamento e gerenciamento de infraestrutura e monitoramento --- devem ser
 consideradas atividades regulares, parte do dia a dia de desenvolvimento de
-{\it software}. As organizações relatam que não aguardam mais momentos específicos
-para performar essas atividades, elas são executadas continuamente. Isso leva
-ao primeiro conceito relacionado à categoria principal: {\bf operações no dia
-a dia de desenvolvimento}.
+{\it software}. Os entrevistados relatam que nas suas organizações não são
+mais aguardados momentos específicos para performar essas atividades, elas são
+executadas continuamente. Isso leva ao primeiro conceito relacionado à
+categoria principal: {\bf operações no dia a dia de desenvolvimento}.
 
 \begin{mq}
 ``\emph{Uma etapa muito importante foi trazer o {\it deployment} para dentro do
@@ -22,7 +22,7 @@ continuamente, a gente tinha que prover toda a infraestrutura necessária no
 mesmo ritmo.}'' (P14, Gerente de \acrshort{TI}, Brasil)
 \end{mq}
 
-Sem {\it DevOps}, um cenário comum é a existência de um processo acelerado de
+Sem {\it DevOps}, um cenário comumente descrito é a existência de um processo acelerado de
 desenvolvimento de {\it software} sem preocupações relacionadas a operações.
 No final, quando o time de desenvolvimento tem um mínimo produto viável, ele
 o envia para o time de operações para publicação. Conhecendo poucas coisas sobre
@@ -48,7 +48,7 @@ nós e nem para os clientes.}'' (P6, {\it Developer}, Portugal)
 
 Um dos resultados da construção de uma \cc é que o time de desenvolvimento não
 precisa mais parar o seu trabalho aguardando pela disponibilização de um
-servidor de aplicação, ou pela execução de um {\it script} na base de dados, ou
+servidor de aplicação, pela execução de um {\it script} na base de dados, ou
 ainda pela publicação de uma nova versão do {\it software} em um ambiente de
 testes. Todos os envolvidos precisam conhecer a maneira como todas essas coisas
 são feitas e, com a colaboração do time de operações, isso pode ser executado
@@ -108,7 +108,7 @@ operações está ao alcance de uma mensagem.}'' (P5, {\it Systems Engineer}, Es
 
 Existe uma {\bf responsabilidade compartilhada} de identificar e corrigir os
 problemas de um {\bf \emph{software}} ao fazer a transição para produção. A estratégia
-de evitar a responsabilidade deve ser evitada. A equipe de desenvolvimento não
+de fugir da responsabilidade deve ser evitada. A equipe de desenvolvimento não
 deve afirmar que uma determinada questão é um problema na infraestrutura, então
 é responsabilidade da equipe de operações. Ou o contrário, a equipe de operações
 não deve afirmar que uma determinada falha foi motivada por um problema na
@@ -148,9 +148,9 @@ que me incomoda muito e que eu vejo acontecer muito é que as pessoas tomam
 \begin{mq}
 ``\emph{DevOps envolve ferramental, mas DevOps não é ferramental. Ou seja, as
 pessoas muitas vezes focam no uso de ferramentas que são chamadas de
-`ferramentas DevOps', acreditando que DevOps é isto. Eu sempre insisto que
+`ferramentas Dev-Ops', acreditando que DevOps é isto. Eu sempre insisto que
 DevOps não é uma ferramenta, DevOps envolve o uso de ferramentas para melhorar
-os procedimentos de desenvolvimento de software.}'' (P2, Consultor DevOps, Brasil)
+os procedimentos de desenvolvimento de software.}'' (P2, Consultor {\it DevOps}, Brasil)
 \end{mq}
 
 Além da categoria principal (\cc), foram identificados três outros conjuntos de
@@ -170,7 +170,7 @@ Aqui serão detalhadas as duas categorias que sustentam a adoção das práticas
 
 Essa é a categoria que apresenta o maior número de conceitos relacionados. Isso
 ocorre porque procedimentos manuais são considerados fortes candidatos para
-propiciar a formação de um silo, dificultado a criação de uma \cc. Se uma tarefa
+propiciar a formação de um silo, dificultando a criação de uma \cc. Se uma tarefa
 é manual, uma pessoa ou um time será responsável por executá-la. Apesar de
 \cat{compartilhamento e transparência} poderem ser usados para garantir a
 colaboração mesmo em tarefas manuais, com a \cat{automação}, os pontos onde os
@@ -179,7 +179,7 @@ silos podem surgir são minimizados.
 \begin{mq}
 ``\emph{Quando um desenvolvedor precisava criar uma nova aplicação, o workflow
 antigo exigia que ele criasse um ticket para a equipes de operações, que então
-avaliava e resolveria manualmente o problema solicitado. Essa tarefa podia levar
+avaliava e resolvia manualmente o problema solicitado. Essa tarefa podia levar
 muito tempo e não havia visibilidade entre os times sobre o que estava
 acontecendo [\ldots]. Hoje, esses silos não existem mais dentro da empresa,
 em particular porque não é mais necessário executar todas essas tarefas
@@ -256,7 +256,7 @@ falha no {\it deployment} sem intervenção humana.
 
 Esta categoria representa o agrupamento de conceitos emergidos
 nas entrevistas a respeito de atividades que ajudam a
-disseminar conhecimento e atividades entre os times de modo a incrementar a
+disseminar conhecimento técnico e procedimental entre os times, de modo a incrementar a
 colaboração entre eles. Ações de treinamento interno e externo, palestras,
 discussões em grupos e {\it round tables} são exemplos desses eventos. Criar
 canais usando ferramentas de comunicação é outra alteranativa recorrentemente
@@ -282,9 +282,9 @@ fóruns adequados para compartilhamento deste tipo de conteúdo.
 
 \item {\bf Compartilhamento de processos}: aqui, o foco é em compartilhar um
 processo de trabalho como um todo. Por exemplo: como configurar um {\it pipeline}
-no {\it Jenkins} utilizando {\it Jenkinsfile}. O conteúo é mais abrangente do
+no {\it Jenkins} utilizando {\it Jenkinsfile}. O conteúdo é mais abrangente do
 que no compartilhamento de atividades. A realização de apresentações e palestras
-foram citados como o fórum mais comum para o compartilhamento de processos.
+foi citada como meio mais comum para o compartilhamento de processos.
 \end{enumerate}
 
 \begin{mq}
@@ -358,7 +358,7 @@ desenvolvimento para que possa ser executada continuamente.
 
 \begin{mq}
 ``\emph{O nosso pipeline tem etapas com toda uma estrutura para criar e destruir
-containeres de maneira rápida e gerar ambientes rapidamente utilizando Docker.
+contêineres de maneira rápida e gerar ambientes rapidamente utilizando Docker.
 Ele também passa pelo Sonar\footnote{https://www.sonarqube.org/} para
 analisar o código utilizando os plugins e bibliotecas dele [...]. Tem também os
 testes automatizados e em qualquer dessas etapas que estou falando o pipeline
@@ -387,17 +387,17 @@ Então a gente foi de um deploy a cada 15 dias para 40 deploys por dia. Então,
 
 \subsection{Resiliência}
 
-Também relaciona à uma saída esperada do processo de adoção de {\it DevOps}, a
+Também relacionada à uma saída esperada do processo de adoção de {\it DevOps}, a
 categoria \cat{resiliência} refere-se à capacidade que as aplicações
 desenvolvidas possuem de se adaptar rapidamente a situações adversas. O primeiro
 conceito relacionado é {\bf auto \emph{scaling}}, que indica a presença de
 mecanismos que possibilitam a alocação automática de mais ou menos recursos para
 aplicações que aumentam ou diminuem sua demanda de acesso em momentos
 específicos. Outro conceito relacionado à categoria de \cat{resiliência} é
-\textbf{automação da recuperação}, que é a capacidade das aplicações e
+\textbf{automação da recuperação}, que é a capacidade de as aplicações e
 infraestrutura subjacente se recuperarem em caso de falhas. Foram relatados dois
 casos típicos de automação de recuperação: (1) em casos de alguma instabilidade
-no ambiente de execução de uma aplicação (um container, por exemplo) ocorre
+no ambiente de execução de uma aplicação (um contêiner, por exemplo) ocorre
 uma reinicialização automática desse ambiente; e (2) em casos de implantação
 de nova versão, se ela não funcionar adequadamente, a anterior é automaticamente
 restaurada. Essa restauração automática de uma versão anterior diminui a chance
@@ -444,7 +444,7 @@ número de conexões do banco de dados, todos recebem um alerta e são responsá
 por buscar soluções para esse problema. Este (número de conexões de banco) é um
 exemplo interessante de métrica que todos começaram a ficar mais atentos, não
 só o time de operações.}''
-(P3, DevOps Developer, Irlanda)
+(P3, {\it DevOps Developer}, Irlanda)
 \end{mq}
 
 Já considerando as \emph{saídas DevOps}, a coleta contínua de métricas das
@@ -461,11 +461,11 @@ usamos grafana\footnote{\url{https://grafana.com/}} e prometheus\footnote{\url{h
 para acompanhar tudo o que está acontecendo na infraestrutura e nas aplicações.
 Nós temos um painel completo em tempo real, extraímos relatórios e, quando algo
 dá errado, somos os primeiros a saber.}''
-(P10, Administrador de rede, Brasil)
+(P10, Administrador de Redes, Brasil)
 \end{mq}
 
 A \cat{medição contínua} envolve (1) {\bf monitoramento de logs de aplicações},
-um conceito que corresponde ao uso do log produzido pelas aplicações e pela
+um conceito que corresponde ao uso do {\it log} produzido pelas aplicações e pela
 infraestrutura como fonte de dados. O conceito de (2) {\bf monitoramento
 contínuo de infraestrutura} indica que o monitoramento não é realizado por uma
 pessoa ou time específicos em um momento específico. A responsabilidade de
@@ -473,27 +473,27 @@ monitorar a infraestrutura é compartilhada e é executada continuamente.
 Já o {\bf monitoramento contínuo de aplicações} refere-se à instrumentação para
 fornecer métricas que são usadas para avaliar o comportamento das aplicações em
 execução e, muitas vezes, direcionar decisões de evolução ou de negócios. Todas
-essas medições/monitoramentos podem ocorrer de forma automatizada,
-a {\bf automação do monitoramento} já foi descrito na subseção \ref{ssec:automation}.
+essas medições/monitoramentos podem ocorrer de forma automatizada, o conceito de
+{\bf automação do monitoramento} já foi descrito na subseção \ref{ssec:automation}.
 
 
 \subsection{Garantia da Qualidade}
 
 Da mesma forma que a \cat{medição contínua}, a \cat{garantia de qualidade} é
 uma categoria que pode funcionar tanto como \emph{facilitador} quanto como \emph{saída}
-do processo de adoção de {\it DevOps}. Como facilitador, porque um aumento na
+do processo de adoção de {\it DevOps}. Como \emph{facilitador}, porque um aumento na
 qualidade é descrito como responsável por gerar mais confiança entre os times,
-o que, no final, gera um ciclo virtuoso de colaboração. Como resultado, o
-princípio é que não é viável criar um cenário de entrega contínua de {\it software}
+o que, no final, gera um ciclo virtuoso de colaboração. Como \emph{saída}, o
+princípio é de que não é viável criar um cenário de entrega contínua de {\it software}
 sem um controle rigoroso da qualidade dos produtos e seus respectivos processos
 de produção.
 
 Os entrevistados apontaram para a necessidade de um controle sofisticado a
 respeito de quais partes de código devem fazer parte das entregas que são
-realizadas continuamente. O Git Flow\footnote{https://nvie.com/posts/a-successful-git-branching-model/}
+realizadas continuamente. O \emph{Git Flow}\footnote{https://nvie.com/posts/a-successful-git-branching-model/}
 foi recorrentemente citado como modelo utilizado para atender à essas necessidades
 de (1) {\bf ramificação de código}, o primeiro conceito de \cat{garantia de
-qualidade}. Em uma seção anterior, exploramos a face de automação relacionada
+qualidade}. Em uma seção anterior, foi explorada a face de automação relacionada
 a microsserviços e testes. Esses elementos também têm uma face de garantia de
 qualidade. Uma característica do estilo arquitetural de microsserviços é a
 necessidade de os serviços serem de pequeno porte com foco em fazer apenas uma coisa.
