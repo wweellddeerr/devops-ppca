@@ -25,16 +25,16 @@ de \textit{software}, melhoria na eficiência e eficácia operacional e maior
 alinhamento com o negócio entre os times de desenvolvimento e operações
 \cite{characterizing_devops}.
 
-O \textit{State of DevOps Report} aponta que, após mais de 27000
-respostas ao \textit{DevOps survey} ao longo dos últimos 6 anos, foi possível
-concluir que a utilização das práticas \textit{DevOps} possibilita uma maior
-performance de \acrshort{TI} e que \textit{DevOps} contribui para melhorias nos
+O interesse em {\it DevOps} é crescente. O \textit{State of DevOps Report}
+aponta que, após mais de 27000 respostas ao \textit{DevOps survey} ao longo dos
+últimos 6 anos, foi possível concluir que a utilização das práticas \textit{DevOps}
+possibilita uma maior performance de \acrshort{TI} e que \textit{DevOps} contribui para melhorias nos
 ciclos de entrega de \textit{software}, na qualidade e segurança de \textit{software}
 e na capacidade de obter \textit{feedback} rápido sobre o desenvolvimento de produtos.
 Ademais, \textit{DevOps} contribui para o atingimento das missões de qualquer
 tipo de organização, independente da indústria ou setor \cite{state_of_devops}.
 
-Os resultados do \textit{agile survey}, realizado entre entre agosto e dezembro
+Já os resultados do \textit{agile survey}, realizado entre entre agosto e dezembro
 de 2017 e publicados no \textit{State of Agile Report}, apontam que 71\% dos 1492
 respondentes ou estão implementando \textit{DevOps} ou planejando adotar nos
 próximos doze meses \cite{state_of_agile}.
@@ -64,150 +64,30 @@ pelo não provisionamento tempestivo da infraestrutura necessária.
 Como resposta aos conflitos ocorridos ao longo do tempo, o \acrshort{TCU}
 investiu na padronização de procedimentos. O provimento de infraestrutura
 para publicação de novas aplicações passou a funcionar em conformidade com um
-\acrfull{SLA} que prevê um prazo de sete dias para conclusão por parte do time
-de operações. O provimento de infraestrutura deve ser pedido por qualquer
-dos times de desenvolvimento por meio do registro de uma solicitação no sistema
-de \textit{servicedesk} interno, e o prazo inicia após este registro.
-Na solicitação devem constar os detalhes da configuração (quantidade de memória
-e CPU, por exemplo) necessária, bem como estimativa de número de usuários que
-irão acessar a aplicação.
-
-No tocante à publicação do \textit{software}, foi criada uma padronização de
+\acrfull{SLA} que prevê prazos para conclusão por parte do time
+de operações. No tocante à publicação do \textit{software}, foi criada uma padronização de
 procedimentos denominada \emph{publicação programada}, que é vista como a maior
 manifestação atual da falta de colaboração entre os times de desenvolvimento
-de operações do \acrshort{TCU}. A publicação programada
+e de operações do \acrshort{TCU}. A publicação programada
 é um processo que prevê um complexo encadeamento de ações com horários bem
-definidos visando reduzir o risco de problemas na publicação dos artefatos. Os
-detalhes desse processo são apresentados a seguir.
+definidos visando reduzir o risco de problemas na publicação dos artefatos.
+A versão de todas as aplicações desenvolvidas é congelada no início de cada
+semana em horários preestabelecidos e existe uma grande quantidade de
+procedimentos formais que cada um dos times deve seguir para que no final da
+semana possa ocorrer a publicação em ambiente de produção.
 
-A versão de todas as aplicações desenvolvidas é congelada semanalmente
-às 03h00m de terça-feira. Para que esse congelamento fosse viabilizado, foi
-criado um segundo servidor \textit{Artifactory}\footnote{Gerenciador de
-repositórios de artefatos de \textit{software} \url{https://jfrog.com/artifactory/}}
-e um segundo servidor \textit{Jenkins}\footnote{Servidor de integração contínua
-\url{https://jenkins.io/}}
-cujos \textit{jobs} apenas podem ser executados no
-contexto da publicação programada. Uma primeira construção é executada com
-base no código contante na \textit{branch} master das aplicações no horário
-estabelecido. Os artefatos produzidos são então publicados no servidor
-\textit{artifactory} onde só podem ser alterados pelo \acrshort{SINAP}.
-
-As equipes de desenvolvimento tem então um prazo até
-as 13h00m para verificar se os artefatos foram gerados adequadamente. Após
-encerrado este prazo, o \acrshort{SINAP} efetua a publicação
-em um ambiente denominado pré-produção. Caso algum artefato não tenha sido
-gerado adequadamente, os times devem efetuar as correções necessárias e
-solicitar a reexecução dos relativos \textit{jobs} no servidor \textit{Jenkins}
-que opera apenas no contexto da publicação programada. Cumpre ressaltar que
-antes de serem reexecutados, os \textit{jobs} precisam ser ajustados para
-congelar uma nova \textit{branch} do repositório de código fonte, não mais a
-\textit{branch} master que pode já possuir código que não faz parte do escopo
-da publicação da semana em tela.
-
-Pré-produção é um ambiente mantido pelo time de operações que possui o
-propósito de ser \emph{o mais similar possível} ao ambiente de produção,
-buscando-se evitar o não funcionamento de alguma aplicação apenas em ambiente
-de produção.
-
-Após a publicação em pré-produção, o \acrshort{SINAP} envia um e-mail de
-``abertura de temporada de testes em pré-produção'', a partir do qual os times
-de desenvolvimento executam testes manuais em suas respectivas aplicações.
-
-É comum que versões específicas de artefatos necessitem da execução de
-\textit{scripts} em banco de dados para funcionar adequadamente, esta execução
-de \textit{scripts} também é padronizada. A sua versão definitiva
-precisa ser concluída e incluída junto com os artefatos para publicação até o
-limite de 12h00 de terça-feira. Ressalte-se que para que um \textit{script}
-esteja em versão definitiva, é necessário ter passado pela equipe de operações
-para validação, para a qual não há prazo definido. Um \textit{script}
-proposto por algum dos times de desenvolvimento durante o dia de segunda-feira
-tipicamente não é validado pelo time de operações até o limite de prazo e isso
-ocasiona erros na publicação dos artefatos relacionados.
-
-Após a publicação em ambiente de pré-produção (13h00m de terça-feira), os times
-de desenvolvimento podem solicitar a substituição dos artefatos a qualquer
-momento até o limite de 18h00m de quinta-feira, quando os artefatos são
-congelados definitivamente para publicação em ambiente de produção. Novas
-publicações em pré-produção ocorrem às 18h00m de terça-feira e às 14h00m de
-quarta e quinta-feira. Essas novas publicações são chamadas de \emph{corretivas}.
-A geração de artefatos para publicações corretivas, assim como a reexecução
-de \textit{jobs} para geração de artefatos que falharam, é um procedimento
-executado manualmente e requer diversos cuidados relacionados à criação de novas
-\textit{branchs} e ajuste dos \textit{jobs} para evitar a inclusão de código
-inserido por outro desenvolvedor com o propósito de publicação apenas na semana
-seguinte.
-
-A publicação em ambiente de produção ocorre \textbf{após} o término do
-expediente de quinta-feira, que ocorre às 20h00m em dias quando não há sessão
-plenária ou logo após o seu término (não há horário máximo estipulado).
-Os procedimentos de publicação são executados manualmente pelo time de
-operações e ocorre um \textit{downtime} que pode variar de 10 minutos a algumas
-horas.
-
-O \acrshort{SLA} entre as equipes prevê que em caso de erros na publicação em
-produção, o \acrshort{SINAP} irá reverter a versão anterior e os novos
-artefatos só serão publicados na semana seguinte. Está previsto ainda que
-não haverá publicação programada em semanas que contenham feriados ou pontos
-facultativos na quinta ou sexta-feira.
-
-\section{Problema e Motivação de Pesquisa}%
-
-A publicação programada e o \acrshort{SLA} ajudam a lidar com alguns dos
-problemas existentes previamente. Todavia, alguns outros problemas de ordem
-prática passam a existir:
-
-\begin{itemize}
-\item Uma eventual evolução pontual em alguma aplicação, cujo código tenha sido
-disponibilizado pelo desenvolvedor na manhã de uma terça-feira, só será
-disponibilizada para o usuário final em ambiente de produção na sexta-feira da
-semana seguinte, uma demora de dez dias que nem sempre é aceitável;
-
-\item Por mais que o ambiente de pré-produção seja semelhante ao de produção,
-ainda ocorrem erros de versões que funcionam naquele mas não neste;
-
-\item A existência de servidores \textit{artifactory} e \textit{jenkins}
-duplicados aumenta o retrabalho e o risco de erros durante o processo de
-geração de artefatos para publicação;
-
-\item A publicação manual e com \textit{downtime} requer a alocação de
-profissionais para trabalho fora do horário regulamentar do \acrshort{TCU},
-gerando a necessidade de pagamento de horas extras, cujo número se acentua
-em dias quando ocorre sessão plenária;
-
-\item O término do horário de expediente em Brasília diverge de algumas outras
-capitais. Em caso de horário de verão, a diferença para Rio Branco, no Acre,
-por exemplo, chega a ser de 3 horas. Ou seja, o \textit{downtime} de 10 minutos
-a algumas horas impede a continuidade dos trabalhos em algumas secretarias
-de controle externo que funcionam nos estados;
-
-\item Combinações de feriados com publicações com erros podem ocasionar longos
-períodos sem publicação de \textit{software} em ambiente de produção. Por exemplo, já
-ocorreu de em uma semana a publicação ser revertida pela ocorrência de erros,
-na semana seguinte ser feriado e na terceira ocorrer novo erro na publicação.
-Neste cenário, é possível que uma nova funcionalidade pronta tenha passado um mês
-inteiro até ser publicada;
-
-\item Nos casos de não funcionamento de aplicações em ambiente de produção,
-a postura de resolução não é colaborativa. A preocupação do time de operações
-tende a ser tão somente assegurar que não é um problema na infraestrutura,
-enquanto que os times de desenvolvimento buscam defender que não é um problema
-na aplicação.
-
-\end{itemize}
-
-Toda essa rigidez procedimental, com tarefas e horários encadeados ilustra o
-quão complexas podem se tornar soluções que visam contornar o problema da falta
-de colaboração entre os times de desenvolvimento e operações.
+A publicação programada e o SLA ajudaram a lidar com alguns dos problemas
+existentes previamente, todavia, alguns outros problemas de ordem prática
+passaram a existir e, por esse motivo, o \acrfull{PDTI} do \acrshort{TCU} para o
+biênio 2017/2018 contém como um de seus indicadores: \emph{o aprimoramento do
+uso de práticas ágeis em todas as equipes e \textbf{ampliação do uso da
+abordagem DevOps}}.
 
 O \acrshort{TCU} possui diversos comitês envolvidos no processo de desenvolvimento
 de suas aplicações corporativas. Um desses comitês se chama \acrfull{CPA} que é
 constituído por representantes de todas as equipes da área de \acrshort{TI} e cuja
 função é orientar e padronizar as decisões tecnológicas e arquiteturais no
 âmbito do processo de desenvolvimento de \textit{software}.
-
-O \acrfull{PDTI} do \acrshort{TCU} para o biênio 2017/2018 contém como um de seus
-indicadores: \emph{o aprimoramento do uso de práticas ágeis em todas as equipes
-e \textbf{ampliação do uso da abordagem DevOps}}.
 
 Inicialmente, para possibilitar o cumprimento do indicador constante no
 \acrshort{PDTI}, o \acrshort{CPA} deliberou no sentido da experimentação e
@@ -220,13 +100,19 @@ Formou-se então novo entendimento de que experiências bem sucedidas na adoçã
 e participações em eventos. Essas experiências deveriam ser apresentadas
 internamente no sentido de pautar a adoção de \textit{DevOps} no \acrshort{TCU}.
 
-Em síntese, a ampliação do uso da abordagem \textit{DevOps} faz parte dos
-indicadores do \acrshort{PDTI} do \acrshort{TCU}. O comitê responsável por
-orientar e padronizar as decisões tecnológicas e arquiteturais (\acrshort{CPA})
-formou entendimento de que para que a adoção de \textit{DevOps} no \acrshort{TCU}
-seja bem sucedida, ela deve ser orientada pelo intercâmbio de experiências com
-praticantes de mercado e pautada em experiências bem sucedidas da adoção de
-\textit{DevOps}.
+\section{Problema de Pesquisa}%
+
+A rigidez procedimental existente no \acrshort{TCU}, ilustra o
+quão complexas podem se tornar soluções que visam contornar o problema da falta
+de colaboração entre os times de desenvolvimento e operações. Neste sentido, a
+adoção de {\it DevOps} é tida como necessária e faz parte dos indicadores do
+\acrshort{PDTI} do órgão.
+
+No entanto, a adoção de DevOps ainda é uma tarefa desafiadora, porque existe
+uma infinidade de informações, práticas e ferramentas relacionadas a {\it DevOps},
+mas ainda não está claro como praticantes de mercado têm utilizado de forma
+organizada e estruturada essa rica, porém ainda dispersa, quantidade de
+informação durante um processo de adoção de {\it DevOps}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -257,10 +143,10 @@ outros contextos.
 
 \subsection{Objetivo Geral}
 
-Este trabalho tem como objetivo geral propor e implantar um modelo, e as
-experiências obtidas durante a sua produção, aderente à prática
-de mercado para fomentar a adoção de \textit{DevOps} no desenvolvimento das
-aplicações corporativas do \acrshort{TCU}.
+Este trabalho tem como objetivo geral investigar a adoção de {\it DevOps} no
+mercado de desenvolvimento de {\it software} e utilizar os resultados e as
+experiências obtidas durante a investigação para fomentar a adoção de \textit{DevOps}
+no desenvolvimento das aplicações corporativas do \acrshort{TCU}.
 
 \subsection{Objetivos Específicos}
 Com o intuito de atingir o objetivo geral deste trabalho, os seguintes objetivos
@@ -270,7 +156,7 @@ específicos foram definidos:
 \item Investigar a adoção de \textit{DevOps} por praticantes bem sucedidos no
 mercado de desenvolvimento de \textit{software};
 \item Propor um modelo de adoção de \textit{DevOps} com base na prática de mercado;
-\item Implantar o modelo e as experiência obtidas durante a sua construção na
+\item Introduzir o modelo e as experiências obtidas durante a sua construção na
 adoção de \textit{DevOps} no \acrshort{TCU}; e
 \item Realizar um estudo empírico para avaliar o estágio atual da adoção de
 \textit{DevOps} no \acrshort{TCU} bem como para validar a relevância do modelo

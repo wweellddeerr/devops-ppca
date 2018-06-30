@@ -307,10 +307,10 @@
     \if@posgraduacao%
 		\if@qualificacao%
 		\else%
-			\newpage\thispagestyle{empty}%
-			\begin{picture}(0,0)\put(-90,-747){\includegraphics{doc/BDM.pdf}}\end{picture}%
+			%\newpage\thispagestyle{empty}%
+			%\begin{picture}(0,0)\put(-90,-747){\includegraphics{doc/BDM.pdf}}\end{picture}%
 			% \includepdf (comando adequado neste caso) precisa ser reconfigurado em modo pretextual, \includegraphics é uma solução rápida, mas ara isso usa valores arbitrários para posicionar a página.
-			\clearpage%
+			%\clearpage%
 		\fi%
 	\fi%
 	\newpage\folhaaprovacao%
