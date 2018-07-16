@@ -42,12 +42,11 @@ A questão de como o desenvolvimento de \textit{software} deve ser
 organizado visando entregar soluções com maior velocidade, melhor qualidade e
 menor custo vem sendo discutida ao longo de décadas nos círculos de engenharia
 de \textit{software} \cite{empirical_studies_agile}. Entre as abordagens de
-desenvolvimento de \textit{software} consideradas tradicionais, a mais antiga e
-que foi mais amplamente utilizada é o modelo cascata, que divide o ciclo de
-vida de desenvolvimento de \textit{software} em estágios distintos e lineares
-e que possui algumas desvantagens, tais como inflexibilidade para
-mudanças de requisitos, e um processo altamente cerimonioso, que tipicamente
-despreza a natureza e o tamanho dos projetos e as características individuais
+desenvolvimento de \textit{software} consideradas tradicionais, existe o modelo
+cascata, que divide o ciclo de vida de desenvolvimento de \textit{software} em
+estágios distintos e lineares e que possui algumas desvantagens, tais como
+inflexibilidade para mudanças de requisitos, e um processo altamente
+cerimonioso, que tipicamente despreza a natureza e o tamanho dos projetos e as características individuais
 das pessoas envolvidas \cite{software_quality_agile}.
 
 Diante da pressão por desenvolvimento acelerado de novos produtos e a
@@ -67,9 +66,9 @@ processo iterativo e contínuo de desenvolvimento \cite{a_decade_of_agile}.
 
 Embora as metodologias ágeis tenham possibilitado uma aproximação das
 atividades de desenvolvimento de \textit{software}, que passaram a ser
-executadas de maneira iterativa e contínua, as atividades de operações têm
-ficado de fora do contexto de práticas ágeis, gerando um gargalo na entrega
-de valor do \textit{software} \cite{understanding_devops}.
+executadas de maneira iterativa e contínua, em um primeiro momento as atividades
+de operações ficaram de fora do contexto de práticas ágeis, gerando um gargalo
+na entrega de valor do \textit{software} \cite{understanding_devops}.
 
 Neste cenário, a equipe de operações tipicamente participa do processo
 apenas em um último momento, que é o de disponibilizar o
@@ -81,9 +80,9 @@ momento. Segundo H\"uttermann
 e cultural que desencadeia três principais tipos de problemas: (1) cada time
 (desenvolvimento e operações) defende seus próprios interesses, ao invés de
 um interesse comum; (2) desenvolvimento de idiomas/vocabulários distintos pelos
-dois times que trabalham em problemas isoladamente, sem a busca de um objetivo
+dois times, que trabalham em problemas isoladamente, sem a busca de um objetivo
 comum; e (3) não compartilhamento de conhecimento entre os times, por falta
-de confiança e receio de perda de poder ou de confrontamento.
+de confiança e receio de confrontamento ou de perda de poder.
 
 Um outro problema típico dessa abordagem ``não \textit{DevOps}'' é a existência
 de um \textit{blame game} onde, na ocorrência de um problema, um lado acusa
@@ -93,7 +92,6 @@ e passa a ser apenas em evitar a responsabilização \cite{toward_unified_model}
 \section{A História de \textit{DevOps}}\label{secao_historico_devops}
 
 O termo \textit{DevOps} foi cunhado em 2009 na Bélgica \cite{devops_for_developers}.
-
 Todavia, as origens de \textit{DevOps} remetem para antes mesmo da existência
 do termo. Primeiro, em 2008, foi publicado o artigo ``\textit{Agile
 Infrastructure and Operations: How Infra-gile are You?}''
@@ -112,8 +110,9 @@ tema \cite{effective_devops}.
 Pouco tempo depois, já em 2009, Hammond e Allspaw apresentaram ``\textit{10+ Deploys
 per Day: Dev and Ops Cooperation at Flickr}'' \cite{flickr} em uma conferência
 chamada \textit{Velocity}, ilustrando não somente o alto número de
-\textit{deploys} realizados na \textit{Flickr}, mas o poder revolucionário que
-a colaboração entre os times de desenvolvimento e operações possibilitou lá.
+\textit{deploys} realizados na \textit{Flickr}, mas também o poder
+revolucionário que a colaboração entre os times de desenvolvimento e operações
+demonstrou por lá.
 
 E foi neste momento que o termo \textit{DevOps} finalmente surgiu. Segundo
 J. Davis e K. Daniels \cite{effective_devops}, em um \textit{tweet} de Andrew
@@ -182,7 +181,7 @@ como um neologismo que representa um movimento de profissionais de tecnologia
 da informação e comunicação buscando uma diferente atitude no que se refere à
 entrega de \textit{software}, através da colaboração entre o desenvolvimento de
 sistemas de \textit{software} e as funções de operações, com base em um conjunto
-de práticas, tais como cultura, automação, medição e compartilhamento.
+de práticas e princípios, tais como cultura, automação, medição e compartilhamento.
 
 \section{Elementos de \textit{DevOps}}\label{secao_elementos_devops}
 
@@ -201,7 +200,7 @@ compõem o acrônimo \acrshort{CAMS}: cultura, automação, medição e comparti
 \textit{Framework}.
 
 O trabalho de Hamunen \cite{challenges_in_adopting_devops}, após
-investigar quais são os componentes-chave de {\it DevOps}, identificou que
+investigar quais são os componentes-chave de {\it Dev-Ops}, identificou que
 diversas fontes adicionaram {\it Lean} como novo componente, culminando
 na formação do que foi chamado de CALMS \textit{Framework}.
 
@@ -217,8 +216,8 @@ contém quatro dimensões: colaboração, automação, medição e
 com os estudos anteriores. Para identificar as dimensões de \textit{DevOps} foi
 utilizada uma revisão de literatura combinada com entrevistas a quatro
 praticantes de três companhias de um mesmo grupo empresarial. Uma extensão
-deste trabalho foi publicada posteriormente em \cite{extending_dimensions} e
-acrescentou uma nova dimensão chamada de \emph{colaboração}. Nessa extensão foi
+deste trabalho foi publicada posteriormente em \cite{extending_dimensions}, onde
+foi acrescentada uma nova dimensão chamada de \emph{colaboração}. Nessa extensão foi
 conduzida uma revisão de literatura multivocal, utilizando dados da literatura
 cinza.
 
@@ -229,7 +228,7 @@ categorias de princípios: (1) automação, (2) garantia da qualidade,
 \textbf{\textit{leanness}}. Apenas a categoria \emph{aspectos sociais}
 representa um elemento novo em relação aos já apresentados aqui. Para
 chegar a estes resultados os autores conduziram uma revisão de literatura
-multivocal, e os dados foram analisados usando algumas técnicas de
+multivocal, e os dados foram analisados usando técnicas de
 codificação de \textit{\acrfull{GT}}.
 
 Por fim, por meio de uma nova revisão sistemática de literatura, Erich et al.
@@ -240,7 +239,7 @@ colaboração, (2) automação, (3) medição, (4) compartilhamento, (5) serviç
 não aparece em nenhum dos trabalhos apontados previamente.
 
 É possível identificar elementos de \textit{DevOps} que aparecem em vários
-trabalhos bem como outros que aparecem apenas em um deles, a Tabela
+trabalhos bem como outros que aparecem apenas em algum deles, a Tabela
 \ref{tabela_elementos_devops} lista os elementos identificados e aponta em
 quais trabalhos cada um deles aparece. Após comparação dos estudos, foi
 identificado que os elementos \emph{cultura}, \emph{cultura de colaboração},
@@ -312,8 +311,8 @@ A Tabela \ref{tabela_elementos_devops} reforça a relevância dos elementos do
 \acrshort{CAMS} \textit{framework}. Apenas \emph{compartilhamento} deixa de
 aparecer em um dos estudos citados, os demais aparecem em todos. Com relação
 aos elementos que não fazem parte do \textit{framework}, \emph{garantia
-da qualidade} e \emph{serviços} aparecem em três e dois estudos, respectivamente,
-enquanto que os demais aparecem apenas em um único estudo.
+da qualidade} aparece em três estudos, \emph{serviços}, e \emph{leanness}
+aparecem em dois, enquanto que os demais aparecem apenas em um único estudo.
 
 Nas subseções a seguir, cada um dos elementos é detalhado. Alguns dos trabalhos
 relacionados citam práticas relacionadas aos elementos. Quando aplicável, as
@@ -394,7 +393,7 @@ de responsabilidades.
 
 Enquanto que em \cite{characterizing_devops}, são apresentadas mais oito
 práticas: (1) avaliação coletiva de desempenho, (2) cultura de confiança, (3)
-comunicação efetiva, (4) Aprendizagem mútua, (5) abertura para mudanças, (6)
+comunicação efetiva, (4) aprendizagem mútua, (5) abertura para mudanças, (6)
 responsabilidade pessoal, (7) relevância de aspectos culturais e (8) respeito
 entre os membros dos times.
 
@@ -409,7 +408,7 @@ No \acrshort{CAMS} \textit{framework} \cite{what_devops_means_2010}, é explicad
 que as ferramentas \textit{DevOps} possibilitam uma ampla gama de possibilidades
 para automação. Ferramentas para gerenciamento de versões, provisionamento,
 gerenciamento de configuração, integração de sistemas, monitoramento e controle
-e orquestração são tratatadas como peças importantes na construção de uma
+e orquestração são tratadas como peças importantes na construção de uma
 estrutura \textit{DevOps}.
 
 Para acompanhar o ritmo ágil das práticas de desenvolvimento de \textit{software}, os
@@ -546,8 +545,8 @@ em \cite{extending_dimensions}. Segundo os autores, a equipe de
 operações é tipicamente responsável por monitorar os sistemas e a
 infraestrutura subjacente para determinar a atribuição apropriada de recursos e
 para detectar, relatar e corrigir os problemas que ocorrem nos sistemas.
-Todavia, \textit{DevOps} propicia uma resposta aos desafios enfrentados na
-realização de um monitoramento efetivo por meio da ênfase em colaboração entre
+Como contraponto, \textit{DevOps} propicia uma resposta aos desafios enfrentados na
+realização de um monitoramento efetivo, por meio da ênfase em colaboração entre
 desenvolvedores e operadores. Adicionalmente, as análises são usadas para
 integrar os dados de desempenho da infraestrutura e do sistema com o
 comportamento de uso do cliente. As informações coletadas são fornecidas como
@@ -559,7 +558,7 @@ elemento \emph{medição}, tipicamente englobam aspectos de \emph{monitoramento}
 Por exemplo, entre as práticas apontadas em \cite{characterizing_devops} estão
 \emph{monitoramento de operações} e \emph{monitoramento de equipes por meio de
 métricas}. Essa separação de \emph{monitoramento} como um elemento autônomo em
-relação a \emph{medição} apenas foi realizado por Lwakatare et al.
+relação a \emph{medição} apenas foi realizada por Lwakatare et al.
 
 \subsection{\textit{Leanness}}
 
@@ -618,9 +617,9 @@ de confiança e as dificuldades para implementar tecnologias {\it DevOps} e para
 adaptar os processos organizacionais são os outros principais agrupamentos de
 desafios relacionados a {\it DevOps}.
 
-Enquanto que Smeds et al. apontam ainda como desafios para {\it DevOps}:
+Enquanto que Smeds et al. \cite{devops_a_definition} apontam ainda como desafios para {\it DevOps}:
 dificuldades relacionadas a estruturas organizacionais não compatíveis, onde
-clientes não vêem valor em {\it DevOps}; a falta de interesse de algum dos times;
-e dificuldades técnicas como a existência e múltiplos ambientes de produção e
+clientes não vêem valor em {\it DevOps}; falta de interesse de algum dos times;
+e dificuldades técnicas como a existência de múltiplos ambientes de produção e
 o fato de ambientes como desenvolvimento e teste não refletirem o ambiente de
 produção.
